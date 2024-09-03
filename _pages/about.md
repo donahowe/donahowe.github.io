@@ -20,7 +20,7 @@ redirect_from:
 
 # 🧍‍♂️ About me
 
-My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate student at Sun Yat-sen University (SYSU). My advisor is Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao). I am currently interning at Tencent PCG [Arc Lab](https://arc.tencent.com/zh/index), collaborating with Yuying Ge [(葛玉莹)](https://geyuying.github.io/) and Xihui Liu [(刘希慧)](https://xh-liu.github.io/).
+My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate student at Sun Yat-sen University (SYSU). I conducti research at [HCP Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index), collaborating with Yuying Ge [(葛玉莹)](https://geyuying.github.io/) and Prof. Xihui Liu [(刘希慧)](https://xh-liu.github.io/).
 
 👋👋👋 I am seeking **PhD application opportunities** and I am also open to any potential discussions or collaboration opportunities. If you are interested in my work or have any collaboration intentions, please feel free to email (howe4884@outlook.com) me without hesitation.
 
@@ -50,7 +50,6 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 - We propose a training-free multi-agent framework called AutoStudio. This framework stands out for its ability to maintain multi-subject consistency in on-the-fly multi-turn interactions with users, enabling it to accomplish various tasks such as open-ended story/manga book generation and multi-turn editing.
 - We propose a novel parallel UNet architecture with dual cross-attention modules to better exploit and fuse subject-aware text features and image features.
 - We introduce a subject-initialized generation process to achieve finer controls of subject locations, which also alleviates the issues of missing subjects and erroneous subject fusions.
-- AutoStudio outperforms the existing methods by large margins on the CMIGBench benchmark for multi-turn interactive image generation.
 
 </div>
 </div>
@@ -63,8 +62,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
 
 [**Project**](https://github.com/qingxingcao/VisDiaHalBench) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
-- To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version. VisDiaHalBench differs from previous hallucination benchmarks in the following three points: 
-
+- To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version.
 - The questions and answers are unambiguously grounded by annotated scene graphs. 
 - The images are uncommonly edited to inspect the visual model and common-object hallucination in LLMs.
 - The carefully designed dialogue refers a same object in different turns to assess the image consistency and influence of history for LVLMs. The detailed analysis of several state-of-the-art LVLMs across image consistency, visual understanding, history influence, and other dimensions reveals their substantial performance gap with single-turn VQA tasks. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
@@ -72,7 +70,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/publications/theatergen.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv</div><img src='images/publications/theatergen.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation](https://arxiv.org/abs/2404.18919) \\
@@ -80,10 +78,15 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
 
 [**Project**](https://howe140.github.io/theatergen.io/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
-- In order to enhance the coupling and portability of the module, the existing rain removal module was redesigned and a multi-scale coupling method was established. A simple and effective strategy achieved a model increase of 5%.
-- In order to improve the transferability and generalization of the model, a detail scaling module is designed to extract generalized features from degraded images and restore finer details to avoid distortion.
-- The attention layer and feed-forward layer in the Transformer block are enhanced to extract universal features more efficiently, enhancing the model's ability to capture comprehensive and transferable features.
-- The progressive learning strategy assists in learning more multi-scale features and achieves SOTA performance on data sets such as SPA-Data, RainDrop, RID, and Rain100.
+- We propose TheaterGen, which is a training-free framework that utilizes a
+large language model to drive a text-to-image generation model, effectively
+addressing the issues of semantic consistency and contextual consistency in
+multi-turn image generation tasks without specialized training.
+- TheaterGen can engage in multi-turn natural language interactions with users
+to accomplish tasks such as story generation and multi-turn editing.
+- We propose a new benchmark, CMIGBench, to evaluate both the semantic
+and contextual consistency in multi-turn image generation and demonstrate
+the superior performance of TheaterGen.
 </div>
 </div>
 
