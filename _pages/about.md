@@ -70,7 +70,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv</div><img src='images/publications/theatergen.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/publications/theatergen.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation](https://arxiv.org/abs/2404.18919) \\
