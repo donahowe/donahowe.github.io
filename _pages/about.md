@@ -20,7 +20,7 @@ redirect_from:
 
 # 🧍‍♂️ About me
 
-My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate student at Sun Yat-sen University (SYSU). I conducti research at [HCP Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index), collaborating with Yuying Ge [(葛玉莹)](https://geyuying.github.io/) and Prof. Xihui Liu [(刘希慧)](https://xh-liu.github.io/).
+My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate student at Sun Yat-sen University (SYSU). I conduct research at [HCP Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index), collaborating with Yuying Ge [(葛玉莹)](https://geyuying.github.io/) and Prof. Xihui Liu [(刘希慧)](https://xh-liu.github.io/).
 
 👋👋👋 I am seeking **PhD application opportunities** and I am also open to any potential discussions or collaboration opportunities. If you are interested in my work or have any collaboration intentions, please feel free to email (howe4884@outlook.com) me without hesitation.
 
