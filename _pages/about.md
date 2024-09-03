@@ -27,9 +27,9 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 
 # 🔥 News
 
-- *2024.05*: &nbsp;🎉🎉 Release [AutoStudio](https://ssugarwh.github.io/consistentid.github.io/) (380+Stars✨) for comic book generation.
-- *2024.05*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) to benchmarking multi-turn image generation.
-- *2021.09*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
+- *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://ssugarwh.github.io/consistentid.github.io/) (380+Stars✨) for comic book generation.
+- *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
+- *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) to benchmarking multi-turn image generation.
 
 # 💻 Internships
 - *2024.06 - now*, [Tencent PCG ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
@@ -100,7 +100,8 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
 - We combine transfer learning technique with the DKFormer to enhance the forecasting performance of our model.
 - The proposed domain knowledge constraint modules demonstrate great portability and can be incorporated into various DL baseline models such as LSTM and GRU, resulting in improved forecasting accuracy.
 
-
+</div>
+</div>
 
 # 📖 Educations
 <!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
