@@ -29,7 +29,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 
 - *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://ssugarwh.github.io/consistentid.github.io/) (380+Stars✨) for comic book generation.
 - *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
-- *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) to benchmarking multi-turn image generation.
+- *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
 
 # 💻 Internships
 - *2024.06 - now*, [Tencent PCG ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
