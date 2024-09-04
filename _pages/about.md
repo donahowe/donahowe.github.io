@@ -58,7 +58,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 <div class='paper-box-text' markdown="1">
 
 [VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models](https://aclanthology.org/2024.acl-long.658/) \\
-Qingxing Cao, **Junhao Cheng**, Xiaodan Liang*, Liang Lin*
+Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 [**Project**](https://github.com/qingxingcao/VisDiaHalBench) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
@@ -94,7 +94,7 @@ the superior performance of TheaterGen.
 <div class='paper-box-text' markdown="1">
 
 [Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) \\
-**Junhao Cheng**, Xing Luo*, Zhi Jin*
+**Junhao Cheng**, Xing Luo\*, Zhi Jin\*
 
 [**Project**](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
