@@ -25,9 +25,9 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 👋👋👋 I am seeking **PhD application opportunities** and I am also open to any potential discussions or collaboration opportunities. If you are interested in my work or have any collaboration intentions, please feel free to email (howe4884@outlook.com) me without hesitation.
 
 
-# 🔥 News
+# 🔥 News  
 
-- *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://ssugarwh.github.io/consistentid.github.io/) (380+Stars✨) for comic book generation.
+- *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (380+Stars✨) for comic book generation.
 - *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
 - *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
 
