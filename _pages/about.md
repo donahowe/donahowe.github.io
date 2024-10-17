@@ -27,7 +27,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 
 # 🔥 News  
 
-- *2024.10*: &nbsp;🎉🎉 One paper as the first author is accepted by Energy (JCR Q1)..
+- *2024.10*: &nbsp;🎉🎉 One paper as the first author is accepted by Energy (JCR Q1).
 - *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨) for comic book generation.
 - *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
 - *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
