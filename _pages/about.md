@@ -27,6 +27,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently a junior undergraduate s
 
 # 🔥 News  
 
+- *2024.10*: &nbsp;🎉🎉 One paper as the first author is accepted by Energy (JCR Q1)..
 - *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨) for comic book generation.
 - *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
 - *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
@@ -71,7 +72,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 - To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version.
 - The questions and answers are unambiguously grounded by annotated scene graphs. 
 - The images are uncommonly edited to inspect the visual model and common-object hallucination in LLMs.
-- The carefully designed dialogue refers a same object in different turns to assess the image consistency and influence of history for LVLMs. The detailed analysis of several state-of-the-art LVLMs across image consistency, visual understanding, history influence, and other dimensions reveals their substantial performance gap with single-turn VQA tasks. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
+- The carefully designed dialogue refers a same object in different turns to assess the image consistency and influence of history for LVLMs. The detailed analysis of several state-of-the-art LVLMs across image consistency, visual standing, history influence, and other dimensions reveals their substantial performance gap with single-turn VQA tasks. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
 
 </div>
 </div>
@@ -99,7 +100,7 @@ the superior performance of TheaterGen.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Energy(Under Review)</div><img src='images/publications/dkformer.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Energy</div><img src='images/publications/dkformer.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) \\
