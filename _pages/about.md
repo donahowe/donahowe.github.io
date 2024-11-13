@@ -69,10 +69,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 [[**Code**]](https://github.com/qingxingcao/VisDiaHalBench) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 [[**Paper**]](https://aclanthology.org/2024.acl-long.658/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
-- To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version.
-- The questions and answers are unambiguously grounded by annotated scene graphs. 
-- The images are uncommonly edited to inspect the visual model and common-object hallucination in LLMs.
-- The carefully designed dialogue refers a same object in different turns to assess the image consistency and influence of history for LVLMs. The detailed analysis of several state-of-the-art LVLMs across image consistency, visual standing, history influence, and other dimensions reveals their substantial performance gap with single-turn VQA tasks. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
+- To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
 
 </div>
 </div>
