@@ -52,9 +52,6 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 [[**Paper**]](https://arxiv.org/abs/2406.01388) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
 - We propose a training-free multi-agent framework called AutoStudio. This framework stands out for its ability to maintain multi-subject consistency in on-the-fly multi-turn interactions with users, enabling it to accomplish various tasks such as open-ended story/manga book generation and multi-turn editing.
-- We propose a novel parallel UNet architecture with dual cross-attention modules to better exploit and fuse subject-aware text features and image features.
-- We introduce a subject-initialized generation process to achieve finer controls of subject locations, which also alleviates the issues of missing subjects and erroneous subject fusions.
-
 </div>
 </div>
 
@@ -70,7 +67,6 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 [[**Paper**]](https://aclanthology.org/2024.acl-long.658/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
 - To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
-
 </div>
 </div>
 
@@ -85,15 +81,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 [[**Code**]](https://github.com/donahowe/TheaterGen) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 [[**Paper**]](https://arxiv.org/abs/2404.18919) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
-- We propose TheaterGen, which is a training-free framework that utilizes a
-large language model to drive a text-to-image generation model, effectively
-addressing the issues of semantic consistency and contextual consistency in
-multi-turn image generation tasks without specialized training.
-- TheaterGen can engage in multi-turn natural language interactions with users
-to accomplish tasks such as story generation and multi-turn editing.
-- We propose a new benchmark, CMIGBench, to evaluate both the semantic
-and contextual consistency in multi-turn image generation and demonstrate
-the superior performance of TheaterGen.
+- We propose TheaterGen, which is a training-free framework that utilizes a large language model to drive a text-to-image generation model, effectively addressing the issues of semantic consistency and contextual consistency in multi-turn image generation tasks without specialized training.
 </div>
 </div>
 
@@ -103,14 +91,10 @@ the superior performance of TheaterGen.
 [Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) \\
 **Junhao Cheng**, Xing Luo\*, Zhi Jin\*
 
-[[**Project**]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+[[**Project**]](https://doi.org/10.1016/j.energy.2024.133511) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+[[**Paper**]](https://doi.org/10.1016/j.energy.2024.133511) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
 - We initially propose the DKFormer forecasting model, which integrates domain knowledge through three constraint modules that are crucial in data pre-processing, model training, and forecasting stages.
-- Unlike conventional sequential extrapolation models that solely rely on historical data for forecasting, our proposed DKFormer model incorporates NWP data’s lead time to guide the forecasting results by constructing a cubic polynomial boundary constraint.
-- We combine transfer learning technique with the DKFormer to enhance the forecasting performance of our model.
-- The proposed domain knowledge constraint modules demonstrate great portability and can be incorporated into various DL baseline models such as LSTM and GRU, resulting in improved forecasting accuracy.
-
 </div>
 </div>
 
