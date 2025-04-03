@@ -38,19 +38,21 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/publications/autostudio.png' alt="sym" width="70%" height="auto"></div></div>
-<div class='paper-box-text' markdown="1">
-  
-[AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation](https://arxiv.org/abs/2406.01388) \\
-**Junhao Cheng**, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang*
+<div class='paper-box' style="display: flex;">
+  <div class='paper-box-image' style="flex: 1;">
+    <div><img src='images/publications/autostudio.png' alt="sym" width="80%" height="auto"></div>
+  </div>
+  <div class='paper-box-text' markdown="1" style="flex: 2; padding-left: 20px;">
+    AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation \\
+    **Junhao Cheng**, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang*
 
-<a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
-[<em>arXiv</em>] <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Project**]](https://howe183.github.io/AutoStudio.io/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Code**]](https://github.com/donahowe/AutoStudio) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://arxiv.org/abs/2406.01388) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+    <a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
+    [<em>arXiv</em>] <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+    [[**Project**]](https://howe183.github.io/AutoStudio.io/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+    [[**Code**]](https://github.com/donahowe/AutoStudio) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+    [[**Paper**]](https://arxiv.org/abs/2406.01388) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+  </div>
 </div>
-</div> 
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2024</div><img src='images/publications/visdiahalbench.png' alt="sym" width="100%"></div></div>
