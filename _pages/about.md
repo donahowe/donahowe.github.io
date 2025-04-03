@@ -38,21 +38,6 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 # 📝 Publications 
 
-<tr>
-  <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/publications/BD-Diff.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
-  </td>
-  <td width="100%" valign="middle">
-    <h3 >BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning</h3>
-    <br>
-    <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang
-    <br>
-    <br>
-    <em>arXiv</em> / <a href='https://arxiv.org/abs/2502.01522'>Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
-    <br>
-  </td>
-</tr>
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/publications/autostudio.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
