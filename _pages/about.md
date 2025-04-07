@@ -150,7 +150,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="220" style="box-shadow: 4px 4px 8px #888">
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="240" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle" >
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
@@ -167,7 +167,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
   <tr>
     <td style="padding:20px;width:20%;vertical-align:middle">
-      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="190" style="box-shadow: 4px 4px 8px #888">
+      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="240" style="box-shadow: 4px 4px 8px #888">
     </td>
     <td width="100%" valign="middle">
       <h3>The First Prize of ICCV 2023 <a href="https://youtube-vos.org/challenge/2023/leaderboard/">The 5th Large-scale Video Object Segmentation Challenge Track3: Referring Video Object Segmentation</a></h3>
@@ -180,7 +180,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
   <tr>
     <td style="padding:20px;width:20%;vertical-align:middle">
-      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="170" style="box-shadow: 4px 4px 8px #888">
+      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="240" style="box-shadow: 4px 4px 8px #888">
     </td>
     <td width="100%" valign="middle">
       <h3 >SEMANTICAC: SEMANTICS-ASSISTED FRAMEWORK FOR AUDIO CLASSIFICATION</h3>
@@ -193,7 +193,8 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
     </td>
   </tr>
   
-# 📖 Educations
+
+<h1 style="padding:20px;width:100%;vertical-align:middle">📖 Educations</h1>
 
 <!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
 - *2018.09 - 2022.06*, B.E in Automation, School of Intelligent Systems Engineering, Nanchang University, Jiangxi, Automation.
