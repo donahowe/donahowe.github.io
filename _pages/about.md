@@ -54,7 +54,39 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
-  
+
+
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/animegamer.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>BD-Diff: AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan
+        <br>
+        <br>
+        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2504.01014'>Paper</a> / <a href="https://github.com/TencentARC/AnimeGamer">Code</a>
+        <a class="more-link" href="https://github.com/TencentARC/AnimeGamer" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/TencentARC/AnimeGamer?style=social"></a>
+        <br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/isolate.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>Object Isolated Attention for Consistent Story Visualization</h3>
+        <br>
+        Xiangyang Luo, <strong>Junhao Cheng<strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu
+        <br>
+        <br>
+        <em>ICME 2025 (CCF-B)</em> / <a href='https://arxiv.org/abs/2503.23353'>Paper</a>
+        <br>
+      </td>
+    </tr>
+    
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
         <img src="images/publications/BD-Diff.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
