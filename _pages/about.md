@@ -20,7 +20,7 @@ redirect_from:
 
 # 🧍‍♂️ About me
 
-My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU). I conduct research at [HCP-I2 Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for image/video generation and other downstream tasks to make AI serve for humans.
+My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU). I conduct research at [HCP-I2 Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for image/video generation and other downstream tasks to make AI serve for humans.
 
 # 🔥 News  
 
@@ -47,7 +47,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
     <p >2025-2027 (expected) </p>
     <p>Upcoming MPhil Student at City University of Hong Kong</p>
-    <p>Superviso: Jing Liao [(廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)</p>
+    <p>Supervisor: Jing Liao <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en'>(廖菁)</a></p>
   </td>
 </tr>
 
@@ -59,7 +59,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
     <p >2021-now </p>
     <p>Studying as an Undergraduate Student at Sun Yat-sen University</p>
-    <p>Xiaodan Liang [(梁小丹)](https://scholar.google.com/citations?view_op=search_authors&mauthors=xiaodan+liang&hl=zh-CN&oi=ao)</p>
+    <p>Supervisor: Xiaodan Liang <a href='https://www.cs.cmu.edu/~xiaodan1/'>(梁小丹)</a></p>
     <br>
   </td>
 </tr></tbody>
