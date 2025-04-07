@@ -124,12 +124,13 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
       </td>
       <td width="100%" valign="middle">
-        <h3>MambaTree: Tree Topology is All You Need in State Space Model</h3>
+        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models</h3>
         <br>
-        <strong>Yicheng Xiao*</strong>, Lin Song*, Shaoli Huang, Jiangshan Wang, Siyu Song, Yixiao Ge, Xiu Li, Ying Shan (&#42; equal contribution)
+        Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin
         <br>
         <br>
-        <em>NeurIPS 2024 Spotlight (CCF-A)</em> / <a href='https://arxiv.org/pdf/2406.02395'>Paper</a> / <a href="https://github.com/EasonXiao-888/GrootVL">Code</a>
+        <em>ACL 2024 (CCF-A)</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
+        <a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
         <br>
       </td>
     </tr>
