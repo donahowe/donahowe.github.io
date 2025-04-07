@@ -104,7 +104,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
 
 <tr>
-  <td style="padding:20px;width:40%;vertical-align:middle" >
+  <td style="padding:20px;width:20%;vertical-align:middle" >
     <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700"  width="240" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle">
