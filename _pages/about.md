@@ -101,6 +101,23 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 </div>
 
 
+<h1 style="padding:20px;width:100%;vertical-align:middle">📖 Educations</h1>
+
+<!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
+- *2018.09 - 2022.06*, B.E in Automation, School of Intelligent Systems Engineering, Nanchang University, Jiangxi, Automation.
+- *2015.09 - 2018.06*, Jiangxi Linchuan No.1 Middle School, China. -->
+
+<div class='school-box'>
+<!-- <div><img src='images/Schools/SYSU.jpeg' alt="sym" width="80"></div> -->
+
+<div class='school-box-text' markdown="1">
+2021.09 - now, Undergraduate.
+
+School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangdong.
+</div>
+</div>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
 
 <tr>
@@ -193,19 +210,3 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
     </td>
   </tr>
   
-
-<h1 style="padding:20px;width:100%;vertical-align:middle">📖 Educations</h1>
-
-<!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
-- *2018.09 - 2022.06*, B.E in Automation, School of Intelligent Systems Engineering, Nanchang University, Jiangxi, Automation.
-- *2015.09 - 2018.06*, Jiangxi Linchuan No.1 Middle School, China. -->
-
-<div class='school-box'>
-<!-- <div><img src='images/Schools/SYSU.jpeg' alt="sym" width="80"></div> -->
-
-<div class='school-box-text' markdown="1">
-2021.09 - now, Undergraduate.
-
-School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangdong.
-</div>
-</div>
