@@ -38,54 +38,9 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 # 📝 Publications 
 
-<div class='paper-box'>
-<div style='display: flex; align-items: flex-start;'>
-<div class='paper-box-image' style='flex: 1;'>
-<img src='images/publications/autostudio.png' alt="sym" width="100%" height="auto">
-</div>
-<div class='paper-box-text' style='flex: 2; padding-left: 20px;' markdown="1">
-  
-AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation \\
-**Junhao Cheng**, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang*
 
-<a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
-[<em>arXiv</em>] <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Project**]](https://howe183.github.io/AutoStudio.io/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Code**]](https://github.com/donahowe/AutoStudio) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://arxiv.org/abs/2406.01388) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
-</div>
-</div>  
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2024</div><img src='images/publications/visdiahalbench.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models](https://aclanthology.org/2024.acl-long.658/) \\
-Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
-
-<a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
-[[**Project**]](https://github.com/qingxingcao/VisDiaHalBench) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Code**]](https://github.com/qingxingcao/VisDiaHalBench) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://aclanthology.org/2024.acl-long.658/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-
-- To investigate the hallucination problem of LVLMs when given long-term misleading textual history, we propose a novel visual dialogue hallucination evaluation benchmark VisDiaHalBench. The benchmark consists of samples with five-turn questions about an edited image and its original version. The benchmark is released in [here](https://github.com/qingxingcao/VisDiaHalBench).
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/publications/theatergen.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation](https://arxiv.org/abs/2404.18919) \\
-**Junhao Cheng**, Baiqiao Yin, Kaixin Cai, Minbin Huang, Hanhui Li, Yuxin He, Xi Lu, Yue Li, Yifei Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang* 
-
-<a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
-[[**Project**]](https://howe140.github.io/theatergen.io/) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Code**]](https://github.com/donahowe/TheaterGen) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://arxiv.org/abs/2404.18919) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-
-- We propose TheaterGen, which is a training-free framework that utilizes a large language model to drive a text-to-image generation model, effectively addressing the issues of semantic consistency and contextual consistency in multi-turn image generation tasks without specialized training.
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Energy</div><img src='images/publications/dkformer.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -149,6 +104,22 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <br>
         <em>arXiv</em> / <a href='https://arxiv.org/abs/2406.01388'>Paper</a> / <a href="https://github.com/donahowe/AutoStudio">Code</a>
         <a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
+        <br>
+      </td>
+    </tr>
+  
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/theatergen.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Baiqiao Yin, Kaixin Cai, Minbin Huang, Hanhui Li, Yuxin He, Xi Lu, Yue Li, Yifei Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
+        <br>
+        <br>
+        <em>arXiv</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
         <br>
       </td>
     </tr>
