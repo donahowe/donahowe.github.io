@@ -57,21 +57,20 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
   
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
-        <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+        <img src="images/publications/BD-Diff.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
       </td>
       <td width="100%" valign="middle">
-        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models</h3>
+        <h3>BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning</h3>
         <br>
-        Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin
+        <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang
         <br>
         <br>
-        <em>ACL 2024 (CCF-A)</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
-        <a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
+        <em>arXiv 2024</em> / <a href='arxiv.org/pdf/2502.01522'>Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
         <br>
       </td>
     </tr>
-
-
+    
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
         <img src="images/publications/autostudio.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
@@ -87,7 +86,23 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <br>
       </td>
     </tr>
-  
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models</h3>
+        <br>
+        Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin
+        <br>
+        <br>
+        <em>ACL 2024 (CCF-A)</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
+        <a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
+        <br>
+      </td>
+    </tr>  
+    
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
         <img src="images/publications/theatergen.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
