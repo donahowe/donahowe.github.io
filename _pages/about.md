@@ -100,6 +100,100 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 </div>
 </div>
 
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<h2 style="padding:20px;width:100%;vertical-align:middle">Publications</h2>
+
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle" >
+    <img src="images/tree_ssm.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+  </td>
+  <td width="100%" valign="middle">
+    <h3 >MambaTree: Tree Topology is All You Need in State Space Model</h3>
+    <br>
+    <strong>Yicheng Xiao*</strong>, Lin Song*, Shaoli Huang, Jiangshan Wang, Siyu Song, Yixiao Ge, Xiu Li, Ying Shan (&#42; equal contribution)
+    <br>
+    <br>
+    <em>NeurIPS 2024 Spotlight (CCF-A)</em> / <a href='https://arxiv.org/pdf/2406.02395'>Paper</a> / <a href="https://github.com/EasonXiao-888/GrootVL">Code</a>
+    <br>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle" >
+    <img src="images/cove.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+  </td>
+  <td width="100%" valign="middle">
+    <h3 >COVE: Unleashing the Diffusion Feature Correspondence for Consistent Video Editing</h3>
+    <br>
+    Jiangshan Wang*, Yue Ma*, Jiayi Guo*, <strong>Yicheng Xiao</strong>, Gao Huang, Xiu Li (&#42; equal contribution)
+    <br>
+    <br>
+    <em>NeurIPS 2024 (CCF-A)</em> / <a href='https://arxiv.org/abs/2406.08850'>Paper</a> / <a href="https://github.com/wangjiangshan0725/COVE">Code</a>
+    <br>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle" >
+    <img src="images/UVCOM.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+  </td>
+  <td width="100%" valign="middle">
+    <h3 >Bridging the Gap: A Unified Video Comprehension Framework for Moment Retrieval and Highlight Detection</h3>
+    <br>
+    <strong>Yicheng Xiao*</strong>,Zhuoyan Luo*, Yong Liu, Yue Ma, Hengwei Bian, Yatai Ji, Yujiu Yang, Xiu Li (&#42; equal contribution)
+    <br>
+    <br>
+    <em>CVPR 2024 (CCF-A)</em> / <a href='https://arxiv.org/pdf/2311.16464.pdf'>Paper</a> / <a href="https://github.com/EasonXiao-888/UVCOM">Code</a>
+    <br>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle">
+    <img src="images/SOC.png" alt="clean-usnob" width="350" height="220" style="box-shadow: 4px 4px 8px #888">
+  </td>
+  <td width="100%" valign="middle" >
+    <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
+    <h3 >SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3>
+    <br>
+    Zhuoyan Luo*, <strong>Yicheng Xiao*</strong>, Yong Liu*, Shuyan Li, Yitong Wang, Yansong Tang, Xiu Li, Yujiu Yang (&#42; equal contribution)
+    <br>
+    <br>
+    <em>NeurIPS 2023 (CCF-A)</em> / <a href="https://arxiv.org/pdf/2305.17011.pdf">Paper</a> / <a href="https://github.com/RobertLuo1/NeurIPS2023_SOC">Code</a>
+    <br>
+  </td>
+</tr>
+
+
+  <tr>
+    <td style="padding:20px;width:20%;vertical-align:middle">
+      <img src="images/iccv_workshop.png" alt="clean-usnob" width="350" height="190" style="box-shadow: 4px 4px 8px #888">
+    </td>
+    <td width="100%" valign="middle">
+      <h3>The First Prize of ICCV 2023 <a href="https://youtube-vos.org/challenge/2023/leaderboard/">The 5th Large-scale Video Object Segmentation Challenge Track3: Referring Video Object Segmentation</a></h3>
+      <br>
+      Zhuoyan Luo*, <strong>Yicheng Xiao*</strong>, Yong Liu*&Dagger;, Yitong Wang, Yansong Tang, Xiu Li, Yujiu Yang.(*equal contribution, &Dagger;Project lead)
+      <br>
+      <br>
+      <em>ICCV Workshop 2023</em> / <a >Paper</a> / <a href="https://github.com/EasonXiao-888/iccv2023_RVOS_Challenge">Code</a>
+  </tr>
+
+  <tr>
+    <td style="padding:20px;width:20%;vertical-align:middle">
+      <img src="images/SemanticAC.png" alt="clean-usnob" width="350" height="170" style="box-shadow: 4px 4px 8px #888">
+    </td>
+    <td width="100%" valign="middle">
+      <h3 >SEMANTICAC: SEMANTICS-ASSISTED FRAMEWORK FOR AUDIO CLASSIFICATION</h3>
+      <br>
+      <strong>Yicheng Xiao*</strong>, Yue Ma*, Shuyan Li, Hantao Zhou, Ran Liao, Xiu Li (&#42; equal contribution)
+      <br>
+      <br>
+      <em>ICASSP 2023 (CCF-B)</em> / <a href="https://arxiv.org/abs/2302.05940">Paper</a> / <a href="https://github.com/EasonXiao-888/SemanticAC">Code</a>
+      <br>
+    </td>
+  </tr>
+  
 # 📖 Educations
 <!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
 - *2018.09 - 2022.06*, B.E in Automation, School of Intelligent Systems Engineering, Nanchang University, Jiangxi, Automation.
