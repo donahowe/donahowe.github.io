@@ -117,23 +117,25 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
 </div>
 </div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
-
-<tr>
-  <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700"  width="240" style="box-shadow: 4px 4px 8px #888">
-  </td>
-  <td width="100%" valign="middle">
-    <h3 >MambaTree: Tree Topology is All You Need in State Space Model</h3>
-    <br>
-    <strong>Yicheng Xiao*</strong>, Lin Song*, Shaoli Huang, Jiangshan Wang, Siyu Song, Yixiao Ge, Xiu Li, Ying Shan (&#42; equal contribution)
-    <br>
-    <br>
-    <em>NeurIPS 2024 Spotlight (CCF-A)</em> / <a href='https://arxiv.org/pdf/2406.02395'>Paper</a> / <a href="https://github.com/EasonXiao-888/GrootVL">Code</a>
-    <br>
-  </td>
-</tr>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
+    <tr>
+      <td style="padding:20px;width:20%;vertical-align:middle">
+        <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>MambaTree: Tree Topology is All You Need in State Space Model</h3>
+        <br>
+        <strong>Yicheng Xiao*</strong>, Lin Song*, Shaoli Huang, Jiangshan Wang, Siyu Song, Yixiao Ge, Xiu Li, Ying Shan (&#42; equal contribution)
+        <br>
+        <br>
+        <em>NeurIPS 2024 Spotlight (CCF-A)</em> / <a href='https://arxiv.org/pdf/2406.02395'>Paper</a> / <a href="https://github.com/EasonXiao-888/GrootVL">Code</a>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
