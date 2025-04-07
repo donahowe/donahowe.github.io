@@ -106,7 +106,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/tree_ssm.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle">
     <h3 >MambaTree: Tree Topology is All You Need in State Space Model</h3>
@@ -121,7 +121,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/cove.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle">
     <h3 >COVE: Unleashing the Diffusion Feature Correspondence for Consistent Video Editing</h3>
@@ -136,7 +136,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/UVCOM.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle">
     <h3 >Bridging the Gap: A Unified Video Comprehension Framework for Moment Retrieval and Highlight Detection</h3>
@@ -151,7 +151,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/SOC.png" alt="clean-usnob" width="350" height="220" style="box-shadow: 4px 4px 8px #888">
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="220" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle" >
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
@@ -168,7 +168,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
   <tr>
     <td style="padding:20px;width:20%;vertical-align:middle">
-      <img src="images/iccv_workshop.png" alt="clean-usnob" width="350" height="190" style="box-shadow: 4px 4px 8px #888">
+      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="190" style="box-shadow: 4px 4px 8px #888">
     </td>
     <td width="100%" valign="middle">
       <h3>The First Prize of ICCV 2023 <a href="https://youtube-vos.org/challenge/2023/leaderboard/">The 5th Large-scale Video Object Segmentation Challenge Track3: Referring Video Object Segmentation</a></h3>
@@ -181,7 +181,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
   <tr>
     <td style="padding:20px;width:20%;vertical-align:middle">
-      <img src="images/SemanticAC.png" alt="clean-usnob" width="350" height="170" style="box-shadow: 4px 4px 8px #888">
+      <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="170" style="box-shadow: 4px 4px 8px #888">
     </td>
     <td width="100%" valign="middle">
       <h3 >SEMANTICAC: SEMANTICS-ASSISTED FRAMEWORK FOR AUDIO CLASSIFICATION</h3>
