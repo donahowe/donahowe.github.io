@@ -47,7 +47,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
     <p >2025-2027 (expected) </p>
     <p>Upcoming MPhil Student at City University of Hong Kong</p>
-    <p>Supervisor: Jing Liao <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en'>(廖菁)</a></p>
+    <p>Supervisor: <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en'>Jing Liao (廖菁)</a></p>
   </td>
 </tr>
 
@@ -59,7 +59,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
     <p >2021-now </p>
     <p>Studying as an Undergraduate Student at Sun Yat-sen University</p>
-    <p>Supervisor: Xiaodan Liang <a href='https://www.cs.cmu.edu/~xiaodan1/'>(梁小丹)</a></p>
+    <p>Supervisor: <a href='https://www.cs.cmu.edu/~xiaodan1/'>Xiaodan Liang (梁小丹)</a></p>
     <br>
   </td>
 </tr></tbody>
