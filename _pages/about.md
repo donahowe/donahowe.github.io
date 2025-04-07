@@ -209,5 +209,3 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
       <br>
     </td>
   </tr>
-  </tbody>
-</table>
