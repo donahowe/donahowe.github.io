@@ -41,12 +41,12 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="150" height="140">
+    <img src="images/Schools/CityUHK.png" alt="clean-usnob" width="150" height="140">
   </td>
   <td width="100%" valign="middle">
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
-    <p >2023-Present </p>
-    <p>Studying as a Master Student at Tsinghua University</p>
+    <p >2025-2027 (expected) </p>
+    <p>Upcoming MPhil Student at City University of Hong Kong</p>
   </td>
 </tr>
 
@@ -56,8 +56,8 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
   </td>
   <td width="100%" valign="middle">
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
-    <p >2019-2023 </p>
-    <p>Studying as an Undergraduate Student at Xidian University</p>
+    <p >2021-now </p>
+    <p>Studying as an Undergraduate Student at Sun Yat-sen University</p>
     <br>
   </td>
 </tr></tbody>
