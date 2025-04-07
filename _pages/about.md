@@ -41,7 +41,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/Schools/CityUHK.png" alt="clean-usnob" width="300" height="280">
+    <img src="images/Schools/CityUHK.png" alt="clean-usnob" width="600" height="560">
   </td>
   <td width="100%" valign="middle">
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
@@ -53,7 +53,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="300" height="280">
+    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="600" height="560">
   </td>
   <td width="100%" valign="middle">
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
