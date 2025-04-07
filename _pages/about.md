@@ -60,7 +60,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <p>Studying as an Undergraduate Student at Xidian University</p>
     <br>
   </td>
-</tr>
+</tr></tbody>
 
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -112,7 +112,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
         <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
         <br>
       </td>
-    </tr></tbody>
+    </tr>
     
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
