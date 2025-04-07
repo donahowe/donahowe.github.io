@@ -36,6 +36,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 - *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
 
 
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">📖 Educations</h1>
 
 <tr>
@@ -60,6 +61,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
     <br>
   </td>
 </tr>
+
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
@@ -110,7 +112,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
         <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
         <br>
       </td>
-    </tr>
+    </tr></tbody>
     
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
