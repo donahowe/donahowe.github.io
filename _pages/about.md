@@ -119,6 +119,7 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
+  
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
         <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
@@ -136,17 +137,18 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
     </tr>
 
 
-<tr>
-  <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700"  width="240" style="box-shadow: 4px 4px 8px #888">
-  </td>
-  <td width="100%" valign="middle">
-    <h3 >COVE: Unleashing the Diffusion Feature Correspondence for Consistent Video Editing</h3>
-    <br>
-    Jiangshan Wang*, Yue Ma*, Jiayi Guo*, <strong>Yicheng Xiao</strong>, Gao Huang, Xiu Li (&#42; equal contribution)
-    <br>
-    <br>
-    <em>NeurIPS 2024 (CCF-A)</em> / <a href='https://arxiv.org/abs/2406.08850'>Paper</a> / <a href="https://github.com/wangjiangshan0725/COVE">Code</a>
-    <br>
-  </td>
-</tr>
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/autostudio.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
+        <br>
+        <br>
+        <em>arXiv</em> / <a href='https://arxiv.org/abs/2406.01388'>Paper</a> / <a href="https://github.com/donahowe/AutoStudio">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
+        <br>
+      </td>
+    </tr>
