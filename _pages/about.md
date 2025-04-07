@@ -100,12 +100,12 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 </div>
 </div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
 <h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
-  
+
 <tr>
-  <td style="padding:20px;width:20%;vertical-align:middle" >
-    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="100%" style="box-shadow: 4px 4px 8px #888">
+  <td style="padding:20px;width:40%;vertical-align:middle" >
+    <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700"  width="240" style="box-shadow: 4px 4px 8px #888">
   </td>
   <td width="100%" valign="middle">
     <h3 >MambaTree: Tree Topology is All You Need in State Space Model</h3>
