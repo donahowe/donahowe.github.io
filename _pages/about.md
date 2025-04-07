@@ -18,7 +18,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 🧍‍♂️ About me
+# 🧍‍♂ About me
 
 My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU). I conduct research at [HCP-I2 Lab](https://www.sysu-hcp.net/), supervised by Prof. Xiaodan Liang [(梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am currently interning at [Tencent PCG Arc Lab](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for image/video generation and other downstream tasks to make AI serve for humans.
 
@@ -30,8 +30,9 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 - *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
 
 # 💻 Internships
-- *2024.06 - now*, [Tencent PCG ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
-- *2023.02 - 2024.06*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
+
+- *2024.10 - now*, [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index), Shenzhen.
+- *2023.02 - 2024.10*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
 - *2023.08 - 2024.02*, [Pengcheng Laboratory](https://www.pcl.ac.cn/), Shenzhen.
 - *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
 
