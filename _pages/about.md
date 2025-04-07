@@ -79,7 +79,7 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
       <td width="100%" valign="middle">
         <h3>Object Isolated Attention for Consistent Story Visualization</h3>
         <br>
-        Xiangyang Luo, <strong>Junhao Cheng<strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu
+        Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu
         <br>
         <br>
         <em>ICME 2025 (CCF-B)</em> / <a href='https://arxiv.org/abs/2503.23353'>Paper</a>
