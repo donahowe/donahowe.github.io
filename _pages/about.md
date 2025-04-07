@@ -82,7 +82,7 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <strong>Junhao Cheng</strong>, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
         <br>
         <br>
-        <em>arXiv</em> / <a href='https://arxiv.org/abs/2406.01388'>Paper</a> / <a href="https://github.com/donahowe/AutoStudio">Code</a>
+        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2406.01388'>Paper</a> / <a href="https://github.com/donahowe/AutoStudio">Code</a>
         <a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
         <br>
       </td>
@@ -98,7 +98,7 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <strong>Junhao Cheng</strong>, Baiqiao Yin, Kaixin Cai, Minbin Huang, Hanhui Li, Yuxin He, Xi Lu, Yue Li, Yifei Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
         <br>
         <br>
-        <em>arXiv</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
+        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
         <a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
         <br>
       </td>
