@@ -61,7 +61,7 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <img src="images/publications/animegamer.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
       </td>
       <td width="100%" valign="middle">
-        <h3>BD-Diff: AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
+        <h3>AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
         <br>
         <strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan
         <br>
