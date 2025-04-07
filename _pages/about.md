@@ -36,26 +36,6 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 - *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
 
 
-# 📝 Publications 
-
-
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Energy</div><img src='images/publications/dkformer.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4823826) \\
-**Junhao Cheng**, Xing Luo\*, Zhi Jin\*
-
-[[**Project**]](https://doi.org/10.1016/j.energy.2024.133511) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-[[**Paper**]](https://doi.org/10.1016/j.energy.2024.133511) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
-
-- We initially propose the DKFormer forecasting model, which integrates domain knowledge through three constraint modules that are crucial in data pre-processing, model training, and forecasting stages.
-</div>
-</div>
-
-
 <h1 style="padding:20px;width:100%;vertical-align:middle">📖 Educations</h1>
 
 <!-- - *2022.06 - (now)*, M.S in Artificial Intelligence, School of Intelligent Systems Engineering, Sun Yat-sen University, Guangdong. 
@@ -120,6 +100,21 @@ School of Intelligent Systems Engineering, Sun Yat-sen University (SYSU), Guangd
         <br>
         <em>arXiv</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
         <a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
+        <br>
+      </td>
+    </tr>
+  
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/dkformer.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Xing Luo, Zhi Jin
+        <br>
+        <br>
+        <em>Energy (JCR-Q1)</em> / <a href='https://doi.org/10.1016/j.energy.2024.133511'>Paper</a>
         <br>
       </td>
     </tr>
