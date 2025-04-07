@@ -101,7 +101,7 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 </div>
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<h2 style="padding:20px;width:100%;vertical-align:middle">Publications</h2>
+<h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
   
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
