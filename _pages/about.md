@@ -102,8 +102,8 @@ Qingxing Cao, **Junhao Cheng**, Xiaodan Liang\*, Liang Lin\*
 
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<h2 style="padding:20px;width:100%;vertical-align:middle">Publications</h2>
-
+# 📝 Publications 
+  
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle" >
     <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="350" height="120" style="box-shadow: 4px 4px 8px #888">
