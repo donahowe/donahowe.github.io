@@ -24,7 +24,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 I am currently a long-term intern at [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for **video generation and reasoning** and other downstream tasks to make AI serve humans.
 
-💡 _I am looking for research collaborations and PhD opportunities. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
+_I am looking for research collaborations and PhD opportunities. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
 # 🔥 News  
 
