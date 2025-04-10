@@ -104,7 +104,7 @@ _I am looking for research collaborations and PhD opportunities. If you think th
         <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang
         <br>
         <br>
-        <em>arXiv 2025</em> / <a href='arxiv.org/pdf/2502.01522'>Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
+        <em>arXiv 2025</em> / <a href="https://arxiv.org/abs/2502.01522">Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
         <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
         <br>
       </td>
