@@ -20,7 +20,7 @@ redirect_from:
 
 # 👦 About me
 
-My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/), and an upcoming MPhil student at City University of Hong Kong (CityUHK) supervised by Prof. [Jing Liao (廖菁)](https://www.cs.cmu.edu/~xiaodan1/).
+My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/).
 
 I am currently a long-term intern at [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for **video generation and reasoning** and other downstream tasks to make AI serve humans.
 
@@ -44,17 +44,6 @@ _I am looking for research collaborations and PhD opportunities. If you think th
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <h1 style="padding:20px;width:100%;vertical-align:middle">🎓 Educations</h1>
 
-<tr>
-  <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/Schools/CityU.svg" alt="clean-usnob" width="600" height="560">
-  </td>
-  <td width="100%" valign="middle">
-    <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
-    <p >2025-2027 (expected) </p>
-    <p>Upcoming MPhil Student at City University of Hong Kong</p>
-    <p>Supervisor: <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en'>Jing Liao (廖菁)</a></p>
-  </td>
-</tr>
 
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
