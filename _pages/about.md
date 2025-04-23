@@ -35,7 +35,7 @@ _I am looking for research collaborations and PhD opportunities. If you think th
 
 # 💻 Internships
 
-- *2024.10 - now*, [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index), Shenzhen.
+- *2024.10 - now*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
 - *2023.02 - 2024.10*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
 - *2023.08 - 2024.02*, [Pengcheng Laboratory](https://www.pcl.ac.cn/), Shenzhen.
 - *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
