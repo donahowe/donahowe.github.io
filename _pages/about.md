@@ -20,7 +20,7 @@ redirect_from:
 
 # 👦 About me
 
-My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/).
+My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab.
 
 I am currently a long-term intern at [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for **video generation and reasoning** and other downstream tasks to make AI serve humans.
 
