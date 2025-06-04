@@ -18,7 +18,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 👦 About me
+# 👋 About me
 
 My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in [Ming-Hsuan](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
 
@@ -27,41 +27,55 @@ I am currently a long-term intern at [ARC Lab, Tencent PCG](https://arc.tencent.
 _I am looking for research collaborations and PhD opportunities. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
 # 🔥 News  
-
-- *2024.10*: &nbsp;🎉🎉 One paper as the first author is accepted by Energy (JCR Q1).
-- *2024.06*: &nbsp;🎉🎉 Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨) for comic book generation.
-- *2024.05*: &nbsp;🎉🎉 One paper as the second author is accepted by ACL 2024.
-- *2024.04*: &nbsp;🎉🎉 Release [TheaterGen](https://github.com/donahowe/TheaterGen) for benchmarking multi-turn image generation.
+- *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
+- *2025.04*: &nbsp; Release [AnimeGamer](https://howe125.github.io/AnimeGamer.github.io/) (300+Stars✨), ransforming characters from anime films into interactive entities with a MLLM.
+- *2024.06*: &nbsp; Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨), generating comic book with multi-character, multi-turn consistency.
+- *2024.05*: &nbsp;🎉🎉 One paper is accepted by ACL 2024.
 
 # 💻 Internships
 
-- *2024.10 - now*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
-- *2023.02 - 2024.10*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
-- *2023.08 - 2024.02*, [Pengcheng Laboratory](https://www.pcl.ac.cn/), Shenzhen.
+- *2024.09 - now*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
+- *2023.08 - 2024.09*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
 - *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
 
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<h1 style="padding:20px;width:100%;vertical-align:middle">🎓 Educations</h1>
 
 
+<h1 style="padding:20px 0;width:100%;vertical-align:middle;text-align:left;">🎓 Educations</h1>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
 <tr>
   <td style="padding:20px;width:20%;vertical-align:middle">
-    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="600" height="560">
+    <img src="images/Schools/CityUHK.png" alt="clean-usnob" width="400" height="373">
   </td>
   <td width="100%" valign="middle">
     <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
-    <p >2021-now </p>
+    <p >2025-now </p>
+    <p>Studying as an MPhil Student at City University of Hong Kong</p>
+    <p>Supervisor: <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl/'>Jing Liao (廖菁)</a></p>
+    <br>
+  </td>
+</tr>
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle">
+    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="400" height="373">
+  </td>
+  <td width="100%" valign="middle">
+    <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
+    <p >2021-2025 </p>
     <p>Studying as an Undergraduate Student at Sun Yat-sen University</p>
     <p>Supervisor: <a href='https://www.cs.cmu.edu/~xiaodan1/'>Xiaodan Liang (梁小丹)</a></p>
     <br>
   </td>
-</tr></tbody>
+</tr>
+  </tbody>
+</table>
 
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<h1 style="padding:20px;width:100%;vertical-align:middle">📝 Publications</h1>
+<h1 style="padding:20px 0;width:100%;vertical-align:middle;text-align:left;">📝 Publications</h1>
 
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
 
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
@@ -172,3 +186,4 @@ _I am looking for research collaborations and PhD opportunities. If you think th
         <br>
       </td>
     </tr>
+</tbody>

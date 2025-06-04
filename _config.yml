@@ -23,9 +23,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "JunhaoCheng"
   avatar           : "images/junhaocheng.png"
-  bio              : "Sun Yat-sen University (SYSU)"
+  bio              : "CityUHK"
   location         : "Shenzhen, Guangdong, China"
-  employer         : "HCPLab"
+  employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=zh-CN"
   email            : "howe4884@outlook.com"
