@@ -18,13 +18,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 👋 About me
+# 👋 About me [Updated 06/13/2025]
 
-My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in [Ming-Hsuan](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
+My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
 
-I am currently a long-term intern at [ARC Lab, Tencent PCG](https://arc.tencent.com/zh/index). My research interests lie in **interactive and generative AI**. Now I focus on designing novel applications for **video generation and reasoning** and other downstream tasks to make AI serve humans.
+I am currently an research intern at [Kuaishou Kling group](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
 
-_I am looking for research collaborations and PhD opportunities. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
+_I am looking for research collaborations and **PhD opportunities**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
 # 🔥 News  
 - *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
@@ -33,10 +33,10 @@ _I am looking for research collaborations and PhD opportunities. If you think th
 - *2024.05*: &nbsp;🎉🎉 One paper is accepted by ACL 2024.
 
 # 💻 Internships
-
-- *2024.09 - now*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index), Shenzhen.
-- *2023.08 - 2024.09*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html), Shenzhen.
-- *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/science/team/detail/763), Beijing.
+- *2025.06 - now*, [Kuaishou, Kling Team](https://app.klingai.com/cn/en). Mentor: [Xin Tao (陶鑫)](https://www.xtao.website/)
+- *2024.09 - 2025.06*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index). Mentor: [Yuying Ge (葛玉莹)](https://geyuying.github.io/)
+- *2023.08 - 2024.09*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html). 
+- *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/). Mentor: [Yunzhe Liu (柳昀哲)](https://www.cibr.ac.cn/science/team/detail/763)
 
 
 
