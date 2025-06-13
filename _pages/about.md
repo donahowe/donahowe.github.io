@@ -18,7 +18,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 👋 About me [Updated 06/13/2025]
+# 👋 About me [Updated 13/06/2025]
 
 My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
 
