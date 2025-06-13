@@ -24,7 +24,7 @@ My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student
 
 I am currently an research intern at [Kuaishou Kling group](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
 
-_I am looking for research collaborations and **PhD opportunities**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
+_I am looking for research collaborations and **PhD opportunities (27 Fall)**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
 # 🔥 News  
 - *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
