@@ -28,7 +28,7 @@ _I am looking for research collaborations and **PhD opportunities (27 Fall)**. I
 
 # 🔥 News  
 - *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
-- *2025.04*: &nbsp; Release [AnimeGamer](https://howe125.github.io/AnimeGamer.github.io/) (300+Stars✨), transforming characters from anime films into interactive entities with a MLLM.
+- *2025.04*: &nbsp; Release [AnimeGamer](https://howe125.github.io/AnimeGamer.github.io/) (300+Stars✨), transforming characters from anime films into interactive entities with an MLLM.
 - *2024.06*: &nbsp; Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨), generating comic book with multi-character, multi-turn consistency.
 - *2024.05*: &nbsp;🎉🎉 One paper is accepted by ACL 2024.
 
