@@ -20,13 +20,14 @@ redirect_from:
 
 # 👋 About me [Updated 22/06/2025]
 
-My name is **Junhao Cheng (程钧豪)**. I am currently an undergraduate student at Sun Yat-sen University (SYSU) supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). I am an upcoming MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in [Ming-Hsuan](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
+My name is **Junhao Cheng (程钧豪)**. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). Now I am an MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in Prof. [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
 
-I am currently an research intern at [Kuaishou Kling team](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
+I am currently a research intern at [Kuaishou Kling team](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
 
 _I am looking for research collaborations and **PhD opportunities (27 Fall)**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
 # 🔥 News  
+- *2025.06*: &nbsp;🎉🎉 One paper is accepted by ICCV 2025.
 - *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
 - *2025.04*: &nbsp; Release [AnimeGamer](https://howe125.github.io/AnimeGamer.github.io/) (300+Stars✨), transforming characters from anime films into interactive entities with an MLLM.
 - *2024.06*: &nbsp; Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨), generating comic book with multi-character, multi-turn consistency.
@@ -85,7 +86,7 @@ _I am looking for research collaborations and **PhD opportunities (27 Fall)**. I
         <strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan
         <br>
         <br>
-        <em>arXiv 2025</em> / <a href='https://arxiv.org/abs/2504.01014'>Paper</a> / <a href="https://github.com/TencentARC/AnimeGamer">Code</a>
+        <em>ICCV 2025</em> / <a href='https://arxiv.org/abs/2504.01014'>Paper</a> / <a href="https://github.com/TencentARC/AnimeGamer">Code</a>
         <a class="more-link" href="https://github.com/TencentARC/AnimeGamer" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/TencentARC/AnimeGamer?style=social"></a>
         <br>
       </td>
