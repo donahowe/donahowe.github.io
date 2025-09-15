@@ -1,1 +1,188 @@
+---
+permalink: /
+title: ""
+excerpt: ""
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+<!-- main: /Users/jhh/Project/Github/JackAILab.github.io/_config.yml -->
 
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+
+<span class='anchor' id='about-me'></span>
+
+# 👋 About me [Updated 26/06/2025]
+
+My name is **Junhao Cheng (程钧豪)**. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). Now I am an MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in Prof. [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
+
+I am currently a research intern at [Kuaishou Kling team](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
+
+_I am looking for research collaborations and **PhD opportunities (27 Fall)**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
+
+# 🔥 News  
+- *2025.06*: &nbsp;🎉🎉 One paper is accepted by ICCV 2025.
+- *2025.06*: &nbsp; Release [Video-Holmes](https://video-holmes.github.io/Page.github.io/), evaluating MLLMs for complex video reasoning like Holmes.
+- *2025.04*: &nbsp; Release [AnimeGamer](https://howe125.github.io/AnimeGamer.github.io/) (300+Stars✨), transforming characters from anime films into interactive entities with an MLLM.
+- *2024.06*: &nbsp; Release [AutoStudio](https://howe183.github.io/AutoStudio.io/) (400+Stars✨), generating comic book with multi-character, multi-turn consistency.
+- *2024.05*: &nbsp;🎉🎉 One paper is accepted by ACL 2024.
+
+# 💻 Internships
+- *2025.06 - now*, [Kuaishou, Kling Team](https://app.klingai.com/cn/en). Mentor: [Xin Tao (陶鑫)](https://www.xtao.website/)
+- *2024.09 - 2025.06*, [Tencent, ARC Lab](https://arc.tencent.com/zh/index). Mentor: [Yuying Ge (葛玉莹)](https://geyuying.github.io/)
+- *2023.08 - 2024.09*, [Lenovo, Research Institute](https://research.lenovo.com/webapp/view/researchField.html). 
+- *2023.03 - 2023.08*, [Chinese Institute of Brain Research (CIBR), Liu Lab](https://www.cibr.ac.cn/). Mentor: [Yunzhe Liu (柳昀哲)](https://www.cibr.ac.cn/science/team/detail/763)
+
+
+<h1 style="padding:20px 0;width:100%;vertical-align:middle;text-align:left;">🎓 Educations</h1>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle">
+    <img src="images/Schools/CityUHK.png" alt="clean-usnob" width="400" height="373">
+  </td>
+  <td width="100%" valign="middle">
+    <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
+    <p >2025-now </p>
+    <p>Studying as an MPhil Student at City University of Hong Kong</p>
+    <p>Supervisor: <a href='https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl/'>Jing Liao (廖菁)</a></p>
+    <br>
+  </td>
+</tr>
+<tr>
+  <td style="padding:20px;width:20%;vertical-align:middle">
+    <img src="images/Schools/SYSU.jpg" alt="clean-usnob" width="400" height="373">
+  </td>
+  <td width="100%" valign="middle">
+    <!-- <h3 class="papertitle">SOC: Semantic-Assisted Object Cluster for Referring Video Object Segmentation</h3> -->
+    <p >2021-2025 </p>
+    <p>Studying as an Undergraduate Student at Sun Yat-sen University</p>
+    <p>Supervisor: <a href='https://www.cs.cmu.edu/~xiaodan1/'>Xiaodan Liang (梁小丹)</a></p>
+    <br>
+  </td>
+</tr>
+  </tbody>
+</table>
+
+
+<h1 style="padding:20px 0;width:100%;vertical-align:middle;text-align:left;">📝 Publications</h1>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<tbody>
+
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/animegamer.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan
+        <br>
+        <br>
+        <em>ICCV 2025</em> / <a href='https://arxiv.org/abs/2504.01014'>Paper</a> / <a href="https://github.com/TencentARC/AnimeGamer">Code</a>
+        <a class="more-link" href="https://github.com/TencentARC/AnimeGamer" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/TencentARC/AnimeGamer?style=social"></a>
+        <br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/isolate.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>Object Isolated Attention for Consistent Story Visualization</h3>
+        <br>
+        Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu
+        <br>
+        <br>
+        <em>ICME 2025 (CCF-B)</em> / <a href='https://arxiv.org/abs/2503.23353'>Paper</a>
+        <br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/BD-Diff.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang
+        <br>
+        <br>
+        <em>arXiv 2025</em> / <a href="https://arxiv.org/abs/2502.01522">Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
+        <br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/autostudio.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
+        <br>
+        <br>
+        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2406.01388'>Paper</a> / <a href="https://github.com/donahowe/AutoStudio">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/AutoStudio" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social"></a>
+        <br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/visdiahalbench.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing  Hallucination in Large Vision-Language Models</h3>
+        <br>
+        Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin
+        <br>
+        <br>
+        <em>ACL 2024 (CCF-A)</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
+        <a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
+        <br>
+      </td>
+    </tr>  
+    
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/theatergen.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Baiqiao Yin, Kaixin Cai, Minbin Huang, Hanhui Li, Yuxin He, Xi Lu, Yue Li, Yifei Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
+        <br>
+        <br>
+        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
+        <a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
+        <br>
+      </td>
+    </tr>
+  
+    <tr>
+      <td style="padding:20px;width:45%;vertical-align:middle">
+        <img src="images/publications/dkformer.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
+      </td>
+      <td width="100%" valign="middle">
+        <h3>Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting</h3>
+        <br>
+        <strong>Junhao Cheng</strong>, Xing Luo, Zhi Jin
+        <br>
+        <br>
+        <em>Energy (JCR-Q1)</em> / <a href='https://doi.org/10.1016/j.energy.2024.133511'>Paper</a>
+        <br>
+      </td>
+    </tr>
+</tbody>
