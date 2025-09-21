@@ -22,7 +22,7 @@ redirect_from:
 
 My name is **Junhao Cheng (程钧豪)**. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. [Xiaodan Liang (梁小丹)](https://www.cs.cmu.edu/~xiaodan1/). Now I am an MPhil student at Prof. [Jing Liao (廖菁)](https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en)'s lab. Before this, I had the privilege of interning in Prof. [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao)'s lab and working closely with him.
 
-I am currently a research intern at [Kuaishou Kling team](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation** and other interesting downstream tasks.
+I am currently a research intern at [Kuaishou Kling team](https://app.klingai.com/cn/en). My research interests lie in **Interactive AI**. Now I focus on designing novel applications for **video understanding and generation and other interesting downstream tasks**.
 
 _I am looking for research collaborations and **PhD opportunities (27 Fall)**. If you think there is anything interesting we can discuss, feel free to [email](mailto:Howe4884@outlook.com) me!_
 
@@ -102,23 +102,7 @@ _I am looking for research collaborations and **PhD opportunities (27 Fall)**. I
         Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu
         <br>
         <br>
-        <em>ICME 2025 (CCF-B)</em> / <a href='https://arxiv.org/abs/2503.23353'>Paper</a>
-        <br>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="padding:20px;width:45%;vertical-align:middle">
-        <img src="images/publications/BD-Diff.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
-      </td>
-      <td width="100%" valign="middle">
-        <h3>BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning</h3>
-        <br>
-        <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang
-        <br>
-        <br>
-        <em>arXiv 2025</em> / <a href="https://arxiv.org/abs/2502.01522">Paper</a> / <a href="https://github.com/donahowe/BD-Diff">Code</a>
-        <a class="more-link" href="https://github.com/donahowe/BD-Diff" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/BD-Diff?style=social"></a>
+        <em>ICME 2025</em> / <a href='https://arxiv.org/abs/2503.23353'>Paper</a>
         <br>
       </td>
     </tr>
@@ -149,27 +133,11 @@ _I am looking for research collaborations and **PhD opportunities (27 Fall)**. I
         Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin
         <br>
         <br>
-        <em>ACL 2024 (CCF-A)</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
+        <em>ACL 2024</em> / <a href='https://aclanthology.org/2024.acl-long.658/'>Paper</a> / <a href="https://github.com/qingxingcao/VisDiaHalBench">Code</a>
         <a class="more-link" href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social"></a>
         <br>
       </td>
     </tr>  
-    
-    <tr>
-      <td style="padding:20px;width:45%;vertical-align:middle">
-        <img src="images/publications/theatergen.png" alt="clean-usnob" width="700" height="400" style="box-shadow: 4px 4px 8px #888">
-      </td>
-      <td width="100%" valign="middle">
-        <h3>TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation</h3>
-        <br>
-        <strong>Junhao Cheng</strong>, Baiqiao Yin, Kaixin Cai, Minbin Huang, Hanhui Li, Yuxin He, Xi Lu, Yue Li, Yifei Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
-        <br>
-        <br>
-        <em>arXiv 2024</em> / <a href='https://arxiv.org/abs/2404.18919'>Paper</a> / <a href="https://github.com/donahowe/TheaterGen">Code</a>
-        <a class="more-link" href="https://github.com/donahowe/TheaterGen" target="_blank"><img alt="GitHub stars" align="right" src="https://img.shields.io/github/stars/donahowe/TheaterGen?style=social"></a>
-        <br>
-      </td>
-    </tr>
   
     <tr>
       <td style="padding:20px;width:45%;vertical-align:middle">
