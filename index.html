@@ -17,6 +17,17 @@
             padding: 0;
             background-color: #f4f7f6;
             overflow-x: hidden;
+            /* 定义浅色渐变：使用淡粉、淡紫、浅蓝、浅绿四种柔和颜色 */
+            background: linear-gradient(135deg, #FFC0CB, #E0BBE4, #957ADF, #80D0FF);
+                
+            /* 关键步骤：将背景尺寸放大到 600% 600%，以容纳更多颜色区域，增强缠绕感 */
+            background-size: 600% 600%; 
+            
+            /* 应用动画：名称为 'soft-gradient'，持续 20 秒，缓动效果 ease-in-out，无限循环 */
+            animation: soft-gradient 20s ease-in-out infinite;
+            
+            /* 确保背景覆盖整个视口 */
+            height: 100vh;
         }
         .container {
             max-width: 1200px;
@@ -347,6 +358,30 @@
             background-color: #eef1f0;
             border-top: 1px solid #e0e0e0;
             border-radius: 0 0 12px 12px;
+        }
+
+        /* 定义渐变移动的动画 */
+        @keyframes soft-gradient {
+            0% {
+                /* 动画开始：左上角 */
+                background-position: 0% 0%;
+            }
+            25% {
+                /* 移动到右上角 */
+                background-position: 100% 0%;
+            }
+            50% {
+                /* 移动到右下角 */
+                background-position: 100% 100%;
+            }
+            75% {
+                /* 移动到左下角 */
+                background-position: 0% 100%;
+            }
+            100% {
+                /* 动画结束：恢复到初始位置，实现无缝循环 */
+                background-position: 0% 0%;
+            }
         }
 
         /* Responsive Design */
