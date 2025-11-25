@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junhao Cheng (程钧豪) - 个人主页</title>
+    <title>Junhao Cheng Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* 设置整个页面的背景 */
         body {
-            /* 1. 设置背景图片路径 */
-            /* 确保 'bg.jpg' 的路径相对于您的 CSS 文件是正确的 */
             background-image: url('images/bg.jpg'); 
 
-            /* 2. 核心设置：确保图片完美覆盖整个视口 */
             background-size: cover; 
             
-            /* 3. 防止背景图片平铺重复 */
             background-repeat: no-repeat;
             
-            /* 4. 将背景图固定，不随页面滚动 */
             background-attachment: fixed; 
             
-            /* 5. 居中显示背景图片 */
             background-position: center center;
             
-            /* 6. 可选：设置背景颜色，在图片加载失败或显示不完全时作为后备 */
             background-color: #f0f0f0; 
         }
         .container {
@@ -102,22 +94,18 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
-/* --- 头像调整：增大尺寸，保持标准椭圆形和简洁蓝色边框 --- */
 .sidebar-avatar {
-    width: 180px; /* 宽放大到 180px */
-    height: 240px; /* 高放大到 240px */
+    width: 180px;
+    height: 240px; 
     
-    /* 保持标准的椭圆形（高比宽长） */
     border-radius: 50%; 
     
     object-fit: cover;
     margin-bottom: 20px;
     
-    /* 边框和阴影略微增大，保持比例 */
-    border: 6px solid #007bff; /* 边框从 5px 增至 6px */
-    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); /* 阴影从 8px 增至 10px */
+    border: 6px solid #007bff;
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); 
     
-    /* 确保移除所有多余的渐变背景属性 */
     background-image: none;
     background-origin: unset;
     background-clip: unset;
@@ -127,20 +115,18 @@
 
 .sidebar-avatar:hover {
     transform: scale(1.05) rotate(2deg);
-    /* 悬停时效果不变 */
     box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); 
 }
 
-        /* --- 名字调整：英文主标题，中文副标题 --- */
         .sidebar-name-en {
-            font-size: 2em; /* 英文名作为主标题，字体略小 */
+            font-size: 2em;
             margin-bottom: 0;
             color: #2c3e50;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
             line-height: 1.2;
         }
         .sidebar-name-cn {
-            font-size: 1.2em; /* 中文名作为副标题 */
+            font-size: 1.2em; 
             color: #7f8c8d;
             margin-top: 5px;
             margin-bottom: 15px;
@@ -200,12 +186,9 @@
             transform: translateY(-5px);
         }
 
-        /* News Section 
-        * 重点修改: news-content 字体大小变小
-        */
         .news-item {
             display: flex;
-            margin-bottom: 15px; /* 稍微缩小间距 */
+            margin-bottom: 15px; 
             align-items: flex-start;
             border-left: 4px solid #007bff;
             padding-left: 15px;
@@ -220,12 +203,12 @@
             flex-shrink: 0;
             margin-right: 18px;
             width: 90px;
-            font-size: 1em; /* 稍微缩小日期字体 */
+            font-size: 1em; 
         }
         .news-content {
             color: #555;
             flex-grow: 1;
-            font-size: 1em; /* 缩小字体以适应一行 */
+            font-size: 1em;
         }
 
         /* Education/Internship Card Styling */
@@ -644,3 +627,4 @@
 
 </body>
 </html>
+
