@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* CSS Reset and Global Styles */
+        /* 设置整个页面的背景 */
         body {
-            font-family: 'Roboto', 'Noto Sans SC', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            overflow-x: hidden;
-            /* 定义浅色渐变：使用淡粉、淡紫、浅蓝、浅绿四种柔和颜色 */
-            background: linear-gradient(135deg, #FFC0CB, #E0BBE4, #957ADF, #80D0FF);
-                
-            /* 关键步骤：将背景尺寸放大到 600% 600%，以容纳更多颜色区域，增强缠绕感 */
-            background-size: 600% 600%; 
+            /* 1. 设置背景图片路径 */
+            /* 确保 'bg.jpg' 的路径相对于您的 CSS 文件是正确的 */
+            background-image: url('images/bg.jpg'); 
+
+            /* 2. 核心设置：确保图片完美覆盖整个视口 */
+            background-size: cover; 
             
-            /* 应用动画：名称为 'soft-gradient'，持续 20 秒，缓动效果 ease-in-out，无限循环 */
-            animation: soft-gradient 20s ease-in-out infinite;
+            /* 3. 防止背景图片平铺重复 */
+            background-repeat: no-repeat;
             
-            /* 确保背景覆盖整个视口 */
-            height: 100vh;
+            /* 4. 将背景图固定，不随页面滚动 */
+            background-attachment: fixed; 
+            
+            /* 5. 居中显示背景图片 */
+            background-position: center center;
+            
+            /* 6. 可选：设置背景颜色，在图片加载失败或显示不完全时作为后备 */
+            background-color: #f0f0f0; 
         }
         .container {
             max-width: 1200px;
