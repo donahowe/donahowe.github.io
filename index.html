@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junhao Cheng (程钧豪) - 个人主页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* CSS Reset and Global Styles */
+        body {
+            font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 1.8em;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #007bff;
+            margin-bottom: 25px;
+            padding-top: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        h2::before { /* 标题下划线的动态效果 */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #0056b3;
+            transition: width 0.4s ease-out;
+        }
+        .section-card:hover h2::before {
+            width: 100%;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+            transform: translateY(-1px);
+        }
+        strong {
+            font-weight: 700;
+            color: #1abc9c;
+        }
+
+        /* ----------------------- */
+        /* Sidebar (左侧边栏 - 个人信息) */
+        /* ----------------------- */
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: sticky; /* 吸顶效果 */
+            top: 30px;
+            align-self: flex-start;
+            transition: all 0.3s ease-in-out;
+        }
+        .sidebar:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+/* --- 头像调整：增大尺寸，保持标准椭圆形和简洁蓝色边框 --- */
+.sidebar-avatar {
+    width: 180px; /* 宽放大到 180px */
+    height: 240px; /* 高放大到 240px */
+    
+    /* 保持标准的椭圆形（高比宽长） */
+    border-radius: 50%; 
+    
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+    /* 边框和阴影略微增大，保持比例 */
+    border: 6px solid #007bff; /* 边框从 5px 增至 6px */
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); /* 阴影从 8px 增至 10px */
+    
+    /* 确保移除所有多余的渐变背景属性 */
+    background-image: none;
+    background-origin: unset;
+    background-clip: unset;
+    
+    transition: transform 0.4s ease-in-out;
+}
+
+.sidebar-avatar:hover {
+    transform: scale(1.05) rotate(2deg);
+    /* 悬停时效果不变 */
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); 
+}
+
+        /* --- 名字调整：英文主标题，中文副标题 --- */
+        .sidebar-name-en {
+            font-size: 2em; /* 英文名作为主标题，字体略小 */
+            margin-bottom: 0;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        .sidebar-name-cn {
+            font-size: 1.2em; /* 中文名作为副标题 */
+            color: #7f8c8d;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .sidebar-title {
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        .sidebar-info p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .sidebar-info i {
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        .social-links {
+            margin-top: 25px;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 20px;
+        }
+        .social-links a {
+            font-size: 1.8em;
+            margin: 0 10px;
+            color: #7f8c8d;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-links a:hover {
+            color: #007bff;
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        /* ----------------------- */
+        /* Main Content (右侧主要内容) */
+        /* ----------------------- */
+        .main-content {
+            flex-grow: 1;
+        }
+        .section-card {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .section-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+
+        /* News Section 
+        * 重点修改: news-content 字体大小变小
+        */
+        .news-item {
+            display: flex;
+            margin-bottom: 15px; /* 稍微缩小间距 */
+            align-items: flex-start;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            transition: background-color 0.3s;
+        }
+        .news-item:hover {
+            background-color: #f8f9fa;
+        }
+        .news-date {
+            font-weight: 700;
+            color: #e74c3c;
+            flex-shrink: 0;
+            margin-right: 18px;
+            width: 90px;
+            font-size: 1em; /* 稍微缩小日期字体 */
+        }
+        .news-content {
+            color: #555;
+            flex-grow: 1;
+            font-size: 1em; /* 缩小字体以适应一行 */
+        }
+
+        /* Education/Internship Card Styling */
+        .exp-item {
+            display: flex;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ecf0f1;
+            align-items: center;
+        }
+        .exp-item:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .exp-logo {
+            width: 110px;
+            height: 110px;
+            flex-shrink: 0;
+            margin-right: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            object-fit: contain;
+            padding: 8px;
+            background-color: #fcfcfc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .exp-logo:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .exp-details {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .exp-details h3 {
+            font-size: 1.25em;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        .exp-details p {
+            margin: 4px 0;
+            font-size: 0.98em;
+            color: #666;
+        }
+        .exp-details .time-period {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .exp-details a {
+            font-weight: 500;
+        }
+
+        /* Publications Card Styling */
+        .publication-item {
+            display: flex;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 25px;
+            align-items: flex-start;
+            transition: background-color 0.3s;
+        }
+        .publication-item:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .publication-item:hover {
+            background-color: #fdfdfd;
+        }
+        .pub-image {
+            width: 220px;
+            flex-shrink: 0;
+        }
+        .pub-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease;
+        }
+        .pub-image img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .pub-details {
+            flex-grow: 1;
+        }
+        .pub-details h3 {
+            font-size: 1.35em;
+            margin-bottom: 8px;
+        }
+        .pub-details .authors {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 0.98em;
+        }
+        .pub-details .venue {
+            display: inline-block;
+            background-color: #007bff; /* 统一颜色 */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-right: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+        }
+        .pub-links a {
+            margin-right: 12px;
+            font-weight: 600;
+            color: #007bff;
+        }
+        .pub-links .badge {
+            float: right;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            background-color: #eef1f0;
+            border-top: 1px solid #e0e0e0;
+            border-radius: 0 0 12px 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .sidebar {
+                width: 100%;
+                margin-bottom: 30px;
+                position: static;
+                top: auto;
+            }
+        }
+        @media (max-width: 768px) {
+            h2 { font-size: 1.6em; }
+            .sidebar-avatar { /* 移动端头像缩小 */
+                width: 120px;
+                height: 160px;
+            }
+            .sidebar-name-en { font-size: 1.8em; }
+            .sidebar-name-cn { font-size: 1em; }
+            .publication-item {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pub-image {
+                width: 80%;
+                max-width: 250px;
+                margin-bottom: 15px;
+            }
+            .pub-details {
+                text-align: center;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 15px;
+            }
+            .exp-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .exp-logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            
+            <img src="images/junhaocheng.png" alt="Junhao Cheng Avatar" class="sidebar-avatar">
+            
+            <h1 class="sidebar-name-en">Junhao Cheng</h1>
+            <p class="sidebar-name-cn">(程钧豪)</p>
+
+            <p class="sidebar-title">MPhil in Computer Science</p>
+            
+            <div class="sidebar-info">
+                <p><i class="fas fa-university"></i> City University Hong Kong</p>
+                <p><i class="fas fa-map-marker-alt"></i> Shenzhen, Guangdong, China</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:howe4884@outlook.com">howe4884@outlook.com</a></p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/donahowe" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+        </div>
+
+        <div class="main-content">
+
+            <div class="section-card">
+                <h2>👋 About me <span style="font-size: 0.6em; color: #7f8c8d; font-weight: normal;">[Updated 25/11/2025]</span></h2>
+                <p>My name is <strong>Junhao Cheng (程钧豪)</strong>. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang (梁小丹)</a>. Now I am an MPhil student at Prof. <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en">Jing Liao (廖菁)</a>'s lab. Before this, I had the privilege of interning in Prof. <a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao">Ming-Hsuan Yang</a>'s lab and working closely with him.</p>
+
+                <p>I am currently a research intern at <a href="https://app.klingai.com/cn/en">Kuaishou Kling team</a>. My research interests lie in Interactive AI. Now I focus on designing novel applications for <strong>video understanding and generation</strong> and other interesting downstream tasks.</p>
+
+                <blockquote style="border-left: 4px solid #f39c12; padding-left: 15px; margin: 15px 0; color: #7f8c8d; background-color: #fffaf2; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0;">I am looking for research collaborations and <strong>PhD opportunities (27 Fall)</strong>. If you think there is anything interesting we can discuss, feel free to <a href="mailto:Howe4884@outlook.com">email</a> me!</p>
+                </blockquote>
+            </div>
+
+            <div class="section-card">
+                <h2>🔥 News</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">2025.11:</span>
+                        <span class="news-content">Release <a href="https://video-as-answer.github.io/">Video-as-Answer</a>, extending next-event prediction to dynamic video answer.</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2025.06:</span>
+                        <span class="news-content">🎉🎉 One paper is accepted by ICCV 2025.</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2025.06:</span>
+                        <span class="news-content">Release <a href="https://video-holmes.github.io/Page.github.io/">Video-Holmes</a>, evaluating MLLMs for complex video reasoning like Holmes.</span>
+                    </div>
+                     <div class="news-item">
+                        <span class="news-date">2025.04:</span>
+                        <span class="news-content">Release <a href="https://howe125.github.io/AnimeGamer.github.io/">AnimeGamer</a> (300+Stars✨), transforming characters from anime films into interactive entities with an MLLM.</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2024.06:</span>
+                        <span class="news-content">Release <a href="https://howe183.github.io/AutoStudio.io/">AutoStudio</a> (400+Stars✨), generating comic book with multi-character, multi-turn consistency.</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2024.05:</span>
+                        <span class="news-content">🎉🎉 One paper is accepted by ACL 2024.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-card">
+                <h2>🎓 Educations</h2>
+                <div class="exp-item">
+                    <img src="images/Schools/CityUHK.png" alt="CityUHK Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>MPhil Student @ City University of Hong Kong</h3>
+                        <p class="time-period">2025 - now</p>
+                        <p>Supervisor: <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl/">Jing Liao (廖菁)</a></p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <img src="images/Schools/SYSU.jpg" alt="SYSU Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>Undergraduate Student @ Sun Yat-sen University</h3>
+                        <p class="time-period">2021 - 2025</p>
+                        <p>Supervisor: <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang (梁小丹)</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>💻 Internships</h2>
+                <div class="exp-item">
+                    <img src="images/kling.jpg" alt="Kuaishou Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>Research Intern @ Kuaishou, Kling Team</h3>
+                        <p class="time-period">2025.07 - now</p>
+                        <p>Mentor: <a href="https://liang-hou.github.io/">Liang Hou(侯良)</a>, <a href="https://www.xtao.website/">Xin Tao (陶鑫)</a></p>
+                    </div>
+                </div>
+                
+                <div class="exp-item">
+                    <img src="images/ARC.png" alt="Tencent Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>Research Intern @ Tencent, ARC Lab</h3>
+                        <p class="time-period">2024.09 - 2025.06</p>
+                        <p>Mentor: <a href="https://geyuying.github.io/">Yuying Ge (葛玉莹)</a></p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <img src="images/Lenovo.png" alt="Lenovo Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>Research Intern @ Lenovo, Research Institute</h3>
+                        <p class="time-period">2023.09 - 2024.08</p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <img src="images/cibr.png" alt="CIBR Logo" class="exp-logo">
+                    <div class="exp-details">
+                        <h3>Research Intern @ Chinese Institute of Brain Research (CIBR)</h3>
+                        <p class="time-period">2023.03 - 2023.08</p>
+                        <p>Mentor: <a href="https://www.cibr.ac.cn/science/team/detail/763">Yunzhe Liu (柳昀哲)</a></p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="section-card">
+                <h2>📝 Selected Publications</h2>
+
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="images/publications/animegamer.png" alt="AnimeGamer Poster">
+                    </div>
+                    <div class="pub-details">
+                        <h3>AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
+                        <p class="authors"><strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan</p>
+                        <p>
+                            <span class="venue">ICCV 2025</span>
+                            <span class="pub-links">
+                                <a href="https://arxiv.org/abs/2504.01014" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
+                                <a href="https://github.com/TencentARC/AnimeGamer" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/TencentARC/AnimeGamer?style=social">
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="images/publications/isolate.png" alt="Isolate Poster">
+                    </div>
+                    <div class="pub-details">
+                        <h3>Object Isolated Attention for Consistent Story Visualization</h3>
+                        <p class="authors">Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu</p>
+                        <p>
+                            <span class="venue">ICME 2025</span>
+                            <span class="pub-links">
+                                <a href="https://arxiv.org/abs/2503.23353" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="images/publications/visdiahalbench.png" alt="VisDiaHalBench Poster">
+                    </div>
+                    <div class="pub-details">
+                        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing Hallucination in Large Vision-Language Models</h3>
+                        <p class="authors">Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin</p>
+                        <p>
+                            <span class="venue">ACL 2024</span>
+                            <span class="pub-links">
+                                <a href="https://aclanthology.org/2024.acl-long.658/" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
+                                <a href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social">
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-image">
+                        <img src="images/publications/dkformer.png" alt="DKFormer Poster">
+                    </div>
+                    <div class="pub-details">
+                        <h3>Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting</h3>
+                        <p class="authors"><strong>Junhao Cheng</strong>, Xing Luo, Zhi Jin</p>
+                        <p>
+                            <span class="venue">Energy (JCR-Q1)</span>
+                            <span class="pub-links">
+                                <a href="https://doi.org/10.1016/j.energy.2024.133511" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer">
+                &copy; 2025 Junhao Cheng.
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
