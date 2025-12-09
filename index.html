@@ -438,7 +438,8 @@
             <div class="social-links">
                 <a href="https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
                 <a href="https://github.com/donahowe" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
+                <a href="#" title="WeChat" id="wechat-btn"><i class="fab fa-weixin"></i></a>
+            </div>
         </div>
 
         <div class="main-content">
@@ -625,8 +626,54 @@
         </div>
     </div>
 
+<!-- 微信二维码模态框 -->
+<div id="wechat-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 5px 30px rgba(0,0,0,0.3); max-width: 400px; width: 90%;">
+        <h3 style="margin-top: 0; color: #333; margin-bottom: 15px;">微信二维码</h3>
+        <div style="margin: 20px 0; padding: 10px; background: #f9f9f9; border-radius: 8px;">
+            <img src="images/wechat-qr.png" alt="WeChat QR Code" style="width: 250px; height: 250px; object-fit: cover; border-radius: 5px;">
+        </div>
+        <p style="color: #666; margin-bottom: 5px;">扫描二维码添加微信</p>
+        <p style="color: #999; font-size: 0.9em; margin-top: 5px;">或保存二维码至相册</p>
+        <button id="close-modal" style="margin-top: 20px; padding: 10px 30px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; transition: background 0.3s;">关闭</button>
+    </div>
+</div>
+
+<script>
+    // 获取元素
+    const wechatBtn = document.getElementById('wechat-btn');
+    const wechatModal = document.getElementById('wechat-modal');
+    const closeModal = document.getElementById('close-modal');
+    
+    // 点击微信图标显示模态框
+    wechatBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        wechatModal.style.display = 'flex';
+    });
+    
+    // 点击关闭按钮隐藏模态框
+    closeModal.addEventListener('click', function() {
+        wechatModal.style.display = 'none';
+    });
+    
+    // 点击模态框背景也隐藏
+    wechatModal.addEventListener('click', function(e) {
+        if (e.target === wechatModal) {
+            wechatModal.style.display = 'none';
+        }
+    });
+    
+    // ESC键关闭模态框
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && wechatModal.style.display === 'flex') {
+            wechatModal.style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 </html>
+
 
 
 
