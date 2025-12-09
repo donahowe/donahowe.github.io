@@ -635,7 +635,7 @@
         </div>
         <p style="color: #666; margin-bottom: 5px;">扫描二维码添加微信</p>
         <p style="color: #999; font-size: 0.9em; margin-top: 5px;">或保存二维码至相册</p>
-        <button id="close-modal" style="margin-top: 20px; padding: 10px 30px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; transition: background 0.3s;">关闭</button>
+        <button id="close-modal" style="margin-top: 20px; padding: 10px 30px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; transition: background 0.3s;">Close</button>
     </div>
 </div>
 
@@ -645,25 +645,21 @@
     const wechatModal = document.getElementById('wechat-modal');
     const closeModal = document.getElementById('close-modal');
     
-    // 点击微信图标显示模态框
     wechatBtn.addEventListener('click', function(e) {
         e.preventDefault();
         wechatModal.style.display = 'flex';
     });
     
-    // 点击关闭按钮隐藏模态框
     closeModal.addEventListener('click', function() {
         wechatModal.style.display = 'none';
     });
     
-    // 点击模态框背景也隐藏
     wechatModal.addEventListener('click', function(e) {
         if (e.target === wechatModal) {
             wechatModal.style.display = 'none';
         }
     });
     
-    // ESC键关闭模态框
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && wechatModal.style.display === 'flex') {
             wechatModal.style.display = 'none';
@@ -673,6 +669,7 @@
 
 </body>
 </html>
+
 
 
 
