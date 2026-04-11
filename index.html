@@ -1,432 +1,451 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junhao Cheng's Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Use a warm sans-serif fallback font stack similar to Cereal -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
+        :root {
+            --palette-bg-primary-core: #ff385c;
+            --palette-bg-tertiary-core: #e00b41;
+            --palette-text-primary: #222222;
+            --palette-text-secondary: #6a6a6a;
+            --palette-bg-page: #f7f7f9;
+            --palette-bg-card: #ffffff;
+            --palette-bg-light: #f2f2f2;
+            --shadow-card: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
+            --shadow-hover: rgba(0,0,0,0.08) 0px 4px 12px;
+            --radius-card: 20px;
+            --radius-btn: 8px;
+            --radius-badge: 14px;
+            --radius-large: 32px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-image: url('images/bg.jpg'); 
-
-            background-size: cover; 
-            
+            background-image: url('images/bg.jpg');
+            background-size: cover;
             background-repeat: no-repeat;
-            
-            background-attachment: fixed; 
-            
+            background-attachment: fixed;
             background-position: center center;
-            
-            background-color: #f0f0f0; 
+            background-color: var(--palette-bg-page);
+            color: var(--palette-text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.43;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
+
+        .main-container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
+            margin: 60px auto 40px;
             display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            color: #2c3e50;
-            margin-top: 0;
-            font-weight: 700;
-        }
-        h2 {
-            font-size: 1.8em;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 25px;
-            padding-top: 15px;
+            gap: 32px;
             position: relative;
-            overflow: hidden;
-        }
-        h2::before { /* 标题下划线的动态效果 */
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: #007bff;
-            transition: width 0.4s ease-out;
-        }
-        .section-card:hover h2::before {
-            width: 100%;
+            z-index: 1;
+            padding: 0 24px;
         }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.2s ease;
-        }
-        a:hover {
-            color: #007bff;
-            text-decoration: underline;
-            transform: translateY(-1px);
-        }
-        strong {
-            font-weight: 700;
-            color: #1abc9c;
-        }
-
-        /* ----------------------- */
-        /* Sidebar (左侧边栏 - 个人信息) */
-        /* ----------------------- */
+        /* Sidebar */
         .sidebar {
             width: 320px;
             flex-shrink: 0;
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 30px 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            position: sticky; /* 吸顶效果 */
-            top: 30px;
+            background: var(--palette-bg-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: 32px;
+            position: sticky;
+            top: 32px;
             align-self: flex-start;
-            transition: all 0.3s ease-in-out;
-        }
-        .sidebar:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
-.sidebar-avatar {
-    width: 180px;
-    height: 240px; 
-    
-    border-radius: 50%; 
-    
-    object-fit: cover;
-    margin-bottom: 20px;
-    
-    border: 6px solid #007bff;
-    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); 
-    
-    background-image: none;
-    background-origin: unset;
-    background-clip: unset;
-    
-    transition: transform 0.4s ease-in-out;
-}
-
-.sidebar-avatar:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.2); 
-}
+        .sidebar-avatar {
+            width: 100%;
+            aspect-ratio: 3/4; /* Portrait */
+            object-fit: cover;
+            border-radius: var(--radius-card);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-card);
+        }
 
         .sidebar-name-en {
-            font-size: 2em;
-            margin-bottom: 0;
-            color: #2c3e50;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.44px;
+            color: var(--palette-text-primary);
             line-height: 1.2;
         }
+
         .sidebar-name-cn {
-            font-size: 1.2em; 
-            color: #7f8c8d;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            font-weight: 400;
+            font-size: 16px;
+            color: var(--palette-text-secondary);
+            margin-top: 4px;
+            margin-bottom: 16px;
         }
-        
+
         .sidebar-title {
-            color: #7f8c8d;
-            margin-bottom: 25px;
-            font-size: 1.1em;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--palette-text-primary);
+            margin-bottom: 24px;
         }
+
         .sidebar-info p {
-            margin: 10px 0;
-            font-size: 1em;
-            color: #555;
+            font-size: 14px;
+            color: var(--palette-text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sidebar-info i {
+            color: var(--palette-bg-primary-core);
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-info a {
+            color: var(--palette-text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .sidebar-info a:hover {
+            color: var(--palette-bg-primary-core);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #ebebeb;
+            justify-content: center;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--palette-bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-        }
-        .sidebar-info i {
-            color: #007bff;
-            font-size: 1.1em;
-        }
-        .social-links {
-            margin-top: 25px;
-            border-top: 1px solid #ecf0f1;
-            padding-top: 20px;
-        }
-        .social-links a {
-            font-size: 1.8em;
-            margin: 0 10px;
-            color: #7f8c8d;
-            transition: color 0.3s, transform 0.3s;
-        }
-        .social-links a:hover {
-            color: #007bff;
-            transform: translateY(-3px) scale(1.1);
+            color: var(--palette-text-primary);
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.2s;
         }
 
-        /* ----------------------- */
-        /* Main Content (右侧主要内容) */
-        /* ----------------------- */
+        .social-links a:hover {
+            background: var(--palette-text-primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Main Content */
         .main-content {
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
         }
-        .section-card {
-            background-color: #ffffff;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
-            transition: all 0.3s ease-in-out;
+
+        .card {
+            background: var(--palette-bg-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: 40px;
         }
-        .section-card:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-            transform: translateY(-5px);
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.44px;
+            color: var(--palette-text-primary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
+
+        .about-text {
+            font-size: 16px;
+            color: var(--palette-text-secondary);
+            margin-bottom: 16px;
+        }
+        
+        .about-text strong {
+            color: var(--palette-text-primary);
+            font-weight: 600;
+        }
+
+        .about-text a {
+            color: var(--palette-text-primary);
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: #ddd;
+            text-underline-offset: 2px;
+        }
+        .about-text a:hover {
+            color: var(--palette-bg-primary-core);
+            text-decoration-color: var(--palette-bg-primary-core);
+        }
+
+        .highlight-box {
+            background: #fff4f6;
+            border-radius: var(--radius-badge);
+            padding: 20px;
+            margin-top: 24px;
+            border-left: 4px solid var(--palette-bg-primary-core);
+        }
+        .highlight-box p {
+            color: var(--palette-text-primary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .highlight-box a {
+            color: var(--palette-bg-primary-core);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Compact News */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 16px;
+        }
+        .news-list::-webkit-scrollbar { width: 6px; }
+        .news-list::-webkit-scrollbar-track { background: transparent; }
+        .news-list::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+        .news-list::-webkit-scrollbar-thumb:hover { background: #bbb; }
 
         .news-item {
             display: flex;
-            margin-bottom: 15px; 
-            align-items: flex-start;
-            border-left: 4px solid #007bff;
-            padding-left: 15px;
-            transition: background-color 0.3s;
+            gap: 16px;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: var(--radius-btn);
+            background: var(--palette-bg-light);
+            transition: background 0.2s;
         }
         .news-item:hover {
-            background-color: #f8f9fa;
+            background: #fdfdfd;
+            box-shadow: var(--shadow-card);
         }
         .news-date {
-            font-weight: 700;
-            color: #e74c3c;
+            font-weight: 600;
+            color: var(--palette-bg-primary-core);
             flex-shrink: 0;
-            margin-right: 18px;
-            width: 90px;
-            font-size: 1em; 
         }
         .news-content {
-            color: #555;
-            flex-grow: 1;
-            font-size: 1em;
+            color: var(--palette-text-primary);
         }
-
-        /* Education/Internship Card Styling */
-        .exp-item {
-            display: flex;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #ecf0f1;
-            align-items: center;
-        }
-        .exp-item:last-of-type {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .exp-logo {
-            width: 110px;
-            height: 110px;
-            flex-shrink: 0;
-            margin-right: 25px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            object-fit: contain;
-            padding: 8px;
-            background-color: #fcfcfc;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .exp-logo:hover {
-            transform: scale(1.08) rotate(-2deg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .exp-details {
-            flex-grow: 1;
-            text-align: left;
-        }
-        .exp-details h3 {
-            font-size: 1.25em;
-            margin-bottom: 5px;
-            color: #34495e;
-        }
-        .exp-details p {
-            margin: 4px 0;
-            font-size: 0.98em;
-            color: #666;
-        }
-        .exp-details .time-period {
-            font-style: italic;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        .exp-details a {
+        .news-content a {
+            color: var(--palette-bg-primary-core);
+            text-decoration: none;
             font-weight: 500;
         }
 
-        /* Publications Card Styling */
-        .publication-item {
-            display: flex;
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #f0f0f0;
-            gap: 25px;
-            align-items: flex-start;
-            transition: background-color 0.3s;
+        /* Educations & Internships */
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
         }
-        .publication-item:last-of-type {
+        .exp-item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding: 16px;
+            border-radius: var(--radius-badge);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+        .exp-item:hover {
+            box-shadow: var(--shadow-card);
+        }
+        .exp-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fff;
+            padding: 4px;
+            border: 1px solid #f0f0f0;
+        }
+        .exp-details h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--palette-text-primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        .exp-details p {
+            font-size: 13px;
+            color: var(--palette-text-secondary);
+        }
+        .exp-details .time-period {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        .exp-details a {
+            color: var(--palette-text-primary);
+            text-decoration: underline;
+            text-decoration-color: #ddd;
+        }
+
+        /* Compact Publications (List style matching Cohere) */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .pub-item {
+            display: flex;
+            gap: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            align-items: flex-start;
+        }
+        .pub-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
             padding-bottom: 0;
         }
-        .publication-item:hover {
-            background-color: #fdfdfd;
-        }
         .pub-image {
-            width: 220px;
+            width: 180px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: var(--radius-btn);
+            border: 1px solid rgba(0,0,0,0.05);
             flex-shrink: 0;
+            box-shadow: var(--shadow-card);
         }
-        .pub-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease;
-        }
-        .pub-image img:hover {
-            transform: scale(1.05) rotate(1deg);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-        .pub-details {
+        .pub-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             flex-grow: 1;
         }
-        .pub-details h3 {
-            font-size: 1.35em;
-            margin-bottom: 8px;
-        }
-        .pub-details .authors {
-            margin-bottom: 12px;
-            color: #555;
-            font-size: 0.98em;
-        }
-        .pub-details .venue {
-            display: inline-block;
-            background-color: #007bff; /* 统一颜色 */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
+        .pub-title {
+            font-size: 18px;
             font-weight: 600;
-            font-size: 0.95em;
-            margin-right: 12px;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+            color: var(--palette-text-primary);
+            line-height: 1.3;
+        }
+        .pub-authors {
+            font-size: 14px;
+            color: var(--palette-text-secondary);
+            line-height: 1.4;
+        }
+        .pub-authors strong {
+            color: var(--palette-text-primary);
+            font-weight: 600;
+        }
+        .pub-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 4px;
+        }
+        .pub-venue {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            background: var(--palette-bg-light);
+            color: var(--palette-text-primary);
+            border-radius: var(--radius-btn);
+            letter-spacing: 0.3px;
+        }
+        .pub-links {
+            display: flex;
+            gap: 12px;
         }
         .pub-links a {
-            margin-right: 12px;
-            font-weight: 600;
-            color: #007bff;
+            color: var(--palette-text-primary);
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-        .pub-links .badge {
-            float: right;
-            margin-top: 2px;
+        .pub-links a:hover {
+            color: var(--palette-bg-primary-core);
         }
 
-        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.85em;
-            color: #7f8c8d;
-            background-color: #eef1f0;
-            border-top: 1px solid #e0e0e0;
-            border-radius: 0 0 12px 12px;
+            padding: 40px;
+            color: var(--palette-text-secondary);
+            font-size: 14px;
         }
 
-        /* 定义渐变移动的动画 */
-        @keyframes soft-gradient {
-            0% {
-                /* 动画开始：左上角 */
-                background-position: 0% 0%;
-            }
-            25% {
-                /* 移动到右上角 */
-                background-position: 100% 0%;
-            }
-            50% {
-                /* 移动到右下角 */
-                background-position: 100% 100%;
-            }
-            75% {
-                /* 移动到左下角 */
-                background-position: 0% 100%;
-            }
-            100% {
-                /* 动画结束：恢复到初始位置，实现无缝循环 */
-                background-position: 0% 0%;
-            }
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 992px) {
-            .container {
+            .main-container {
                 flex-direction: column;
-                padding: 20px;
+                margin-top: 40px;
             }
             .sidebar {
                 width: 100%;
-                margin-bottom: 30px;
                 position: static;
-                top: auto;
-            }
-        }
-        @media (max-width: 768px) {
-            h2 { font-size: 1.6em; }
-            .sidebar-avatar { /* 移动端头像缩小 */
-                width: 120px;
-                height: 160px;
-            }
-            .sidebar-name-en { font-size: 1.8em; }
-            .sidebar-name-cn { font-size: 1em; }
-            .publication-item {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
+            }
+            .sidebar-avatar {
+                width: 200px;
+                height: 266px;
+            }
+            .sidebar-info p {
+                justify-content: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .exp-grid {
+                grid-template-columns: 1fr;
+            }
+            .pub-item {
+                flex-direction: column;
+                gap: 16px;
             }
             .pub-image {
-                width: 80%;
-                max-width: 250px;
-                margin-bottom: 15px;
-            }
-            .pub-details {
-                text-align: center;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 15px;
-            }
-            .exp-item {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-            .exp-logo {
-                margin-right: 0;
-                margin-bottom: 15px;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="main-container">
+        <!-- Sidebar -->
         <div class="sidebar">
-            
             <img src="images/junhaocheng.png" alt="Junhao Cheng Avatar" class="sidebar-avatar">
-            
             <h1 class="sidebar-name-en">Junhao Cheng</h1>
             <p class="sidebar-name-cn">(程钧豪)</p>
-
             <p class="sidebar-title">MPhil in Computer Science</p>
             
             <div class="sidebar-info">
@@ -436,329 +455,291 @@
             </div>
             
             <div class="social-links">
-                <a href="https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://github.com/donahowe" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" title="WeChat" id="wechat-btn"><i class="fab fa-weixin"></i></a>
+                <a href="https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/donahowe" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" id="wechat-btn"><i class="fab fa-weixin"></i></a>
             </div>
         </div>
 
+        <!-- Main Content -->
         <div class="main-content">
 
-            <div class="section-card">
-                <h2>👋 About me <span style="font-size: 0.6em; color: #7f8c8d; font-weight: normal;">[Updated 21/02/2026]</span></h2>
-                <p>My name is <strong>Junhao Cheng (程钧豪)</strong>. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang (梁小丹)</a>. Now I am an MPhil student at Prof. <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en">Jing Liao (廖菁)</a>'s lab. Before this, I had the privilege of interning in Prof. <a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao">Ming-Hsuan Yang</a>'s lab and working closely with him.</p>
+            <!-- About -->
+            <div class="card">
+                <h2>About me</h2>
+                <p class="about-text">My name is <strong>Junhao Cheng (程钧豪)</strong>. I received my bachelor's degree from Sun Yat-sen University (SYSU) in 2025, supervised by Prof. <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang</a>. Now I am an MPhil student at Prof. <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en">Jing Liao</a>'s lab. Before this, I had the privilege of interning in Prof. <a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=en&oi=ao">Ming-Hsuan Yang</a>'s lab and working closely with him.</p>
+                <p class="about-text">I am currently a research intern at <a href="https://app.klingai.com/cn/en">Kuaishou Kling team</a>. My research interests lie in Interactive AI. Now I focus on foundation models and novel applications for <strong>image/video understanding and generation</strong>.</p>
 
-                <p>I am currently a research intern at <a href="https://app.klingai.com/cn/en">Kuaishou Kling team</a>. My research interests lie in Interactive AI. Now I focus on foundation models and novel applications for <strong>image/video understanding and generation</strong>.</p>
-
-                <blockquote style="border-left: 4px solid #f39c12; padding-left: 15px; margin: 15px 0; color: #7f8c8d; background-color: #fffaf2; border-radius: 0 8px 8px 0;">
-                    <p style="margin: 0;">I am open to <strong>research collaborations, PhD opportunities (27 Fall), and industry/startup roles</strong>. If you're interested in discussing potential synergies, I'd be happy to <a href="mailto:Howe4884@outlook.com">📧connect</a>.</p>
-                </blockquote>
+                <div class="highlight-box">
+                    <p>I am open to <strong>research collaborations, PhD opportunities (27 Fall), and industry/startup roles</strong>. If you're interested in discussing potential synergies, I'd be happy to <a href="mailto:Howe4884@outlook.com">connect via email</a>.</p>
+                </div>
             </div>
 
-            <div class="section-card">
-                <h2>🔥 News</h2>
+            <!-- News -->
+            <div class="card">
+                <h2>News</h2>
                 <div class="news-list">
                     <div class="news-item">
-                        <span class="news-date">2026.02:</span>
+                        <span class="news-date">2026.02</span>
                         <span class="news-content">🎉🎉 One paper is accepted by CVPR 2026, along with two at AISTORY Workshop.</span>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">2025.11:</span>
+                        <span class="news-date">2025.11</span>
                         <span class="news-content">Release <a href="https://video-as-answer.github.io/">Video-as-Answer</a>, extending next-event prediction to video answer.</span>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">2025.06:</span>
+                        <span class="news-date">2025.06</span>
                         <span class="news-content">🎉🎉 One paper is accepted by ICCV 2025.</span>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">2025.06:</span>
+                        <span class="news-date">2025.06</span>
                         <span class="news-content">Release <a href="https://video-holmes.github.io/Page.github.io/">Video-Holmes</a>, evaluating MLLMs for complex video reasoning.</span>
                     </div>
-                     <div class="news-item">
-                        <span class="news-date">2025.04:</span>
-                        <span class="news-content">Release <a href="https://howe125.github.io/AnimeGamer.github.io/">AnimeGamer</a> (300+Stars✨), transforming characters from anime films into interactive entities with an MLLM.</span>
+                    <div class="news-item">
+                        <span class="news-date">2025.04</span>
+                        <span class="news-content">Release <a href="https://howe125.github.io/AnimeGamer.github.io/">AnimeGamer</a> (300+Stars✨), transforming characters from anime films into interactive entities.</span>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">2024.06:</span>
-                        <span class="news-content">Release <a href="https://howe183.github.io/AutoStudio.io/">AutoStudio</a> (400+Stars✨), generating comic book with multi-character, multi-turn consistency.</span>
+                        <span class="news-date">2024.06</span>
+                        <span class="news-content">Release <a href="https://howe183.github.io/AutoStudio.io/">AutoStudio</a> (400+Stars✨), generating comic book with multi-character consistency.</span>
                     </div>
                     <div class="news-item">
-                        <span class="news-date">2024.05:</span>
+                        <span class="news-date">2024.05</span>
                         <span class="news-content">🎉🎉 One paper is accepted by ACL 2024.</span>
                     </div>
                 </div>
             </div>
             
-            <div class="section-card">
-                <h2>🎓 Educations</h2>
-                <div class="exp-item">
-                    <img src="images/Schools/CityUHK.png" alt="CityUHK Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>MPhil Student @ City University of Hong Kong</h3>
-                        <p class="time-period">2025 - 2027 (expected)</p>
-                        <p>Supervisor: <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl/">Jing Liao (廖菁)</a></p>
+            <!-- Education -->
+            <div class="card">
+                <h2>Education</h2>
+                <div class="exp-grid">
+                    <div class="exp-item">
+                        <img src="images/Schools/CityUHK.png" alt="CityUHK Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>MPhil @ City University of Hong Kong</h3>
+                            <p class="time-period">2025 - 2027 (expected)</p>
+                            <p>Supervisor: <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl/">Jing Liao</a></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="exp-item">
-                    <img src="images/Schools/SYSU.jpg" alt="SYSU Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>Undergraduate Student @ Sun Yat-sen University</h3>
-                        <p class="time-period">2021 - 2025</p>
-                        <p>Supervisor: <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang (梁小丹)</a></p>
+                    <div class="exp-item">
+                        <img src="images/Schools/SYSU.jpg" alt="SYSU Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>Undergrad @ Sun Yat-sen University</h3>
+                            <p class="time-period">2021 - 2025</p>
+                            <p>Supervisor: <a href="https://www.cs.cmu.edu/~xiaodan1/">Xiaodan Liang</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="section-card">
-                <h2>💻 Internships</h2>
-                <div class="exp-item">
-                    <img src="images/kling.jpg" alt="Kuaishou Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>Research Intern @ Kuaishou, Kling Team</h3>
-                        <p class="time-period">2025.07 - now</p>
-                        <p>Mentor: <a href="https://liang-hou.github.io/">Liang Hou(侯良)</a>, <a href="https://www.xtao.website/">Xin Tao (陶鑫)</a></p>
+            <!-- Internships -->
+            <div class="card">
+                <h2>Internships</h2>
+                <div class="exp-grid">
+                    <div class="exp-item">
+                        <img src="images/kling.jpg" alt="Kling Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>Research Intern @ Kuaishou, Kling Team</h3>
+                            <p class="time-period">2025.07 - Present</p>
+                            <p>Mentor: <a href="https://liang-hou.github.io/">Liang Hou</a>, <a href="https://www.xtao.website/">Xin Tao</a></p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <img src="images/ARC.png" alt="Tencent Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>Research Intern @ Tencent, ARC Lab</h3>
+                            <p class="time-period">2024.09 - 2025.06</p>
+                            <p>Mentor: <a href="https://geyuying.github.io/">Yuying Ge</a></p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <img src="images/Lenovo.png" alt="Lenovo Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>Research Intern @ Lenovo Research</h3>
+                            <p class="time-period">2023.09 - 2024.08</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <img src="images/cibr.png" alt="CIBR Logo" class="exp-logo">
+                        <div class="exp-details">
+                            <h3>Research Intern @ CIBR</h3>
+                            <p class="time-period">2023.03 - 2023.08</p>
+                            <p>Mentor: <a href="https://brain.bnu.edu.cn/">Yunzhe Liu</a></p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="exp-item">
-                    <img src="images/ARC.png" alt="Tencent Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>Research Intern @ Tencent, ARC Lab</h3>
-                        <p class="time-period">2024.09 - 2025.06</p>
-                        <p>Mentor: <a href="https://geyuying.github.io/">Yuying Ge (葛玉莹)</a></p>
-                    </div>
-                </div>
-
-                <div class="exp-item">
-                    <img src="images/Lenovo.png" alt="Lenovo Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>Research Intern @ Lenovo, Research Institute</h3>
-                        <p class="time-period">2023.09 - 2024.08</p>
-                    </div>
-                </div>
-
-                <div class="exp-item">
-                    <img src="images/cibr.png" alt="CIBR Logo" class="exp-logo">
-                    <div class="exp-details">
-                        <h3>Research Intern @ Chinese Institute for Brain Research</h3>
-                        <p class="time-period">2023.03 - 2023.08</p>
-                        <p>Mentor: <a href="https://brain.bnu.edu.cn/kytd/jsyjy/Ljs/18e25c12984e48eb966932924b9b76c7.htm">Yunzhe Liu (柳昀哲)</a></p>
-                    </div>
-                </div>
-                
             </div>
 
-            <div class="section-card">
-                <h2>📝 Selected Publications</h2>
+            <!-- Publications -->
+            <div class="card">
+                <h2>Selected Publications</h2>
+                <div class="publications-list">
+                    
+                    <div class="pub-item">
+                        <img src="images/publications/VANS.png" alt="VANS" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Liang Hou, Xin Tao, Jing Liao</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">CVPR 2026</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2511.16669"><i class="fas fa-file-alt"></i> Paper</a>
+                                    <a href="https://github.com/KlingAIResearch/VANS"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="pub-item">
+                        <img src="images/publications/animegamer.png" alt="AnimeGamer" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">ICCV 2025</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2504.01014"><i class="fas fa-file-alt"></i> Paper</a>
+                                    <a href="https://github.com/TencentARC/AnimeGamer"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/publications/VANS.png" alt="VANS Poster">
+                    <div class="pub-item">
+                        <img src="images/Holmes.png" alt="Video-Holmes" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">Video-Holmes: Can MLLM Think Like Holmes for Complex Video Reasoning?</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Yuying Ge, Teng Wang, Yixiao Ge, Jing Liao, Ying Shan</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">ArXiv 2025</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2505.21374"><i class="fas fa-file-alt"></i> Paper</a>
+                                    <a href="https://github.com/TencentARC/Video-Holmes"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-details">
-                        <h3>Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO</h3>
-                        <p class="authors"><strong>Junhao Cheng</strong>, Liang Hou, Xin Tao, Jing Liao</p>
-                        <p>
-                            <span class="venue">CVPR 2026</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2511.16669" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
-                                <a href="https://github.com/KlingAIResearch/VANS" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/KlingAIResearch/VANS?style=social">
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/publications/animegamer.png" alt="AnimeGamer Poster">
-                    </div>
-                    <div class="pub-details">
-                        <h3>AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction</h3>
-                        <p class="authors"><strong>Junhao Cheng</strong>, Yuying Ge, Yixiao Ge, Jing Liao, Ying Shan</p>
-                        <p>
-                            <span class="venue">ICCV 2025</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2504.01014" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
-                                <a href="https://github.com/TencentARC/AnimeGamer" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/TencentARC/AnimeGamer?style=social">
-                            </span>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/Holmes.png" alt="AnimeGamer Poster">
+                    <div class="pub-item">
+                        <img src="images/Bddiff.png" alt="BD-Diff" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">ArXiv 2025</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2502.01522"><i class="fas fa-file-alt"></i> Paper</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-details">
-                        <h3>Video-Holmes: Can MLLM Think Like Holmes for Complex Video Reasoning?</h3>
-                        <p class="authors"><strong>Junhao Cheng</strong>, Yuying Ge, Teng Wang, Yixiao Ge, Jing Liao, Ying Shan</p>
-                        <p>
-                            <span class="venue">ArXiv 2025</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2505.21374" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
-                                <a href="https://github.com/TencentARC/Video-Holmes" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/TencentARC/Video-Holmes?style=social">
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/Bddiff.png" alt="Isolate Poster">
-                    </div>
-                    <div class="pub-details">
-                        <h3>BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning</h3>
-                        <p class="authors"> <strong>Junhao Cheng</strong>, Wei-Ting Chen, Xi Lu, Ming-Hsuan Yang</p>
-                        <p>
-                            <span class="venue">Arxiv 2025</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2502.01522" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/Autostudio.png" alt="AnimeGamer Poster">
+                    <div class="pub-item">
+                        <img src="images/Autostudio.png" alt="AutoStudio" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Xi Lu, Hanhui Li, Khun Loun Zai, et al.</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">CVPRW 2026</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2406.01388"><i class="fas fa-file-alt"></i> Paper</a>
+                                    <a href="https://github.com/donahowe/AutoStudio"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-details">
-                        <h3>AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation</h3>
-                        <p class="authors"><strong>Junhao Cheng</strong>, Xi Lu, Hanhui Li, Khun Loun Zai, Baiqiao Yin, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang</p>
-                        <p>
-                            <span class="venue">CVPR 2026 Workshop</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2406.01388" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
-                                <a href="https://github.com/donahowe/AutoStudio" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/donahowe/AutoStudio?style=social">
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/publications/isolate.png" alt="Isolate Poster">
-                    </div>
-                    <div class="pub-details">
-                        <h3>Object Isolated Attention for Consistent Story Visualization</h3>
-                        <p class="authors">Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, Tao Feng, Zhou Liu, Fei Ma, Fei Yu</p>
-                        <p>
-                            <span class="venue">ICME 2025</span>
-                            <span class="pub-links">
-                                <a href="https://arxiv.org/abs/2503.23353" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
 
+                    <div class="pub-item">
+                        <img src="images/publications/isolate.png" alt="Isolate" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">Object Isolated Attention for Consistent Story Visualization</h3>
+                            <p class="pub-authors">Xiangyang Luo, <strong>Junhao Cheng</strong>, Yifan Xie, Xin Zhang, et al.</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">ICME 2025</span>
+                                <div class="pub-links">
+                                    <a href="https://arxiv.org/abs/2503.23353"><i class="fas fa-file-alt"></i> Paper</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/publications/visdiahalbench.png" alt="VisDiaHalBench Poster">
+                    <div class="pub-item">
+                        <img src="images/publications/visdiahalbench.png" alt="VisDiaHalBench" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing Hallucination in Large Vision-Language Models</h3>
+                            <p class="pub-authors">Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">ACL 2024</span>
+                                <div class="pub-links">
+                                    <a href="https://aclanthology.org/2024.acl-long.658/"><i class="fas fa-file-alt"></i> Paper</a>
+                                    <a href="https://github.com/qingxingcao/VisDiaHalBench"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pub-details">
-                        <h3>VisDiaHalBench: A Visual Dialogue Benchmark For Diagnosing Hallucination in Large Vision-Language Models</h3>
-                        <p class="authors">Qingxing Cao, <strong>Junhao Cheng</strong>, Xiaodan Liang, Liang Lin</p>
-                        <p>
-                            <span class="venue">ACL 2024</span>
-                            <span class="pub-links">
-                                <a href="https://aclanthology.org/2024.acl-long.658/" target="_blank"><i class="fas fa-file-alt"></i> Paper</a> 
-                                <a href="https://github.com/qingxingcao/VisDiaHalBench" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <img alt="GitHub stars" class="badge" src="https://img.shields.io/github/stars/qingxingcao/VisDiaHalBench?style=social">
-                            </span>
-                        </p>
+
+                    <div class="pub-item">
+                        <img src="images/publications/dkformer.png" alt="DKFormer" class="pub-image" onerror="this.src='https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="pub-content">
+                            <h3 class="pub-title">Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting</h3>
+                            <p class="pub-authors"><strong>Junhao Cheng</strong>, Xing Luo, Zhi Jin</p>
+                            <div class="pub-meta">
+                                <span class="pub-venue">Energy (JCR-Q1)</span>
+                                <div class="pub-links">
+                                    <a href="https://doi.org/10.1016/j.energy.2024.133511"><i class="fas fa-file-alt"></i> Paper</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-
-                <div class="publication-item">
-                    <div class="pub-image">
-                        <img src="images/publications/dkformer.png" alt="DKFormer Poster">
-                    </div>
-                    <div class="pub-details">
-                        <h3>Integrating Domain Knowledge into Transformer for Short-Term Wind Power Forecasting</h3>
-                        <p class="authors"><strong>Junhao Cheng</strong>, Xing Luo, Zhi Jin</p>
-                        <p>
-                            <span class="venue">Energy (JCR-Q1)</span>
-                            <span class="pub-links">
-                                <a href="https://doi.org/10.1016/j.energy.2024.133511" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
             </div>
             
-            <div class="footer">
-                &copy; 2025 Junhao Cheng.
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Junhao Cheng.
+    </div>
+
+    <!-- WeChat Modal -->
+    <div id="wechat-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(4px);">
+        <div style="background: white; padding: 32px; border-radius: var(--radius-card); text-align: center; box-shadow: var(--shadow-card); max-width: 400px; width: 90%;">
+            <h3 style="margin-top: 0; color: var(--palette-text-primary); margin-bottom: 16px; font-size: 20px;">WeChat</h3>
+            <div style="margin: 20px 0; padding: 10px; background: var(--palette-bg-page); border-radius: var(--radius-badge);">
+                <img src="images/wechat-qr.png" alt="WeChat QR Code" style="width: 250px; height: 250px; object-fit: cover; border-radius: 8px;">
             </div>
-
+            <p style="color: var(--palette-text-secondary); margin-bottom: 24px; font-size: 14px;">Scan to add me on WeChat</p>
+            <button id="close-modal" style="padding: 12px 32px; background: var(--palette-text-primary); color: white; border: none; border-radius: var(--radius-btn); cursor: pointer; font-size: 16px; font-weight: 500; transition: background 0.3s; width: 100%;">Close</button>
         </div>
     </div>
 
-<!-- 微信二维码模态框 -->
-<div id="wechat-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center;">
-    <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 5px 30px rgba(0,0,0,0.3); max-width: 400px; width: 90%;">
-        <h3 style="margin-top: 0; color: #333; margin-bottom: 15px;">微信二维码</h3>
-        <div style="margin: 20px 0; padding: 10px; background: #f9f9f9; border-radius: 8px;">
-            <img src="images/wechat-qr.png" alt="WeChat QR Code" style="width: 250px; height: 250px; object-fit: cover; border-radius: 5px;">
-        </div>
-        <p style="color: #666; margin-bottom: 5px;">扫描二维码添加微信</p>
-        <p style="color: #999; font-size: 0.9em; margin-top: 5px;">或保存二维码至相册</p>
-        <button id="close-modal" style="margin-top: 20px; padding: 10px 30px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; transition: background 0.3s;">Close</button>
-    </div>
-</div>
-
-<script>
-    // 获取元素
-    const wechatBtn = document.getElementById('wechat-btn');
-    const wechatModal = document.getElementById('wechat-modal');
-    const closeModal = document.getElementById('close-modal');
-    
-    wechatBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        wechatModal.style.display = 'flex';
-    });
-    
-    closeModal.addEventListener('click', function() {
-        wechatModal.style.display = 'none';
-    });
-    
-    wechatModal.addEventListener('click', function(e) {
-        if (e.target === wechatModal) {
+    <script>
+        const wechatBtn = document.getElementById('wechat-btn');
+        const wechatModal = document.getElementById('wechat-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        wechatBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            wechatModal.style.display = 'flex';
+        });
+        
+        closeModal.addEventListener('click', function() {
             wechatModal.style.display = 'none';
-        }
-    });
-    
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && wechatModal.style.display === 'flex') {
-            wechatModal.style.display = 'none';
-        }
-    });
-</script>
-
+        });
+        
+        wechatModal.addEventListener('click', function(e) {
+            if (e.target === wechatModal) {
+                wechatModal.style.display = 'none';
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && wechatModal.style.display === 'flex') {
+                wechatModal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
