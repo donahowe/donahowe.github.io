@@ -47,7 +47,6 @@ lucide-react/dist/esm/Icon.mjs:
 lucide-react/dist/esm/createLucideIcon.mjs:
 lucide-react/dist/esm/icons/arrow-down.mjs:
 lucide-react/dist/esm/icons/arrow-up-right.mjs:
-lucide-react/dist/esm/icons/chevron-down.mjs:
 lucide-react/dist/esm/icons/git-branch.mjs:
 lucide-react/dist/esm/icons/graduation-cap.mjs:
 lucide-react/dist/esm/icons/mail.mjs:

@@ -1,0 +1,13 @@
+/* The official BounceCards stylesheet is imported unchanged by the adapter.
+   Content cards only need a rectangular, unclipped slot; motion stays in JS. */
+.bounce-cards--content > .bounce-cards__card {
+  height: var(--bounce-cards-height);
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.bounce-cards--content > .bounce-cards__card:focus-visible {
+  outline: 2px solid var(--accent, #4c62e9);
+  outline-offset: 7px;
+}

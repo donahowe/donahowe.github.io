@@ -123,7 +123,26 @@
   },
   "retainedSourceOnly": [
     "FlexCarousel",
-    "ScrollStack",
-    "BounceCards"
+    "ScrollStack"
+  ],
+  "applicationAdapters": [
+    {
+      "component": "Lanyard",
+      "path": "src/components/ThemedLanyard.jsx",
+      "original": "src/components/reactbits/Lanyard/Lanyard.jsx",
+      "changes": "Wraps the unmodified original with public image/color props; derives a color-inverted official strap texture in memory for dark mode."
+    },
+    {
+      "component": "HoloCard",
+      "path": "src/components/adapters/HoloCardContent.jsx",
+      "original": "src/components/reactbits/HoloCard/HoloCard.jsx",
+      "changes": "Source-derived content adapter adds an HTML children slot and group semantics. The original shader, texture pipeline, spring motion, defaults and CSS are retained."
+    },
+    {
+      "component": "BounceCards",
+      "path": "src/components/adapters/BounceCardsContent.jsx",
+      "original": "src/components/reactbits/BounceCards/BounceCards.jsx",
+      "changes": "Source-derived content adapter adds renderCard, rectangular height/hitbox and descendant focus/link routing. The original slot/PATTERN, spring integration, stagger and hover target formulas are retained."
+    }
   ]
 }

@@ -9,11 +9,12 @@ ScrollStack retain the unmodified official JavaScript + CSS registry files.
 Magnet and SpotlightCard also retain their upstream implementations.
 
 The current page uses TearTicket for individual education and internship
-entries and HoloCard for the image layer of publication cards. PublicationDeck
-is a separate, website-specific layout inspired by BounceCards; it does not
-render the official BounceCards component. The original BounceCards,
-FlexCarousel, and ScrollStack source files remain in the repository but are
-not used by the current page.
+entries. PublicationDeck composes small content adapters of the official
+HoloCard and BounceCards implementations, so each publication can include its
+real title, authors, venue, and links on one holographic card. The adapters are
+separate files; the original HoloCard and BounceCards JSX/CSS remain unchanged.
+FlexCarousel and ScrollStack are retained for reference and are not rendered
+by the current page.
 
 - Upstream revision: [`e12c22192ac7b4b452c5e2feb9b586d74765d696`](https://github.com/DavidHDev/react-bits/commit/e12c22192ac7b4b452c5e2feb9b586d74765d696)
 - Copyright (c) 2026 David Haz
@@ -70,22 +71,39 @@ official band texture still match that record.
 ### Current page integrations
 
 - **Lanyard:** unmodified official source with its default motion, geometry,
-  lighting, and physical parameters. Only the personal front/back photo and
-  original official band texture are supplied as image props.
+  lighting, and physical parameters. The personal photograph is supplied to
+  both faces. The external `ThemedLanyard` wrapper supplies the original band
+  texture in light mode and a runtime color-inverted copy in dark mode through
+  the public `strapImage` and `strapColor` props.
 - **TechText:** unmodified official source in separate English and Chinese name
   instances. The page uses the component's public `align` and `fontSize` props
   for composition; it does not patch the renderer or typography calculations.
 - **TearTicket:** unmodified official source. Individual institutions and roles
-  are supplied through its supported `children` and `stub` slots. Dimensions,
-  theme colors, and other presentation choices use its public props. Its
-  original tear interaction is retained.
-- **HoloCard:** unmodified official source renders each publication's image
-  layer. Titles, author lists, venues, and links remain normal HTML in the
-  surrounding publication card.
-- **PublicationDeck:** a page-level adaptation inspired by BounceCards' fanned
-  arrangement, bounce, and hover separation. Its publication grouping and
-  click-to-expand behavior are application code, not features attributed to
-  the official BounceCards implementation.
+  are supplied through its supported `children` and `stub` slots; institutional
+  logos use its public `image` prop. Public dimensions and theme props plus
+  scoped page CSS compose compact square tickets and square logo areas. Its
+  original tear interaction and image parallax are retained.
+- **HoloCardContent:** an adapter in
+  [`src/components/adapters/HoloCardContent.jsx`](src/components/adapters/HoloCardContent.jsx)
+  starts from the official HoloCard source and adds a `children` slot on the
+  rotating front face. A non-flipping card with content uses group semantics so
+  its text and links remain accessible. It imports the original CSS and keeps
+  the shader, texture pipeline, lighting, spring motion, and default visual
+  parameters unchanged. Publication artwork is composed into a card-sized
+  image, with real HTML metadata over the same face. This adapter is distinct
+  from the unmodified original JSX in `src/components/reactbits/HoloCard/`.
+- **BounceCardsContent:** an adapter in
+  [`src/components/adapters/BounceCardsContent.jsx`](src/components/adapters/BounceCardsContent.jsx)
+  starts from the official BounceCards source and adds a `renderCard` content
+  slot, a rectangular height/hit area, and descendant focus and link handling.
+  It preserves the original rotation pattern, slot calculation, spring
+  integration, stagger, and hover target formulas. A guard keeps the active
+  card selected while the pointer reads its text or uses its links. The
+  original JSX/CSS remain unchanged in `src/components/reactbits/BounceCards/`.
+- **PublicationDeck:** application code places the eight publication cards in
+  one row using these two content adapters. Image composition, HTML metadata,
+  publication details, navigation links, and responsive layout are page-level
+  integrations rather than features attributed to the upstream components.
 
 TearTicket's `motion/react` import is provided by the installed
 `motion@12.23.12` dependency. HoloCard and BounceCards require no additional
@@ -105,6 +123,12 @@ when a front image is uploaded without a separate back image, both faces use
 the uploaded image. The original motion, card construction, surface finish,
 metal hardware, and band geometry are retained. No custom badge SVG is used.
 
+[`src/components/ThemedLanyard.jsx`](src/components/ThemedLanyard.jsx) derives
+the dark-mode white strap in memory with Canvas 2D `invert(1)`. The original
+texture file is never rewritten, and the official component's texture-loading
+and physical simulation code remain unchanged. This theme transformation is
+an application adapter, not an upstream Lanyard feature.
+
 Runtime dependencies are declared in `package.json`. Their license notices are
 available with their installed packages and upstream repositories.
 
@@ -113,5 +137,16 @@ available with their installed packages and upstream repositories.
 - Manrope Variable, Copyright 2019 The Manrope Project Authors, distributed under the SIL Open Font License 1.1. See `licenses/Manrope-OFL.txt`.
 - Instrument Serif, Copyright 2022 The Instrument Serif Project Authors, distributed under the SIL Open Font License 1.1. See `licenses/InstrumentSerif-OFL.txt`.
 - Geist Sans, Copyright (c) 2023 Vercel, in collaboration with basement.studio, distributed under SIL Open Font License 1.1. See `licenses/Geist-OFL.txt`. The TechText wrapper inherits this font to match the official demo.
+- Working Sheet Hand (400) and Working Sheet Marker (700), Copyright (c) 2026
+  Acme Sketch preview contributors, distributed under the MIT License. The
+  unmodified font files in `fonts/sketch/` are the exact fonts used by the
+  [DesignPrompts Sketch reference](https://designprompts.dev/?style=sketch&width=wide&section=hero),
+  whose CSS names them `Sketch Working Hand` and `Sketch Working Marker`.
+  The complete original
+  [font license](https://designprompts.dev/fonts/sketch/LICENSE.txt) is preserved
+  in [`licenses/WorkingSheet-MIT.txt`](licenses/WorkingSheet-MIT.txt).
+  See [`fonts/sketch/README.md`](fonts/sketch/README.md) for original download
+  URLs, exact hashes, and character coverage. These fonts support Latin text;
+  unsupported punctuation and Chinese characters use fallback fonts.
 
 Bundled React, React DOM, Three.js, OGL, Motion, and Lucide license notices are retained in the generated `assets/site/*.LEGAL.txt` files where provided by their upstream distributions.

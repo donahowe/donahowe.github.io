@@ -1,0 +1,8 @@
+/* HTML lies on the same official rotor/front face as the shader and artwork. */
+.holo-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  user-select: text;
+  -webkit-user-select: text;
+}

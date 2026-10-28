@@ -1,13 +1,47 @@
 # Desktop preview captures
 
-## Current HOWE revision — 2026-10-28
+## Current HOWE revision 3 — 2026-10-28
 
-The HOWE captures show the current desktop layout at 1363 × 936. The page
+Captured from the built homepage at 1363 × 936. The page opens in dark mode
+and uses the exact Working Sheet Hand / Marker fonts from the requested
+DesignPrompts Sketch reference. Original academic text, emphasis, links, and
+section order remain unchanged.
+
+- [Default-dark first screen](howe-v3-desktop-dark-20261028.jpg)
+- [Compact square education and internship tickets](howe-v3-tickets-20261028.jpg)
+- [One-row publication fan with an expanded paper](howe-v3-publications-20261028.jpg)
+- [Internally scrollable News column](howe-v3-news-20261028.jpg)
+
+Verified in the desktop browser: dark mode after reloading a light selection;
+English and Chinese TechText; full introduction and contacts in the first
+screen; one fixed background layer at different scroll positions; all six
+compact tickets with uncropped logos, mouse and keyboard tearing and restoration, with detached stubs contained; the
+280px News region reaching its last update using its own scroll position;
+one initial eight-card overlapping BounceCards fan; pointer and keyboard
+activation that separates and raises a card; complete longest paper title and
+unclipped metadata; the actual Paper link opening ACL Anthology without also
+opening the dialog; dialog Escape dismissal, focus return, and scroll-lock
+restoration; bounded, mutually exclusive contact Magnet movement without an
+additional button transform; and WeChat opening/closing with scrollbar
+compensation and focus return.
+
+The browser does not provide WebGL 2. These captures show the static portrait
+and HoloCard artwork fallback, although TechText, TearTicket, BounceCards and
+HoloCard's DOM tilt run. The 3D lanyard, shader foil/glitter and LightRays GPU
+rendering could not be visually checked here. The official renderer sources
+are retained; 17 vendor source/asset hashes and five preserved adapter algorithm
+sections pass independent checks. HoloCard material props use upstream defaults.
+Lanyard theme inversion changes only the supplied strap texture, after the
+texture is ready, leaving the official physics instance and source intact.
+
+## Archived HOWE revision 2 — 2026-10-28
+
+These earlier HOWE captures show the revision-2 desktop layout at 1363 × 936. The page
 opens in light mode, with the portrait on the left and the English and Chinese
 TechText names, original introduction and contact links on the right. The
 original News → Education → Internships → Publications sequence is restored.
 
-- [Current first screen](howe-desktop-light-20261028.jpg)
+- [Revision-2 first screen](howe-desktop-light-20261028.jpg)
 - [Expanded education and internship tickets](howe-education-20261028.jpg)
 - [Publication cards](howe-publications-20261028.jpg)
 

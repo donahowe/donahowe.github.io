@@ -113,8 +113,16 @@ assert.deepEqual(directSectionIds, ['top', 'notes', 'education', 'internships', 
 const sectionText = id => visibleText(elementById(main.inner, id, 'section').inner);
 const educationText = sectionText('education');
 const internshipText = sectionText('internships');
-const newsText = sectionText('notes');
-const publicationText = sectionText('research');
+const newsSection = elementById(main.inner, 'notes', 'section');
+const newsScroll = findElement(newsSection.inner, (_, attrs) => attrs['data-content'] === 'news-scroll', 'single News scroll container');
+assert.equal([...newsSection.inner.matchAll(/\bdata-content="news-scroll"/g)].length, 1, 'Keep one News scroll container');
+assert.equal(newsScroll.attrs.tabindex, '0', 'Make the News scroll container reachable by keyboard');
+assert.ok(newsScroll.attrs['aria-label'], 'Give the News scroll region an accessible label');
+assert.ok(!/<details\b/i.test(newsSection.inner), 'Keep all News in the scroll list, without an earlier-updates disclosure');
+const newsText = visibleText(newsScroll.inner);
+const publicationSection = elementById(main.inner, 'research', 'section');
+const publicationDeck = findElement(publicationSection.inner, (_, attrs) => ['row', 'bounce'].includes(attrs['data-publication-layout']), 'single publication collection');
+assert.equal([...publicationSection.inner.matchAll(/\bdata-publication-layout="[^"]+"/g)].length, 1, 'Keep all publications in one collection');
 const originalEntryTitles = [...oldPage.matchAll(/<div class="exp-details">\s*<h3>([\s\S]*?)<\/h3>/g)].map(match => visibleText(match[1]));
 const originalEntryDates = [...oldPage.matchAll(/<p class="time-period">([\s\S]*?)<\/p>/g)].map(match => visibleText(match[1]));
 for (let index = 0; index < originalEntryTitles.length; index++) {
@@ -150,19 +158,24 @@ for (let index = 0; index < originalPaperTitles.length; index++) {
   assert.equal(paper.venue, originalPaperVenues[index], `Keep original venue: ${paper.title}`);
 }
 for (const publication of publications) {
-  assert.ok(publicationText.includes(publication.title), `Missing prerendered publication: ${publication.title}`);
-  assert.ok(publicationText.includes(publication.authors.join(', ')), `Missing prerendered author list: ${publication.title}`);
-  assert.ok(publicationText.includes(publication.venue), `Missing prerendered venue: ${publication.title}`);
-  for (const link of publication.links) assert.ok(html.includes(link.url.replaceAll('&', '&amp;')), `Missing publication link: ${link.url}`);
+  const paper = elementById(publicationDeck.inner, `paper-${publication.id}`, 'article');
+  const text = visibleText(paper.inner);
+  const paperLinks = new Set(anchors(paper.inner).map(link => link.href));
+  assert.ok(text.includes(publication.title), `Missing prerendered publication: ${publication.title}`);
+  assert.ok(text.includes(publication.authors.join(', ')), `Missing prerendered author list: ${publication.title}`);
+  assert.ok(text.includes(publication.venue), `Missing prerendered venue: ${publication.title}`);
+  for (const link of publication.links) assert.ok(paperLinks.has(link.url), `Missing link on its publication card: ${link.url}`);
 }
+const renderedPaperIds = [...publicationDeck.inner.matchAll(/<article\b[^>]*\bid="(paper-[^"]+)"/g)].map(match => match[1]);
+assert.deepEqual(renderedPaperIds, publications.map(paper => `paper-${paper.id}`), 'Render each publication once in the original data order');
 const currentLinkTargets = new Set(anchors(html).map(link => link.href));
 for (const link of anchors(oldPage).filter(link => /^(https?:|mailto:)/.test(link.href ?? ''))) {
   assert.ok(currentLinkTargets.has(link.href), `Keep original public link: ${link.href}`);
 }
 
-// A fresh visit starts light, regardless of saved or operating-system theme.
+// A fresh visit starts dark, regardless of saved or operating-system theme.
 const htmlTag = html.match(/<html\b[^>]*>/i)?.[0];
-assert.equal(attributes(htmlTag ?? '')['data-theme'], 'light', 'The generated page must start in light mode');
+assert.equal(attributes(htmlTag ?? '')['data-theme'], 'dark', 'The generated page must start in dark mode');
 for (const [source, label] of [[templateSource, 'template'], [appSource, 'App']]) {
   assert.ok(!/getItem\s*\(\s*(['"])junhao-theme\1\s*\)/.test(source), `${label} must not restore a historical theme`);
   assert.ok(!/prefers-color-scheme/.test(source), `${label} must not choose the initial theme from the operating system`);
@@ -187,5 +200,5 @@ for (const name of ['Lanyard','TechText','LightRays','FlexCarousel','ScrollStack
 }
 assert.ok(!html.includes('<!-- APP_'), 'Build placeholders must be replaced');
 assert.ok(html.includes('application/ld+json'), 'Keep structured profile data');
-console.log(`Verified static content: exact original backup; original biography, emphasis, and links; hero contact links; original section order; ${publications.length} publications; ${education.length} education entries; ${experience.length} internships; ${news.length} updates; light default; HOWE brand; ${localAssets.size} local assets and section links.`);
+console.log(`Verified static content: exact original backup; original biography, emphasis, and links; hero contact links; original section order; ${publications.length} publications in one collection; ${education.length} education entries; ${experience.length} internships; ${news.length} updates in one News scroll region; dark default; HOWE brand; ${localAssets.size} local assets and section links.`);
 console.log('Source checks: bilingual TechText integration and seven preserved React Bits source files. Browser animation, layout, and interaction verification is separate.');
