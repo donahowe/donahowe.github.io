@@ -110,6 +110,20 @@
       "sha256": "c10a595c3de1939ff6bdc801b6c39bd80c869b437aaab5c5c14997a0b8436b88",
       "registry": "https://reactbits.dev/r/BounceCards-JS-CSS.json",
       "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/BounceCards/BounceCards.css"
+    },
+    {
+      "component": "DriftWall",
+      "path": "src/components/reactbits/DriftWall/DriftWall.jsx",
+      "sha256": "d6b186fbff08d8ad555ee705feebdeba2f1ff8882e22eb37b5c548ae821e7254",
+      "registry": "https://reactbits.dev/r/DriftWall-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/DriftWall/DriftWall.jsx"
+    },
+    {
+      "component": "DriftWall",
+      "path": "src/components/reactbits/DriftWall/DriftWall.css",
+      "sha256": "022c15ad24586e42f4fbe1dd1f059eeb0d558fd568972749768654c74e1e957d",
+      "registry": "https://reactbits.dev/r/DriftWall-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/DriftWall/DriftWall.css"
     }
   ],
   "verification": {
@@ -118,7 +132,8 @@
     "successfulCommands": [
       "npx --yes shadcn@latest add @react-bits/Lanyard-JS-CSS --yes",
       "npx --yes shadcn@latest add @react-bits/TechText-JS-CSS @react-bits/LightRays-JS-CSS @react-bits/FlexCarousel-JS-CSS @react-bits/ScrollStack-JS-CSS --yes",
-      "npx --yes shadcn@latest add @react-bits/TearTicket-JS-CSS @react-bits/HoloCard-JS-CSS @react-bits/BounceCards-JS-CSS --yes"
+      "npx --yes shadcn@latest add @react-bits/TearTicket-JS-CSS @react-bits/HoloCard-JS-CSS @react-bits/BounceCards-JS-CSS --yes",
+      "npx --yes shadcn@latest add @react-bits/DriftWall-JS-CSS --yes"
     ]
   },
   "retainedSourceOnly": [
@@ -136,13 +151,21 @@
       "component": "HoloCard",
       "path": "src/components/adapters/HoloCardContent.jsx",
       "original": "src/components/reactbits/HoloCard/HoloCard.jsx",
-      "changes": "Source-derived content adapter adds an HTML children slot and group semantics. The original shader, texture pipeline, spring motion, defaults and CSS are retained."
+      "changes": "Source-derived content adapter adds an HTML children slot and group semantics. The original shader, texture pipeline, spring motion, default declarations and CSS are retained. The page customizes public visual props and supplies a composed silver-frame artwork texture; these page choices do not change the official rendering algorithm.",
+      "pageMaterialProps": {
+        "intensity": 0,
+        "edgeSparkle": 0.8,
+        "frame": 4,
+        "glare": 0
+      },
+      "pageTextureComposition": "The 280px-wide publication card has an 11px silver gradient frame composed into its input artwork; the public frame value of 4 creates an approximately 11.2px edge effect band. The enlarged view reuses the same PublicationCard and material props."
     },
     {
       "component": "BounceCards",
       "path": "src/components/adapters/BounceCardsContent.jsx",
       "original": "src/components/reactbits/BounceCards/BounceCards.jsx",
-      "changes": "Source-derived content adapter adds renderCard, rectangular height/hitbox and descendant focus/link routing. The original slot/PATTERN, spring integration, stagger and hover target formulas are retained."
+      "changes": "Source-derived content adapter adds renderCard, rectangular height/hitbox and descendant focus/link routing. The original slot/PATTERN, spring integration, stagger and hover target formulas are retained.",
+      "pageLayoutProps": "Card dimensions, spread, rotation and pushDistance are page-level configuration of the preserved slot/hover engine."
     }
   ]
 }

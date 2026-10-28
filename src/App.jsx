@@ -5,7 +5,9 @@ import TearTicket from './components/reactbits/TearTicket/TearTicket.jsx';
 import Magnet from './components/reactbits/Magnet/Magnet.jsx';
 import CanvasGuard from './components/graphics/CanvasGuard.jsx';
 import PublicationDeck from './components/PublicationDeck.jsx';
+import LifeGallery from './components/LifeGallery.jsx';
 import { profile, publications, education, experience, news } from './data/profile.js';
+import { lifePhotos } from './data/lifePhotos.js';
 
 const Lanyard = lazy(() => import('./components/ThemedLanyard.jsx'));
 const LightRays = lazy(() => import('./components/reactbits/LightRays/LightRays.jsx'));
@@ -40,15 +42,18 @@ function SectionHeading({ number, id, children, count }) {
   </div>;
 }
 
-function ExperienceContent({ item, staticImage = false }) {
+function ExperienceContent({ item, staticImage = false, educationEntry = false, torn = false }) {
+  const at = item.title.indexOf('@');
+  const title = educationEntry && at >= 0 ? <>{item.title.slice(0, at + 1)}{' '}<br/>{item.title.slice(at + 1).trimStart()}</> : item.title;
   return <div className="ticket-content">
-    <div className="ticket-topline">{staticImage && <img className="organization-logo" src={item.image} alt={`${item.organization} logo`} width="64" height="64" loading="lazy" />}<span className="entry-period">{item.period}</span></div>
-    <h3>{item.url ? <ExternalLink href={item.url}>{item.title}<ArrowUpRight size={15}/></ExternalLink> : item.title}</h3>
+    <div className="ticket-topline">{staticImage && <img className="organization-logo" src={item.image} alt={`${item.organization} logo`} width="92" height="92" loading="lazy" />}</div>
+    <h3>{item.url ? <ExternalLink href={item.url}>{title}<ArrowUpRight size={15}/></ExternalLink> : title}</h3>
+    {torn && <span className="sr-only">{item.period}</span>}
     {item.people.length > 0 && <p className="entry-people">{item.people[0].role}: {item.people.map((person, i) => <React.Fragment key={person.name}>{i > 0 && ', '}<ExternalLink href={person.url}>{person.name}</ExternalLink></React.Fragment>)}</p>}
   </div>;
 }
 
-function ExperienceTicket({ item, index, animated, theme }) {
+function ExperienceTicket({ item, index, animated, theme, educationEntry = false }) {
   const [torn, setTorn] = useState(false);
   const ticketRef = useRef(null);
   useEffect(() => { if (!animated) setTorn(false); }, [animated]);
@@ -56,10 +61,10 @@ function ExperienceTicket({ item, index, animated, theme }) {
     setTorn(false);
     requestAnimationFrame(() => ticketRef.current?.querySelector('.tear-ticket__piece--stub')?.focus({ preventScroll: true }));
   };
-  const stub = <div className="ticket-stub-content" aria-hidden="true"><span className="stub-number">{pad(index + 1)}</span><span className="stub-rule"/><span className="stub-label">HOWE</span><span className="stub-barcode"/><ArrowUpRight size={17}/></div>;
-  return <article className="experience-ticket" ref={ticketRef}>
-    {animated ? <TearTicket width={286} height={286} stubSize={48} radius={16} rotate={0} image={item.image} imageAlt={`${item.organization} logo`} scrim={false} imageRadius={12} background={theme === 'light' ? '#ffffff' : '#1b1c20'} color={theme === 'light' ? '#191a1e' : '#f4f4f5'} borderColor={theme === 'light' ? '#dfe1e7' : '#3b3e47'} stubBackground={theme === 'light' ? '#f4f5f8' : '#262831'} torn={torn} onTear={() => setTorn(true)} ariaLabel={`Tear the ${item.organization} ticket stub`} stub={stub}><ExperienceContent item={item}/></TearTicket> : <div className="ticket-static"><div className="ticket-static-main"><ExperienceContent item={item} staticImage/></div><div className="ticket-static-stub">{stub}</div></div>}
-    <div className="ticket-footer">{torn ? <button type="button" onClick={restoreTicket} aria-label={`Restore ${item.organization} ticket`}><RotateCcw size={13}/>Restore ticket</button> : <span aria-hidden="true">{animated ? 'Drag the edge to tear' : '\u00a0'}</span>}</div>
+  const stub = <div className="ticket-stub-content"><span className="stub-number" aria-hidden="true">{pad(index + 1)}</span><span className="stub-period">{item.period}</span><span className="stub-barcode" aria-hidden="true"/></div>;
+  return <article className="experience-ticket" data-kind={educationEntry ? 'education' : 'internship'} ref={ticketRef}>
+    {animated ? <TearTicket width={286} height={286} stubSize={48} radius={16} rotate={0} image={item.image} imageAlt={`${item.organization} logo`} scrim={false} imageRadius={12} background={theme === 'light' ? '#ffffff' : '#1b1c20'} color={theme === 'light' ? '#191a1e' : '#f4f4f5'} borderColor={theme === 'light' ? '#dfe1e7' : '#3b3e47'} stubBackground={theme === 'light' ? '#f4f5f8' : '#262831'} torn={torn} onTear={() => setTorn(true)} ariaLabel={`Tear the ${item.organization} ticket stub, ${item.period}`} stub={stub}><ExperienceContent item={item} educationEntry={educationEntry} torn={torn}/></TearTicket> : <div className="ticket-static"><div className="ticket-static-main"><ExperienceContent item={item} educationEntry={educationEntry} staticImage/></div><div className="ticket-static-stub">{stub}</div></div>}
+    {torn && <div className="ticket-footer"><button type="button" onClick={restoreTicket} aria-label={`Restore ${item.organization} ticket`}><RotateCcw size={13}/>Restore ticket</button></div>}
   </article>;
 }
 
@@ -162,7 +167,7 @@ export default function App() {
     <div className={`site-rays${gpu ? ' has-webgl' : ''}`} aria-hidden="true">{gpu && <VisualBoundary fallback={null}><Suspense fallback={null}><CanvasGuard onUnavailable={onWebglUnavailable}><LightRays lightMode={theme === 'light'}/></CanvasGuard></Suspense></VisualBoundary>}</div>
     <header className="site-header"><div className="header-inner page-width">
       <a className="brand" href="#top" aria-label="HOWE, back to top">HOWE<span className="brand-dot" aria-hidden="true"/></a>
-      <nav id="main-navigation" aria-label="Main navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'}>{[['top','About'],['notes','News'],['education','Education'],['internships','Internships'],['research','Publications']].map(([id,label]) => <a key={id} href={`#${id}`} className={activeSection === id ? 'active' : ''} onClick={() => setMenuOpen(false)}>{label}</a>)}</nav>
+      <nav id="main-navigation" aria-label="Main navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'}>{[['top','About'],['notes','News'],['education','Education'],['internships','Internships'],['research','Publications'],['life','More about me']].map(([id,label]) => <a key={id} href={`#${id}`} className={activeSection === id ? 'active' : ''} onClick={() => setMenuOpen(false)}>{label}</a>)}</nav>
       <div className="header-controls"><button className="theme-toggle icon-button" type="button" onClick={() => setTheme(value => value === 'light' ? 'dark' : 'light')} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`} title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>{theme === 'light' ? <Moon size={18}/> : <Sun size={18}/>}</button><button className="mobile-menu icon-button" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={20}/> : <Menu size={20}/>}</button></div>
     </div></header>
 
@@ -181,11 +186,13 @@ export default function App() {
 
       <section className="news-section page-width" id="notes" aria-labelledby="news-heading"><SectionHeading number="01" id="news-heading" count={news.length}>News</SectionHeading><div className="news-layout" data-content="news-scroll" tabIndex={0} role="region" aria-label="News updates"><ul className="news-list">{news.map((item,i) => <NewsItem key={i} item={item}/>)}</ul></div></section>
 
-      <section className="experience-section page-width" id="education" aria-labelledby="education-heading"><SectionHeading number="02" id="education-heading" count={education.length}>Education</SectionHeading><div className="ticket-grid">{education.map((item,index) => <ExperienceTicket key={item.id} item={item} index={index} animated={animated} theme={theme}/>)}</div></section>
+      <section className="experience-section page-width" id="education" aria-labelledby="education-heading"><SectionHeading number="02" id="education-heading" count={education.length}>Education</SectionHeading><div className="ticket-grid">{education.map((item,index) => <ExperienceTicket key={item.id} item={item} index={index} animated={animated} theme={theme} educationEntry/>)}</div></section>
 
       <section className="experience-section page-width" id="internships" aria-labelledby="internships-heading"><SectionHeading number="03" id="internships-heading" count={experience.length}>Internships</SectionHeading><div className="ticket-grid">{experience.map((item,index) => <ExperienceTicket key={item.id} item={item} index={index} animated={animated} theme={theme}/>)}</div></section>
 
-      <section className="research-section page-width" id="research" aria-labelledby="research-heading"><SectionHeading number="04" id="research-heading" count={publications.length}>Selected Publications</SectionHeading><PublicationDeck publications={publications} animated={animated} theme={theme}/></section>
+      <section className="research-section page-width" id="research" aria-labelledby="research-heading"><SectionHeading number="04" id="research-heading">Selected Publications</SectionHeading><PublicationDeck publications={publications} animated={animated} theme={theme}/></section>
+
+      <section className="life-section page-width" id="life" aria-labelledby="life-heading"><SectionHeading number="05" id="life-heading">More about me</SectionHeading><p className="life-note" lang="zh-CN">我最近活着的证据</p><LifeGallery photos={lifePhotos} animated={animated} theme={theme}/></section>
     </main>
 
     <footer className="site-footer page-width"><a href="#top" className="footer-brand">HOWE</a><span>© 2025 Junhao Cheng <span lang="zh-CN">程钧豪</span></span><div><button type="button" className="motion-toggle" aria-pressed={motion} onClick={toggleMotion}>{motion ? <Pause size={12}/> : <Play size={12}/>}Motion {motion ? 'on' : 'off'}</button><a href="/legacy.html">Classic version<ArrowUpRight size={12}/></a><a href="#top" aria-label="Back to top">Back to top<MoveUpRight size={13}/></a></div></footer>

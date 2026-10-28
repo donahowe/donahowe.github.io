@@ -1,0 +1,66 @@
+/* Section spacing and website wrappers only. DriftWall's CSS stays intact. */
+.life-section { padding-top: 24px; padding-bottom: 76px; }
+.life-note { margin: -10px 0 20px; color: var(--muted, #646773); font: 400 20px/1.6 var(--sans, sans-serif); }
+
+.life-gallery {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  width: 100%;
+  height: 600px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--ink, #191a1e);
+  font-family: var(--sans, sans-serif);
+}
+
+.life-gallery[data-life-gallery='static'] { border: 1px solid var(--line, #e4e6eb); }
+.life-gallery__static {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 18px;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line, #e4e6eb) transparent;
+}
+
+.life-gallery__static > li { min-width: 0; }
+.life-gallery__static a { display: block; overflow: hidden; border-radius: 14px; background: var(--paper, #fff); }
+.life-gallery__static img { display: block; width: 100%; height: auto; }
+.life-gallery__static a:focus-visible { outline: 2px solid var(--accent, #4c62e9); outline-offset: 4px; }
+.life-gallery__static:focus-visible { outline: 2px solid var(--accent, #4c62e9); outline-offset: -5px; }
+
+@media (max-width: 900px) {
+  .life-section { padding-top: 18px; padding-bottom: 56px; }
+  .life-gallery { height: 540px; }
+  .life-note { font-size: 19px; }
+  .life-gallery__static { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  .life-section { padding-top: 16px; padding-bottom: 45px; }
+  .life-note { margin-top: -8px; margin-bottom: 15px; font-size: 18px; }
+  .life-gallery { height: 480px; border-radius: 14px; }
+  .life-gallery__static { gap: 12px; padding: 12px; }
+  .life-gallery__static a { border-radius: 10px; }
+}
+
+@media print {
+  .life-section { padding-block: 20px; }
+  .life-note { color: #333; font-size: 12pt; }
+  .life-gallery { background: #fff; }
+  .life-gallery[data-life-gallery='static'] { height: auto; overflow: visible; }
+  .life-gallery__static { height: auto; overflow: visible; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .life-gallery__static > li { break-inside: avoid; }
+}

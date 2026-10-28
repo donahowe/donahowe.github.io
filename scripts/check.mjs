@@ -24,7 +24,7 @@ const decodeEntities = value => value
   .replace(/&#(\d+);/g, (_, value) => String.fromCodePoint(Number(value)))
   .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&apos;/g, "'")
   .replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-const visibleText = value => decodeEntities(value.replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]*>/g, ''))
+const visibleText = value => decodeEntities(value.replace(/<!--[\s\S]*?-->/g, '').replace(/<br\b[^>]*>/gi, ' ').replace(/<[^>]*>/g, ''))
   .replace(/\s+/g, ' ').trim();
 const attributes = openingTag => Object.fromEntries(
   [...openingTag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)]
@@ -109,10 +109,9 @@ for (const token of main.inner.matchAll(/<!--[\s\S]*?-->|<\/?([a-z][\w:-]*)\b[^>
   if (depth === 0 && tag === 'section') directSectionIds.push(attributes(token[0]).id);
   if (!voidTags.has(tag) && !/\/\s*>$/.test(token[0])) depth++;
 }
-assert.deepEqual(directSectionIds, ['top', 'notes', 'education', 'internships', 'research'], 'Keep hero → News → Education → Internships → Selected Publications order');
-const sectionText = id => visibleText(elementById(main.inner, id, 'section').inner);
-const educationText = sectionText('education');
-const internshipText = sectionText('internships');
+const academicSectionOrder = ['top', 'notes', 'education', 'internships', 'research'];
+assert.deepEqual(directSectionIds.slice(0, academicSectionOrder.length), academicSectionOrder, 'Keep the original academic sections first and in their original order');
+assert.deepEqual(directSectionIds.slice(academicSectionOrder.length), ['life'], 'Append More about me after publications as the final main section');
 const newsSection = elementById(main.inner, 'notes', 'section');
 const newsScroll = findElement(newsSection.inner, (_, attrs) => attrs['data-content'] === 'news-scroll', 'single News scroll container');
 assert.equal([...newsSection.inner.matchAll(/\bdata-content="news-scroll"/g)].length, 1, 'Keep one News scroll container');
@@ -123,6 +122,8 @@ const newsText = visibleText(newsScroll.inner);
 const publicationSection = elementById(main.inner, 'research', 'section');
 const publicationDeck = findElement(publicationSection.inner, (_, attrs) => ['row', 'bounce'].includes(attrs['data-publication-layout']), 'single publication collection');
 assert.equal([...publicationSection.inner.matchAll(/\bdata-publication-layout="[^"]+"/g)].length, 1, 'Keep all publications in one collection');
+const toolbar = findElement(publicationDeck.inner, (_, attrs) => hasClass(attrs, 'publication-deck__toolbar'), 'publication toolbar');
+assert.ok(!/\b\d+\s+papers\b/i.test(visibleText(toolbar.inner)), 'Remove the redundant paper-count label from the toolbar');
 const originalEntryTitles = [...oldPage.matchAll(/<div class="exp-details">\s*<h3>([\s\S]*?)<\/h3>/g)].map(match => visibleText(match[1]));
 const originalEntryDates = [...oldPage.matchAll(/<p class="time-period">([\s\S]*?)<\/p>/g)].map(match => visibleText(match[1]));
 for (let index = 0; index < originalEntryTitles.length; index++) {
@@ -130,14 +131,36 @@ for (let index = 0; index < originalEntryTitles.length; index++) {
   assert.ok(item, `Keep original experience wording: ${originalEntryTitles[index]}`);
   assert.equal(item.period, originalEntryDates[index], `Keep original dates: ${item.title}`);
 }
-for (const [items, text] of [[education, educationText], [experience, internshipText]]) {
-  for (const item of items) {
-    assert.ok(text.includes(item.title), `Keep experience in its correct section: ${item.title}`);
-    assert.ok(text.includes(item.period), `Keep visible experience dates: ${item.period}`);
+for (const [items, sectionId, kind] of [[education, 'education', 'education'], [experience, 'internships', 'internship']]) {
+  const section = elementById(main.inner, sectionId, 'section');
+  const openings = [...section.inner.matchAll(/<article\b[^>]*>/g)]
+    .filter(match => attributes(match[0])['data-kind'] === kind);
+  assert.equal(openings.length, items.length, `Keep every ${kind} ticket in its original section`);
+  for (let index = 0; index < items.length; index++) {
+    const item = items[index];
+    const ticket = findElement(section.inner.slice(openings[index].index), (tag, attrs) => tag === 'article' && attrs['data-kind'] === kind, `${kind} ticket ${index + 1}`);
+    const title = findElement(ticket.inner, tag => tag === 'h3', `title for ${item.title}`);
+    assert.equal(visibleText(title.inner), item.title, `Keep original title and order: ${item.title}`);
+    const stub = findElement(ticket.inner, (_, attrs) => hasClass(attrs, 'ticket-stub-content'), `date strip for ${item.title}`);
+    const period = findElement(stub.inner, (_, attrs) => hasClass(attrs, 'stub-period'), `date on the strip for ${item.title}`);
+    assert.equal(visibleText(period.inner), item.period, `Keep the original date on its ticket strip: ${item.period}`);
+    assert.notEqual(stub.attrs['aria-hidden'], 'true', 'The date strip carries meaningful content');
+    assert.notEqual(period.attrs['aria-hidden'], 'true', 'The original date must remain accessible');
+    assert.ok(!/\bHOWE\b/.test(visibleText(stub.inner)), 'Use the original period in place of the stub brand');
+    // The prerendered/intact state contains one date. A torn client-side ticket
+    // can retain a screen-reader-only date while its old strip is aria-hidden.
+    assert.equal(visibleText(ticket.inner).split(item.period).length - 1, 1, `Display the original date once on the intact ticket: ${item.title}`);
+    const images = [...ticket.inner.matchAll(/<img\b[^>]*>/g)].map(match => attributes(match[0]));
+    assert.ok(images.some(image => image.src === item.image), `Keep the original logo: ${item.organization}`);
+    if (kind === 'education') {
+      const at = item.title.indexOf('@');
+      assert.deepEqual(title.inner.split(/<br\b[^>]*>/i).map(visibleText), [item.title.slice(0, at + 1).trim(), item.title.slice(at + 1).trim()], `Wrap the education title after @ without changing its words: ${item.title}`);
+    } else {
+      assert.ok(!/<br\b/i.test(title.inner), `Keep natural wrapping for internship titles: ${item.title}`);
+    }
   }
-  const positions = items.map(item => text.indexOf(item.title));
-  assert.deepEqual(positions, [...positions].sort((a, b) => a - b), 'Keep original order within education and internships');
 }
+assert.ok(!appSource.includes('Drag the edge to tear'), 'Remove the idle ticket drag-instruction caption');
 const originalNews = [...oldPage.matchAll(/<span class="news-content">([\s\S]*?)<\/span>/g)].map(match => visibleText(match[1]));
 const originalNewsDates = [...oldPage.matchAll(/<span class="news-date">([\s\S]*?)<\/span>/g)].map(match => visibleText(match[1]));
 for (let index = 0; index < originalNews.length; index++) {
@@ -195,10 +218,11 @@ for (const asset of localAssets) {
   const file = await stat(resolve(root, `.${asset}`)).catch(() => null);
   assert.ok(file?.isFile(), `Missing local asset: ${asset}`);
 }
-for (const name of ['Lanyard','TechText','LightRays','FlexCarousel','ScrollStack','Magnet','SpotlightCard']) {
+const preservedComponents = ['Lanyard','TechText','LightRays','FlexCarousel','ScrollStack','Magnet','SpotlightCard','TearTicket','HoloCard','BounceCards','DriftWall'];
+for (const name of preservedComponents) {
   assert.ok((await stat(`src/components/reactbits/${name}/${name}.jsx`)).isFile(), `Missing preserved React Bits source: ${name}`);
 }
 assert.ok(!html.includes('<!-- APP_'), 'Build placeholders must be replaced');
 assert.ok(html.includes('application/ld+json'), 'Keep structured profile data');
 console.log(`Verified static content: exact original backup; original biography, emphasis, and links; hero contact links; original section order; ${publications.length} publications in one collection; ${education.length} education entries; ${experience.length} internships; ${news.length} updates in one News scroll region; dark default; HOWE brand; ${localAssets.size} local assets and section links.`);
-console.log('Source checks: bilingual TechText integration and seven preserved React Bits source files. Browser animation, layout, and interaction verification is separate.');
+console.log(`Source checks: bilingual TechText integration and ${preservedComponents.length} preserved React Bits source files. Browser animation, layout, and interaction verification is separate.`);

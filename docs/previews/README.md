@@ -1,6 +1,51 @@
 # Desktop preview captures
 
-## Current HOWE revision 3 — 2026-10-28
+## Current HOWE revision 4 — 2026-10-28
+
+- [Ticket dates, larger logos, and education title wrapping](howe-v4-tickets-20261028.jpg)
+- [Silver publication cards and text-only venue labels](howe-v4-publications-20261028.jpg)
+- [The same publication card enlarged](howe-v4-paper-enlarged-20261028.jpg)
+- [More about me placeholder photo wall](howe-v4-life-20261028.jpg)
+
+Desktop review confirmed the revised ticket presentation: the original dates
+on the side strips, larger school/company logos, education titles wrapping
+after `@`, and removal of the idle drag-instruction caption.
+
+The publication review confirmed the silver edge treatment and prominent
+original venue labels, complete content without overflow on the longest card,
+and enlargement of the same card design. Escape and the close control dismiss
+the enlarged card, with focus and page scrolling restored afterward.
+The transparent VisDiaHalBench and DKFormer figures both render against a
+white background. All eight venue labels contain only their original text,
+with no SVG icons. The overview and enlarged VisDiaHalBench captures above
+were refreshed after these changes.
+
+The **More about me / 我最近活着的证据** section was verified at the end of
+`main`, with its navigation link working and the academic order unchanged.
+All eight local placeholder photos loaded. At the tested desktop size, the
+official DriftWall rendered five columns in a 600px-high wall, repeating the
+eight images into 46 tiles for continuous looping.
+
+Track transforms continued updating during observation. Pointer hover raised
+the active tile to `translateZ(64px)` at opacity 1 and paused its column;
+keyboard Tab focus selected the corresponding active tile. Turning Motion off
+switched to an independently scrollable grid containing all eight images, and
+turning it back on restored the wall. Dark/light theme switching passed, the
+wall's outer container remained transparent, and the document had no horizontal
+overflow.
+
+These are placeholder-photo checks. Replacing them with the forthcoming
+personal collection still requires reviewing the new images and descriptions.
+
+The current cloud browser does not provide WebGL 2. DriftWall's CSS interaction
+was exercised, as were the card's DOM interactions and static material fallback.
+The restored HoloCard edge-sparkle shader itself could not be visually verified
+in this environment, nor could the GPU lanyard or LightRays rendering. The
+static integrity checks pass for 19 official source/asset files and five
+preserved adapter algorithm sections; those checks are separate from browser
+rendering verification.
+
+## Archived HOWE revision 3 — 2026-10-28
 
 Captured from the built homepage at 1363 × 936. The page opens in dark mode
 and uses the exact Working Sheet Hand / Marker fonts from the requested
