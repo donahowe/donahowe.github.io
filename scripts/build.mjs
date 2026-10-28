@@ -45,7 +45,7 @@ const { default: App } = await import(`${pathToFileURL(resolve('.build/server.mj
 const html = renderToString(createElement(App));
 const entry = Object.entries(result.metafile.outputs).find(([, details]) => details.entryPoint === 'src/main.jsx');
 if (!entry || !entry[1].cssBundle) throw new Error('Build did not produce the expected JavaScript and stylesheet.');
-const font = Object.keys(result.metafile.outputs).find(path => path.includes('manrope-latin-wght') && path.endsWith('.woff2'));
+const font = Object.keys(result.metafile.outputs).find(path => path.includes('Geist-Variable') && path.endsWith('.woff2'));
 const template = await readFile('src/index.template.html', 'utf8');
 const page = template.replace('<!-- APP_HTML -->', html)
   .replace('<!-- APP_CSS -->', `<link rel="stylesheet" href="/${entry[1].cssBundle}">`)

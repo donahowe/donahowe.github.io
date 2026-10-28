@@ -68,6 +68,62 @@
       "path": "images/react-bits/lanyard.png",
       "sha256": "5cd055054c470432fb8743eda836cf0ba40bcbc2b6df5ee84c3f831607be657c",
       "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/assets/lanyard/lanyard.png"
+    },
+    {
+      "component": "TearTicket",
+      "path": "src/components/reactbits/TearTicket/TearTicket.jsx",
+      "sha256": "1fa31fc5bcd83c7e4911b347a20b43963a3c05fca94f9e7562025133d817a7a2",
+      "registry": "https://reactbits.dev/r/TearTicket-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Micro/TearTicket/TearTicket.jsx"
+    },
+    {
+      "component": "TearTicket",
+      "path": "src/components/reactbits/TearTicket/TearTicket.css",
+      "sha256": "2599cee61597409350e6d93548c9f14cdda6befaee9a4c46cc31f51ca5f6fb6c",
+      "registry": "https://reactbits.dev/r/TearTicket-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Micro/TearTicket/TearTicket.css"
+    },
+    {
+      "component": "HoloCard",
+      "path": "src/components/reactbits/HoloCard/HoloCard.jsx",
+      "sha256": "40e68659e18761786bc69e5e69cf5b16c04fd092a3dbb8e030c095bab91bb282",
+      "registry": "https://reactbits.dev/r/HoloCard-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/HoloCard/HoloCard.jsx"
+    },
+    {
+      "component": "HoloCard",
+      "path": "src/components/reactbits/HoloCard/HoloCard.css",
+      "sha256": "d891110bae1e6810d596823104cb67b0c3f982c62cf0f37ae220bb062afcb9dc",
+      "registry": "https://reactbits.dev/r/HoloCard-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/HoloCard/HoloCard.css"
+    },
+    {
+      "component": "BounceCards",
+      "path": "src/components/reactbits/BounceCards/BounceCards.jsx",
+      "sha256": "f49ab5cf394d9607ec2fbfa0628a31c41ff376a55059397fb72c8535d470a869",
+      "registry": "https://reactbits.dev/r/BounceCards-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/BounceCards/BounceCards.jsx"
+    },
+    {
+      "component": "BounceCards",
+      "path": "src/components/reactbits/BounceCards/BounceCards.css",
+      "sha256": "c10a595c3de1939ff6bdc801b6c39bd80c869b437aaab5c5c14997a0b8436b88",
+      "registry": "https://reactbits.dev/r/BounceCards-JS-CSS.json",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/content/Components/BounceCards/BounceCards.css"
     }
+  ],
+  "verification": {
+    "date": "2026-10-28",
+    "method": "Byte-for-byte comparison with the official registry manifests at upstreamCommit and files installed by the official shadcn CLI.",
+    "successfulCommands": [
+      "npx --yes shadcn@latest add @react-bits/Lanyard-JS-CSS --yes",
+      "npx --yes shadcn@latest add @react-bits/TechText-JS-CSS @react-bits/LightRays-JS-CSS @react-bits/FlexCarousel-JS-CSS @react-bits/ScrollStack-JS-CSS --yes",
+      "npx --yes shadcn@latest add @react-bits/TearTicket-JS-CSS @react-bits/HoloCard-JS-CSS @react-bits/BounceCards-JS-CSS --yes"
+    ]
+  },
+  "retainedSourceOnly": [
+    "FlexCarousel",
+    "ScrollStack",
+    "BounceCards"
   ]
 }

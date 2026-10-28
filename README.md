@@ -1,12 +1,16 @@
-# Junhao Cheng · Personal homepage
+# HOWE · Junhao Cheng
 
 [Visit the homepage](https://donahowe.github.io/) · [View the original design](https://donahowe.github.io/legacy.html)
 
 An academic portfolio for **Junhao Cheng (程钧豪)**, an MPhil student at City University of Hong Kong working on Interactive AI, video reasoning, and video generation.
 
-The 2026 redesign is designed primarily for desktop viewing, with light and dark themes and the original academic wording retained. It uses the official React Bits Lanyard, TechText, LightRays, FlexCarousel, and ScrollStack implementations and their demo settings. The five components' JSX and CSS files are unmodified registry source, verified against files installed by the official shadcn CLI. Page layout, content, theme controls, and accessible alternatives live outside those components.
+The current design uses the **HOWE** wordmark, Geist typography, and a neutral white/black palette. Every new page load starts in **light mode**. The header button switches to dark mode for the current page; theme choices are neither restored from nor saved to browser storage, and the initial theme does not follow the operating system.
 
-The Lanyard displays the original portrait on both faces and uses React Bits' original band texture, matching the official demo's behavior when a front photo is uploaded. Publication details also remain available as ordinary HTML, including when JavaScript is unavailable.
+On desktop, the first section places the draggable **Lanyard** portrait on the left and English/Chinese **TechText** names on the right. The complete original introduction follows the names, with its original links and emphasis, then the original availability statement and email, Scholar, GitHub, and WeChat contacts. The remaining page follows the original reading order: **News → Education → Internships → Selected Publications**.
+
+All six education and internship entries are visible as **TearTicket** cards. Visitors can tear a ticket's stub and use **Restore ticket** to bring it back. The publication area combines **HoloCard** images with ordinary HTML titles, venues, authors, and links. Its gentle fan arrangement, expansion control, and large-image dialog are a custom integration inspired by **BounceCards**, not an instance of the official BounceCards component. Publication details remain in the prerendered HTML when JavaScript is unavailable.
+
+The Lanyard displays the original portrait on both faces with React Bits' original band texture. **LightRays** remains a background enhancement. The former FlexCarousel and ScrollStack sources are retained in the repository but are no longer rendered by the current page.
 
 ## Develop and update
 
@@ -16,7 +20,6 @@ Use **Node.js 22 or newer** and npm. From a checkout of this repository:
 npm ci
 npm run build
 npm run check
-node scripts/check-reactbits.mjs
 npm run preview
 ```
 
@@ -26,8 +29,11 @@ The preview serves the generated site at `http://localhost:3000`. Run `npm run b
 | --- | --- |
 | `src/data/profile.js` | Publications, news, education, internships, contact links, and profile metadata |
 | `src/App.jsx` | Page structure, original introductory copy, and interaction wrappers |
-| `src/styles.css` | Typography, colors, layouts, and responsive styles |
-| `src/components/reactbits/` | Official React Bits component source |
+| `src/styles.css` | Geist typography, neutral themes, hero layout, ticket layout, and responsive styles |
+| `src/index.template.html` | Static document metadata and the initial light theme |
+| `src/components/PublicationDeck.jsx` and `PublicationDeck.css` | Custom publication fan/grid layout, HoloCard integration, text, links, and image dialog |
+| `src/components/graphics/CanvasGuard.jsx` | Page-level rendering fallback |
+| `src/components/reactbits/` | Vendored React Bits source, including Lanyard, TechText, LightRays, TearTicket, and HoloCard |
 | `images/` | Original portrait, research figures, logos, and other existing assets |
 | `images/optimized/` | Optimized publication figures |
 | `images/react-bits/lanyard.png` | Unmodified official React Bits band texture |
@@ -38,7 +44,9 @@ The preview serves the generated site at `http://localhost:3000`. Run `npm run b
 | `docs/REDESIGN.md` | Maintenance notes, backup details, and restoration steps |
 | `docs/react-bits-integrity.json` | Pinned hashes for the official component source and band texture |
 
-Edit source files rather than the generated `index.html` or bundles. Most academic metadata lives in `src/data/profile.js`; the original introductory and availability sentences in `src/App.jsx` should be updated alongside it when those facts change. Preserve the original wording unless a content update is intended. Publication figures use `images/optimized/<publication-id>.webp` in the carousel, so a new or renamed publication needs a matching optimized image. The portrait comes directly from `profile.avatar`; there is no separate badge artwork to regenerate.
+Edit source files rather than the generated `index.html` or bundles. Most academic metadata lives in `src/data/profile.js`; the original introductory and availability sentences in `src/App.jsx` should be updated alongside it when those facts change. Preserve the original wording unless a content update is intended. Publication figures use `images/optimized/<publication-id>.webp` in the deck, so a new or renamed publication needs a matching optimized image. The portrait comes directly from `profile.avatar`; there is no separate badge artwork to regenerate.
+
+`npm run check` runs the static content/layout-contract checks and the pinned React Bits source-integrity check. It does not establish that browser animations or pointer interactions have been verified.
 
 ## Publish to GitHub Pages
 
@@ -46,8 +54,8 @@ The repository retains its existing **`main` branch / root directory** deploymen
 
 After making changes:
 
-1. Run `npm run build`, `npm run check`, and `node scripts/check-reactbits.mjs`.
-2. Review the desktop layout, component interactions, and both themes in the local preview, then check narrow-screen fallbacks.
+1. Run `npm run build` and `npm run check`.
+2. Review the desktop layout, bilingual names, ticket tearing/restoration, publication expansion/dialogs, and both themes in the local preview, then check narrow-screen fallbacks and reduced motion.
 3. Review and commit the source changes together with the generated `index.html` and `assets/site/` changes.
 4. Push to `main` through your normal Git workflow.
 
@@ -60,14 +68,15 @@ The original homepage was preserved before the redesign:
 - **Complete repository backup:** [`backup/pre-redesign-2026-10-28`](https://github.com/donahowe/donahowe.github.io/tree/backup/pre-redesign-2026-10-28)
 - **Original commit:** [`ae00437e6b34b281d2cb2c65498b84f41d4aa461`](https://github.com/donahowe/donahowe.github.io/commit/ae00437e6b34b281d2cb2c65498b84f41d4aa461)
 - **Browsable original homepage:** [`legacy.html`](https://donahowe.github.io/legacy.html)
+- **First React Bits iteration:** [`backup/react-bits-v1-2026-10-28`](https://github.com/donahowe/donahowe.github.io/tree/backup/react-bits-v1-2026-10-28)
 
 The original images and other repository assets remain available. See [the restoration guide](docs/REDESIGN.md#restore-the-original-homepage) for a normal, history-preserving Git revert or an HTML-only restore.
 
 ## Credits and licenses
 
-The animated components and band texture come from [React Bits](https://github.com/DavidHDev/react-bits) by David Haz. The five requested components retain the exact official JavaScript + CSS registry files, including their original motion and rendering behavior. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the pinned revision and verified installation commands, and [`licenses/react-bits-LICENSE.md`](licenses/react-bits-LICENSE.md) for the complete upstream license. The React Bits license includes the Commons Clause; the repository's own license does not replace that upstream license.
+The animated components and band texture come from [React Bits](https://github.com/DavidHDev/react-bits) by David Haz. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for source provenance and [`licenses/react-bits-LICENSE.md`](licenses/react-bits-LICENSE.md) for the complete upstream license. Preserve upstream source and license records when changing the integration. The React Bits license includes the Commons Clause; the repository's own license does not replace that upstream license.
 
-The visual direction draws on the botanical style reference at [DesignPrompts](https://designprompts.dev/?style=botanical&width=wide&section=hero).
+`PublicationDeck` is site-specific code inspired by BounceCards' card arrangement. It imports HoloCard for the image treatment and keeps the academic text as HTML. The official BounceCards source may be retained as a reference, but it is not used as the deck implementation.
 
 The original homepage credits [Yi Ren](https://rayeren.github.io/) and AcadHomepage. Its acknowledgments are retained here:
 
