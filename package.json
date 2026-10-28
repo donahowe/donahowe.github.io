@@ -1,0 +1,29 @@
+{
+  "name": "junhao-cheng-homepage",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Junhao Cheng's academic homepage, with React Bits interactions and a static GitHub Pages build.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs && node scripts/check-reactbits.mjs",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "geist": "1.7.0",
+    "lucide-react": "1.63.0",
+    "ogl": "1.0.11",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

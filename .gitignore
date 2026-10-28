@@ -1,0 +1,7 @@
+node_modules/
+.build/
+.openai/
+.DS_Store
+npm-debug.log*
+
+qa-preview/

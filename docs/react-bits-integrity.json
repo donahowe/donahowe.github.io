@@ -1,0 +1,73 @@
+{
+  "description": "Unmodified official React Bits registry files and official Lanyard strap asset. Website-specific behavior lives outside these files.",
+  "retrieved": "2026-10-28",
+  "upstreamCommit": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+  "files": [
+    {
+      "component": "Lanyard",
+      "path": "src/components/reactbits/Lanyard/Lanyard.jsx",
+      "sha256": "c5d3750b82111c400c8b1ae564fafee71f43012fbf86e2001aa4ff2d7912ed4c",
+      "registry": "https://reactbits.dev/r/Lanyard-JS-CSS.json"
+    },
+    {
+      "component": "Lanyard",
+      "path": "src/components/reactbits/Lanyard/Lanyard.css",
+      "sha256": "25678081ba329fe4f4c8730351e68b023e028a673eda5a4638199f79eec5b463",
+      "registry": "https://reactbits.dev/r/Lanyard-JS-CSS.json"
+    },
+    {
+      "component": "TechText",
+      "path": "src/components/reactbits/TechText/TechText.jsx",
+      "sha256": "397181c93aeada2bc69aff800f79c2a17c502fabc43e0de6913224141413eda8",
+      "registry": "https://reactbits.dev/r/TechText-JS-CSS.json"
+    },
+    {
+      "component": "TechText",
+      "path": "src/components/reactbits/TechText/TechText.css",
+      "sha256": "e71acfbf0f418e78ae3f37499ec36e4e2ca43009b5ba6dc6ac5663fb9d1dc5a8",
+      "registry": "https://reactbits.dev/r/TechText-JS-CSS.json"
+    },
+    {
+      "component": "LightRays",
+      "path": "src/components/reactbits/LightRays/LightRays.jsx",
+      "sha256": "3fb621e0af06c4964b14d11fc583ab273d7b76fdc9f0ade41916a37e1c564c1c",
+      "registry": "https://reactbits.dev/r/LightRays-JS-CSS.json"
+    },
+    {
+      "component": "LightRays",
+      "path": "src/components/reactbits/LightRays/LightRays.css",
+      "sha256": "745fa51da4964776a2a0166857f94bcaa2b131bd6bf92fa46796226cc5ce58e3",
+      "registry": "https://reactbits.dev/r/LightRays-JS-CSS.json"
+    },
+    {
+      "component": "FlexCarousel",
+      "path": "src/components/reactbits/FlexCarousel/FlexCarousel.jsx",
+      "sha256": "6ff85b48ebd647190fb5b0b6543d142a28062090ee8990c2a5a1d59178fc6706",
+      "registry": "https://reactbits.dev/r/FlexCarousel-JS-CSS.json"
+    },
+    {
+      "component": "FlexCarousel",
+      "path": "src/components/reactbits/FlexCarousel/FlexCarousel.css",
+      "sha256": "12ae281e18501340c3c9230491f0990abb899f6841af02db07a6a6495bc27adb",
+      "registry": "https://reactbits.dev/r/FlexCarousel-JS-CSS.json"
+    },
+    {
+      "component": "ScrollStack",
+      "path": "src/components/reactbits/ScrollStack/ScrollStack.jsx",
+      "sha256": "e73d47bae2967bf5f4051a8600387ff460dc381a2c8c571c76d28f42aa970292",
+      "registry": "https://reactbits.dev/r/ScrollStack-JS-CSS.json"
+    },
+    {
+      "component": "ScrollStack",
+      "path": "src/components/reactbits/ScrollStack/ScrollStack.css",
+      "sha256": "64b2bf8c66a1958e0405ed6b885086562e635c22f0f1f79950806661d5470013",
+      "registry": "https://reactbits.dev/r/ScrollStack-JS-CSS.json"
+    },
+    {
+      "component": "Lanyard",
+      "path": "images/react-bits/lanyard.png",
+      "sha256": "5cd055054c470432fb8743eda836cf0ba40bcbc2b6df5ee84c3f831607be657c",
+      "source": "https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/assets/lanyard/lanyard.png"
+    }
+  ]
+}
