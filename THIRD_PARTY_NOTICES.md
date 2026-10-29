@@ -73,8 +73,8 @@ official band texture still match that record.
 ### Current page integrations
 
 - **Lanyard:** unmodified official source with its default motion, geometry,
-  lighting, and physical parameters. The personal photograph is supplied to
-  both faces. The external `ThemedLanyard` wrapper supplies the original band
+  lighting, and physical parameters. Two personal photographs are supplied to
+  its front and reverse faces. The external `ThemedLanyard` wrapper supplies the original band
   texture in light mode and a runtime color-inverted copy in dark mode through
   the public `strapImage` and `strapColor` props.
 - **TechText:** unmodified official source in separate English and Chinese name
@@ -118,8 +118,8 @@ official band texture still match that record.
   The enlarged view reuses the same `PublicationCard` component, including its
   artwork, material parameters, metadata, and links. Modal positioning, entry
   animation, dismissal, and focus restoration are application behavior.
-- **DriftWall:** unmodified official JavaScript/CSS source renders the photo
-  wall in “More about me / 我最近活着的证据.” The page supplies its own
+- **DriftWall (currently inactive):** unmodified official JavaScript/CSS source was used for the photo
+  wall in “More about me / 我最近活着的证据,” which is currently absent from the page. Its saved integration supplies
   `{ image, title, href }` items. The original component alternates column
   drift, pauses the hovered column, lifts the active tile, and follows the
   pointer with perspective tilt. Its `href` items remain normal links.
@@ -142,11 +142,9 @@ sample image URLs are documented in the pinned
 It is 1025 × 250 pixels and has SHA-256
 `5cd055054c470432fb8743eda836cf0ba40bcbc2b6df5ee84c3f831607be657c`.
 
-The Lanyard front and back use the homepage owner's original photograph at
-`/images/junhaocheng.png`, supplied through `frontImage` and `backImage`.
-This follows the official [`LanyardDemo` front-image upload behavior](https://github.com/DavidHDev/react-bits/blob/e12c22192ac7b4b452c5e2feb9b586d74765d696/src/demo/Components/LanyardDemo.jsx):
-when a front image is uploaded without a separate back image, both faces use
-the uploaded image. The original motion, card construction, surface finish,
+The Lanyard front uses `/images/junhaocheng.png` and its reverse uses
+`/images/junhaocheng2.png`, supplied through `frontImage` and `backImage`.
+The existing click-to-flip gesture reveals the other image. The original motion, card construction, surface finish,
 metal hardware, and band geometry are retained. No custom badge SVG is used.
 
 [`src/components/ThemedLanyard.jsx`](src/components/ThemedLanyard.jsx) derives

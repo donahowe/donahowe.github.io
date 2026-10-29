@@ -6,9 +6,9 @@ The current redesign retains the original academic wording and GitHub Pages addr
 
 The first section places the **Lanyard** portrait on the left and English and Chinese **TechText** names on the right. The original two biography paragraphs follow the names, preserving their links and emphasis. The complete original availability statement and all contact actions remain in this first section. **LightRays** stays in one fixed, viewport-sized layer behind every section, rather than ending with the hero.
 
-The original academic section order remains **About/contact → News → Education → Internships → Selected Publications**. Its direct section IDs are `top`, `notes`, `education`, `internships`, and `research`; `contact` is inside the first section. The new **More about me / 我最近活着的证据** photo wall is appended as `section#life`, after `research` and before the existing footer. The header navigation adds **More about me** at the end. News shows all ten original updates in one bounded list that scrolls internally. Education and internships show all **six entries** as compact square TearTicket cards, with a larger original logo on the left, the original date on the tearable side strip, and a Restore ticket action. Education titles wrap after `@` without changing their words. Publications use whole-card HoloCard rendering with titles, venues, authors, and links retained as ordinary HTML on the card's front face.
+The original academic section order remains **About/contact → News → Education → Internships → Selected Publications**. Its direct section IDs are `top`, `notes`, `education`, `internships`, and `research`; `contact` is inside the first section. The previously added **More about me / 我最近活着的证据** photo wall is currently absent from the rendered page and navigation, while its source and assets remain available for restoration. Headings have no numeric prefix or count. News shows all ten original updates in one bounded list that scrolls internally. Education and internships show all **six entries** as compact square TearTicket cards, with a larger original logo on the left, the original date on the tearable side strip, and a Restore ticket action. Education titles wrap after `@` without changing their words. Publications use whole-card HoloCard rendering with titles, venues, authors, and links retained as ordinary HTML on the card's front face.
 
-The life section uses the official **DriftWall** component and a separate photo dataset. Its present images are placeholders awaiting the user's photos. Adding this section does not reorder or rewrite the academic content.
+The Lanyard now shows the original portrait on its front and `/images/junhaocheng2.png` on its back. Clicking the card flips it; the non-WebGL fallback is also a two-image toggle. The small MPhil eyebrow above the animated names is no longer displayed.
 
 All eight publications are composed as one more widely spaced row. Their presentation uses silver metallic borders, the official colorful edge sparkle, and prominent text-only venue labels using the existing venue strings. Selecting a paper enlarges that same card design. `PublicationDeck` uses `BounceCardsContent`, a content-slot adaptation of the official BounceCards source. The adapter retains the upstream spring, picking, and hover engine and adds the slots and interaction semantics needed for full HTML paper cards. `HoloCardContent` adds an HTML slot to the original HoloCard front face while retaining its shader and motion engine. Both official vendor files are preserved separately; the adapters are documented source adaptations. FlexCarousel and ScrollStack are retained as source files and in the first-iteration backup; the current page no longer renders them.
 
@@ -23,9 +23,9 @@ GitHub Pages continues serving **`main` at the repository root**. Generated file
 | A paper title, author list, venue, or link | `src/data/profile.js` |
 | News, education, internship dates, or mentor links | `src/data/profile.js` |
 | Contact links and portrait source | `src/data/profile.js` |
-| Personal photo-wall entries and descriptions | `src/data/lifePhotos.js` |
-| Photo-wall placeholder files and personal-photo replacements | `images/life/` |
-| DriftWall integration and the static photo-wall fallback | `src/components/LifeGallery.jsx` and `src/components/LifeGallery.css` |
+| Archived personal photo-wall entries and descriptions | `src/data/lifePhotos.js` |
+| Archived photo-wall placeholders | `images/life/` |
+| Disabled DriftWall integration and the static photo-wall fallback | `src/components/LifeGallery.jsx` and `src/components/LifeGallery.css` |
 | Original introductory text, availability statement, section order, or layout markup | `src/App.jsx` |
 | Neutral themes, handwritten body typography, hero/ticket layouts, or responsive styles | `src/styles.css` |
 | News scroll-container markup and original update rendering | `src/App.jsx` and `src/styles.css` |
@@ -41,13 +41,13 @@ GitHub Pages continues serving **`main` at the repository root**. Generated file
 | Publication image selection in the deck and enlarged card | `figureSource` in `src/components/PublicationDeck.jsx` |
 | Most publication figures | `images/optimized/<publication-id>.webp` |
 | Original transparent figures used by VisDiaHalBench and DKFormer | `images/publications/visdiahalbench.png` and `images/publications/dkformer.png` |
-| Portrait used on both Lanyard faces | `profile.avatar` in `src/data/profile.js`, currently `/images/junhaocheng.png` |
+| Front and reverse Lanyard portraits | `profile.avatar` and `profile.avatarBack` in `src/data/profile.js` |
 | Official Lanyard band texture | `images/react-bits/lanyard.png` |
 | Embedded regular and bold handwritten fonts | `fonts/sketch/WorkingSheet-Hand.ttf` and `fonts/sketch/WorkingSheet-Marker.ttf` |
 
 The original About paragraphs and availability statement are preserved in `src/data/profile.js` and rendered with their original links and emphasis in `src/App.jsx`. When updating a biographical fact, check both files for the old wording. Do not shorten or rewrite existing academic content as part of a visual-only change.
 
-The portrait is passed to Lanyard as both `frontImage` and `backImage`, exactly as the official demo does when only a front image is uploaded. Updating `profile.avatar` updates both photo faces without generating another asset. The original `images/react-bits/lanyard.png` remains unchanged. `src/components/ThemedLanyard.jsx` uses Canvas 2D color inversion to produce a dark-theme texture data URL and passes it through Lanyard's supported `strapImage` prop; it does not modify the official Lanyard renderer or source texture.
+`profile.avatar` (`/images/junhaocheng.png`) and `profile.avatarBack` (`/images/junhaocheng2.png`) are passed separately to Lanyard's supported `frontImage` and `backImage` props. The existing short-click gesture flips between faces; a keyboard-accessible photo button switches images when the WebGL canvas is unavailable. The original `images/react-bits/lanyard.png` remains unchanged. `src/components/ThemedLanyard.jsx` uses Canvas 2D color inversion to produce a dark-theme texture data URL and passes it through Lanyard's supported `strapImage` prop; it does not modify the official Lanyard renderer or source texture.
 
 Sketch Working Hand supplies regular body text and Sketch Working Marker supplies the bold handwritten weight. The files are embedded locally as `fonts/sketch/WorkingSheet-Hand.ttf` and `fonts/sketch/WorkingSheet-Marker.ttf`. Preserve their provenance in [`fonts/sketch/README.md`](../fonts/sketch/README.md) and complete MIT license in [`licenses/WorkingSheet-MIT.txt`](../licenses/WorkingSheet-MIT.txt). Keep the original introduction's emphasis ranges unchanged when adjusting weights.
 
@@ -81,9 +81,9 @@ Images should show the actual research. The texture builder in `PublicationDeck.
 
 Silver framing comes from the generated texture. The HoloCard public material props are `intensity={0}`, `edgeSparkle={0.8}`, `frame={4}`, and `glare={0}`: the colorful edge sparkle uses the official default setting while full-surface foil and glare remain disabled. These presentation choices are customized through public props; the vendor shader and motion algorithms remain preserved. HoloCard's renderer covers the whole card, with the title, text-only venue label, author list, and links kept as selectable, accessible HTML in the front-face slot rather than being baked into the texture.
 
-## Personal photo wall
+## Archived personal photo wall (not currently displayed)
 
-`section#life` is the last section inside `main`, immediately after publications. Its heading is **More about me** and its accompanying line is **我最近活着的证据**. Keep the original five academic sections in their existing order, and leave the footer after the new section.
+The former `section#life` (heading **More about me** with **我最近活着的证据**) has been removed from `src/App.jsx` and header navigation. Keep the original five academic sections in order, with publications immediately before the footer. The complete previous page remains in `backup/howe-v4-before-final-polish-2026-10-29`.
 
 `src/components/LifeGallery.jsx` supplies the photos to the unchanged official DriftWall component. DriftWall provides the drifting wall, pointer parallax, and hover lift. A static scrollable photo grid preserves images, descriptions, and original-image links when animation is disabled or unavailable.
 
@@ -99,7 +99,7 @@ Photo entries live in `src/data/lifePhotos.js`, independently of academic profil
 
 To replace the placeholders, add the supplied photos to `images/life/` and update the corresponding entries. Keep descriptions tied to the actual images; placeholder graphics do not establish personal events, locations, or dates. The planned selection is approximately twenty photos, and entries can be added or removed without changing an asserted gallery size.
 
-Run the normal build and checks after replacing photos, then review cropping, readable descriptions, navigation to the final section, and interaction with the existing motion preference. The content checker only asserts the appended section and preservation of the original academic order; gallery geometry and browser interactions require preview review.
+If re-enabling the gallery later, run the normal build and checks after replacing photos, then review cropping, readable descriptions, navigation, and motion preferences. The content checker currently asserts that the five academic sections are the only direct sections inside `main`.
 
 ## Behavior and accessibility
 
@@ -128,15 +128,15 @@ Publication figures and HTML metadata share the HoloCard front face and transfor
 
 Review these interactions after changes:
 
-- Desktop portrait dragging and the English/Chinese TechText treatment; keep the complete introduction and contact actions readable in the first section.
+- Desktop portrait dragging, clicking to flip between both photos, and the English/Chinese TechText treatment; keep the complete introduction and contact actions readable in the first section.
 - Internal News scrolling and keyboard access to all ten updates.
 - Compact ticket composition, complete logos, one original date per side strip, education title wrapping, and tearing/restoration.
 - The single row containing all eight publications, card interactions, same-card enlargement/dismissal, focus return, and paper links.
-- The final More about me section, its photo replacements, and DriftWall interaction without changes to the academic sequence.
+- Publications are followed by the footer; no personal photo-wall navigation or heading appears.
 - A fresh visit in dark mode, in-page switching to light, and a reload returning to dark.
 - Keyboard access, visible focus, reduced motion, narrow-screen layouts, and WeChat dialog dismissal/QR readability.
 
-`scripts/check.mjs` checks the legacy backup hash, original wording and emphasis, original links, first-section contact placement, the unchanged academic order followed by `section#life`, the original date once on each intact ticket's side strip, education title wrapping, one News scroll region, one publication collection with each paper represented once, default-dark source contract, and static assets. `scripts/check-reactbits.mjs` compares pinned vendor files and five preserved algorithm sections in the BounceCards/HoloCard adapters. Those source checks do not establish successful browser animation behavior. Browser captures and the checks associated with each revision are recorded in [`docs/previews/README.md`](previews/README.md); earlier captures are not evidence of verification for this iteration.
+`scripts/check.mjs` checks the legacy backup hash, original wording and emphasis, original links, first-section contact placement, the unchanged five-section academic order, the two distinct portrait sources, unnumbered headings, the original date once on each intact ticket's side strip, education title wrapping, one News scroll region, one publication collection with each paper represented once, default-dark source contract, and static assets. `scripts/check-reactbits.mjs` compares pinned vendor files and five preserved algorithm sections in the BounceCards/HoloCard adapters. Those source checks do not establish successful browser animation behavior. Browser captures and the checks associated with each revision are recorded in [`docs/previews/README.md`](previews/README.md); earlier captures are not evidence of verification for this iteration.
 
 ## Content provenance and dates
 
@@ -206,6 +206,6 @@ Neither procedure requires a force push or deletion of the backup branch.
 
 React Bits component provenance, the official band texture, and pinned source information are documented in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and `docs/react-bits-integrity.json`. Preserve those records and [`licenses/react-bits-LICENSE.md`](../licenses/react-bits-LICENSE.md) when updating or redistributing the components. React Bits uses MIT with the Commons Clause; do not describe its code as unrestricted MIT.
 
-The current page integrates Lanyard, TechText, LightRays, TearTicket, Magnet, DriftWall, and the BounceCards/HoloCard content adapters. `PublicationDeck` combines those documented adapters with publication-specific composition and dialog behavior. Preserve the upstream license in adapters derived from its source. Retaining an unused upstream component file, such as FlexCarousel, ScrollStack, or SpotlightCard, does not mean that component is rendered on the current page.
+The current page integrates Lanyard, TechText, LightRays, TearTicket, Magnet, and the BounceCards/HoloCard content adapters. `PublicationDeck` combines those documented adapters with publication-specific composition and dialog behavior. Preserve the upstream license in adapters derived from its source. Retaining an unused upstream component file, such as DriftWall, FlexCarousel, ScrollStack, or SpotlightCard, does not mean that component is rendered on the current page.
 
 The original homepage's acknowledgments remain in [README.md](../README.md). Dependency versions are recorded in `package.json` and locked in `package-lock.json` for reproducible installation.

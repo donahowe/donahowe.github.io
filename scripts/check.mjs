@@ -98,6 +98,10 @@ assert.ok(wechatButton, 'Keep the WeChat action in the hero contact area');
 assert.equal(wechatButton.attrs.type, 'button', 'Use an explicit button for the WeChat action');
 assert.ok(html.includes(profile.wechatQr), 'Retain the original WeChat QR code');
 assert.ok(visibleText(hero.inner).includes(profile.name) && visibleText(hero.inner).includes(profile.nameCn), 'Keep both English and Chinese names in the static hero');
+assert.ok(!/class="hero-role"/.test(hero.inner), 'Do not show the redundant MPhil eyebrow above the name');
+assert.equal(profile.avatarBack, '/images/junhaocheng2.png', 'Use the requested second portrait on the badge reverse');
+assert.ok(appSource.includes('backImage={profile.avatarBack}'), 'Give the interactive badge a different back photo');
+assert.ok((await stat(resolve(root, `.${profile.avatarBack}`))).isFile(), 'The second portrait must exist in the repository');
 
 // Enforce the original reading order after moving About into the first section.
 const directSectionIds = [];
@@ -110,8 +114,11 @@ for (const token of main.inner.matchAll(/<!--[\s\S]*?-->|<\/?([a-z][\w:-]*)\b[^>
   if (!voidTags.has(tag) && !/\/\s*>$/.test(token[0])) depth++;
 }
 const academicSectionOrder = ['top', 'notes', 'education', 'internships', 'research'];
-assert.deepEqual(directSectionIds.slice(0, academicSectionOrder.length), academicSectionOrder, 'Keep the original academic sections first and in their original order');
-assert.deepEqual(directSectionIds.slice(academicSectionOrder.length), ['life'], 'Append More about me after publications as the final main section');
+assert.deepEqual(directSectionIds, academicSectionOrder, 'Keep the original academic sections in order, with publications last');
+assert.ok(!/href="#life"|id="life"/.test(html), 'Remove the personal photo-wall section and navigation');
+for (const heading of [...main.inner.matchAll(/<div class="section-title">([\s\S]*?)<\/div>/g)]) {
+  assert.ok(!/section-(?:number|count)/.test(heading[1]), 'Do not display numbered section headings or counts');
+}
 const newsSection = elementById(main.inner, 'notes', 'section');
 const newsScroll = findElement(newsSection.inner, (_, attrs) => attrs['data-content'] === 'news-scroll', 'single News scroll container');
 assert.equal([...newsSection.inner.matchAll(/\bdata-content="news-scroll"/g)].length, 1, 'Keep one News scroll container');
@@ -224,5 +231,5 @@ for (const name of preservedComponents) {
 }
 assert.ok(!html.includes('<!-- APP_'), 'Build placeholders must be replaced');
 assert.ok(html.includes('application/ld+json'), 'Keep structured profile data');
-console.log(`Verified static content: exact original backup; original biography, emphasis, and links; hero contact links; original section order; ${publications.length} publications in one collection; ${education.length} education entries; ${experience.length} internships; ${news.length} updates in one News scroll region; dark default; HOWE brand; ${localAssets.size} local assets and section links.`);
+console.log(`Verified static content: exact original backup; two-sided badge; unnumbered academic headings; original biography, emphasis, and links; hero contact links; original section order; ${publications.length} publications in one collection; ${education.length} education entries; ${experience.length} internships; ${news.length} updates in one News scroll region; dark default; HOWE brand; ${localAssets.size} local assets and section links.`);
 console.log(`Source checks: bilingual TechText integration and ${preservedComponents.length} preserved React Bits source files. Browser animation, layout, and interaction verification is separate.`);

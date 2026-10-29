@@ -13,6 +13,7 @@ export const profile = {
   location: 'Shenzhen, Guangdong, China',
   email: 'howe4884@outlook.com',
   avatar: '/images/junhaocheng.png',
+  avatarBack: '/images/junhaocheng2.png',
   scholarUrl: 'https://scholar.google.com/citations?user=NBIllU8AAAAJ&hl=en',
   githubUrl: 'https://github.com/donahowe',
   wechatQr: '/images/wechat-qr.png',

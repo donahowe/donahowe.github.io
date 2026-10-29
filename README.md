@@ -6,15 +6,15 @@ An academic portfolio for **Junhao Cheng (程钧豪)**, an MPhil student at City
 
 The current design uses the **HOWE** wordmark, Sketch Working handwritten typography for the body and introduction, and a neutral black/white palette. The animated name treatment keeps its technical type styling. Every new page load starts in **dark mode**. The header button switches to light mode for the current page; theme choices are neither restored from nor saved to browser storage, and the initial theme does not follow the operating system.
 
-On desktop, the first section places the draggable **Lanyard** portrait on the left and English/Chinese **TechText** names on the right. The complete original introduction follows the names, with its original links and emphasis, then the original availability statement and email, Scholar, GitHub, and WeChat contacts. The remaining page follows the original reading order: **News → Education → Internships → Selected Publications**.
+On desktop, the first section places the draggable **Lanyard** portrait on the left and English/Chinese **TechText** names on the right, without a separate degree label above the names. The complete original introduction follows the names, with its original links and emphasis, then the original availability statement and email, Scholar, GitHub, and WeChat contacts. The remaining page follows the original reading order: **News → Education → Internships → Selected Publications**, with unnumbered section headings.
 
-After the publications, **More about me / 我最近活着的证据** adds a personal photo wall using the official **DriftWall** component. It is the last content section before the existing footer, and the navigation adds a final **More about me** link. The current images are placeholders for the user's forthcoming photos.
+The personal photo wall has been removed from the visible page and navigation for now. Its **DriftWall** integration and placeholder assets remain in the source tree for a possible future return; the previous visible design is also preserved in the backup branch.
 
 News retains all ten original updates inside one bounded, internally scrollable list. All six education and internship entries are visible as compact square **TearTicket** cards with larger original school/company logos on the left. Each card's original date appears once, on its tearable side strip; **Restore ticket** brings the strip back. Education titles wrap after `@` while retaining their original wording. Publication cards share **HoloCard** rendering across the whole card, with ordinary HTML titles, venues, authors, and links on the same front face. Publication details remain in the prerendered HTML when JavaScript is unavailable.
 
 All eight publications belong to one more widely spaced row, with silver metallic borders, the official colorful edge sparkle, and prominent text-only labels using the original venue names. The card interaction uses `BounceCardsContent`, a content-slot adaptation of the official **BounceCards** source that retains its spring, picking, and hover engine while supporting complete HTML paper cards. `HoloCardContent` adds a front-face HTML slot to HoloCard while retaining its shaders and motion engine. The real research figure is contained within a card-sized texture without cropping. Selecting a paper enlarges the same card design, preserving its image, title, venue, authors, and links.
 
-The Lanyard displays the original portrait on both faces. Its original band texture is retained; a page-level adapter generates a theme-appropriate texture for dark mode without modifying the source asset or vendor component. **LightRays** stays in one fixed, viewport-sized background layer throughout the page. The former FlexCarousel and ScrollStack sources are retained in the repository but are no longer rendered by the current page.
+The Lanyard now uses `/images/junhaocheng.png` on the front and `/images/junhaocheng2.png` on the reverse. Clicking the 3D card flips it to reveal the other image; on devices without WebGL, a clickable photo button switches between them. The original band texture is retained; a page-level adapter generates a theme-appropriate texture for dark mode without modifying the source asset or vendor component. **LightRays** stays in one fixed, viewport-sized background layer throughout the page. The former FlexCarousel and ScrollStack sources are retained in the repository but are no longer rendered by the current page.
 
 ## Develop and update
 
@@ -32,12 +32,12 @@ The preview serves the generated site at `http://localhost:3000`. Run `npm run b
 | File or directory | Purpose |
 | --- | --- |
 | `src/data/profile.js` | Publications, news, education, internships, contact links, and profile metadata |
-| `src/data/lifePhotos.js` | Photo-wall entries: IDs, image paths, descriptions, and dimensions |
+| `src/data/lifePhotos.js` | Inactive photo-wall entries, retained for later use |
 | `src/App.jsx` | Page structure, original introductory copy, and interaction wrappers |
 | `src/styles.css` | Handwritten body typography, neutral themes, hero/ticket layouts, and responsive styles |
 | `src/index.template.html` | Static document metadata and the initial dark theme |
 | `src/components/PublicationDeck.jsx` and `PublicationDeck.css` | Single-row publication composition, card material/venue styling, and same-card enlargement |
-| `src/components/LifeGallery.jsx` and `LifeGallery.css` | DriftWall integration, image links, and the static photo-wall fallback |
+| `src/components/LifeGallery.jsx` and `LifeGallery.css` | Inactive DriftWall integration, preserved for possible restoration |
 | `src/components/adapters/BounceCardsContent.jsx` | Content-slot adaptation of the official BounceCards interaction engine |
 | `src/components/adapters/HoloCardContent.jsx` and `HoloCardContent.css` | Semantic HTML on HoloCard's original front-face renderer |
 | `src/components/ThemedLanyard.jsx` | Theme-aware band-texture generation around the unchanged Lanyard component |
@@ -45,7 +45,7 @@ The preview serves the generated site at `http://localhost:3000`. Run `npm run b
 | `src/components/reactbits/` | Vendored React Bits source, including Lanyard, TechText, LightRays, TearTicket, HoloCard, and DriftWall |
 | `images/` | Original portrait, research figures, logos, and other existing assets |
 | `images/optimized/` | Optimized publication figures, with the transparent PNG exceptions described below |
-| `images/life/` | Placeholder images and their future personal-photo replacements |
+| `images/life/` | Preserved placeholder images for the currently disabled photo wall |
 | `images/react-bits/lanyard.png` | Unmodified official React Bits band texture |
 | `fonts/sketch/WorkingSheet-Hand.ttf` and `WorkingSheet-Marker.ttf` | Embedded regular and bold handwritten fonts |
 | `scripts/` | Static build, checks, and local preview server |
@@ -59,9 +59,9 @@ Edit source files rather than the generated `index.html` or bundles. Most academ
 
 `npm run check` runs the static content/layout-contract checks, pinned React Bits source-integrity checks, and comparisons of the preserved BounceCards/HoloCard algorithm sections in their content adapters. It does not establish that browser animations or pointer interactions have been verified.
 
-## Replace the photo-wall placeholders
+## Restore the optional photo wall in the future
 
-Add the supplied photos to `images/life/` and update their entries in `src/data/lifePhotos.js`. Each entry has `{ id, src, alt, width, height, fullSrc? }`: keep IDs unique, use `/images/life/...` image paths, write descriptions for the actual photos, and record each file's actual dimensions. `fullSrc` can point to an optional larger version.
+The gallery is currently disabled in `src/App.jsx`. If it is restored later, add the supplied photos to `images/life/` and update their entries in `src/data/lifePhotos.js`. Each entry has `{ id, src, alt, width, height, fullSrc? }`: keep IDs unique, use `/images/life/...` image paths, write descriptions for the actual photos, and record each file's actual dimensions. `fullSrc` can point to an optional larger version.
 
 The gallery currently uses placeholders; they are not presented as evidence of personal events. Replace or remove entries as the final photo selection changes. The gallery count follows the data, so the approximately twenty-photo plan does not require a fixed-size list. Rebuild and check the site after updating photos, then review the wall in the preview.
 
@@ -72,7 +72,7 @@ The repository retains its existing **`main` branch / root directory** deploymen
 After making changes:
 
 1. Run `npm run build` and `npm run check`.
-2. Review the desktop layout, bilingual names, News scrolling, ticket dates/logos/tearing/restoration, publication interactions/same-card enlargement, the final photo wall, and both themes in the local preview, then check narrow-screen fallbacks and reduced motion.
+2. Review the desktop layout, two-sided portrait flipping, bilingual names, News scrolling, ticket dates/logos/tearing/restoration, publication interactions/same-card enlargement, and both themes in the local preview, then check narrow-screen fallbacks and reduced motion.
 3. Review and commit the source changes together with the generated `index.html` and `assets/site/` changes.
 4. Push to `main` through your normal Git workflow.
 
@@ -88,6 +88,7 @@ The original homepage was preserved before the redesign:
 - **First React Bits iteration:** [`backup/react-bits-v1-2026-10-28`](https://github.com/donahowe/donahowe.github.io/tree/backup/react-bits-v1-2026-10-28)
 - **HOWE v2 checkpoint:** [`backup/howe-v2-2026-10-28`](https://github.com/donahowe/donahowe.github.io/tree/backup/howe-v2-2026-10-28)
 - **Previous HOWE iteration:** [`backup/howe-v3-2026-10-28`](https://github.com/donahowe/donahowe.github.io/tree/backup/howe-v3-2026-10-28)
+- **HOWE v4 before final polish (includes photo wall):** [`backup/howe-v4-before-final-polish-2026-10-29`](https://github.com/donahowe/donahowe.github.io/tree/backup/howe-v4-before-final-polish-2026-10-29)
 
 The original images and other repository assets remain available. See [the restoration guide](docs/REDESIGN.md#restore-the-original-homepage) for a normal, history-preserving Git revert or an HTML-only restore.
 

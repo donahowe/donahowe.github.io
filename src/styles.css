@@ -153,3 +153,7 @@ body { font-size:18px; line-height:1.55; }
   .ticket-grid { display:grid; grid-template-columns:repeat(2,286px); }
   .about-text { font-size:12pt; }
 }
+
+/* The canvas-free portrait keeps the two-sided photo interaction accessible. */
+.static-portrait { border:0; background:transparent; cursor:pointer; }
+.static-portrait:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
